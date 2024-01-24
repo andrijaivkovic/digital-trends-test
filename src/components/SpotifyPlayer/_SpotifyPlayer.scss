@@ -1,0 +1,83 @@
+.spotify-player {
+  position: fixed;
+
+  display: none;
+
+  bottom: 2rem;
+
+  width: 100%;
+
+  height: 84px;
+
+  z-index: 90;
+
+  opacity: 0.95;
+
+  @include mediaQuery(desktop-xlarge) {
+    height: 156px;
+  }
+
+  @include mediaQuery(mobile) {
+    bottom: 3rem;
+  }
+
+  & > .player-container {
+    @include flex-row;
+
+    border: $border;
+
+    border-radius: $border-radius;
+    margin-inline: 15rem;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: $drop-shadow-strong;
+
+    @include mediaQuery(desktop-large) {
+      margin-inline: 20vw;
+    }
+
+    @include mediaQuery(desktop-xlarge) {
+      margin-inline: 15vw;
+    }
+
+    @include mediaQuery(mobile) {
+      position: sticky;
+      margin-inline: $body-inline-padding-mobile;
+    }
+
+    @include mediaQuery(tablet) {
+      position: sticky;
+      margin-inline: $body-inline-padding-tablet;
+    }
+
+    & > .spotify-loading {
+      width: 100%;
+      flex: 1;
+
+      @include flex-row;
+      @include flex-center;
+      gap: 3rem;
+
+      @include glass-gradient;
+      border-radius: $border-radius;
+
+      & > p {
+        color: #242424;
+        font-size: 2.4rem;
+        font-weight: 400;
+
+        @include mediaQuery(mobile) {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+
+  & > iframe {
+    width: 100%;
+  }
+
+  &.shown {
+    @include flex-row;
+  }
+}

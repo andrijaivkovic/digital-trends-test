@@ -1,0 +1,30 @@
+$color-text-black: #242424;
+
+$color-volume-one: #5f5fa2;
+$color-volume-two: #df66cb;
+$color-volume-three: #fc631b;
+$color-volume-four: #119d8c;
+$color-volume-five: #55b615;
+$color-volume-six: #8488ff;
+$color-volume-seven: #00a1ff;
+$color-volume-eight: #fabc2b;
+
+$drop-shadow-light: 0 5px 40px rgba(6, 58, 102, 0.15);
+$drop-shadow-strong: 0 5px 40px rgba(6, 58, 102, 0.25);
+$drop-shadow-v-strong: 0 5px 25px rgba(6, 58, 102, 0.5);
+
+$border: 2px solid rgba(255, 255, 255, 1);
+$border-radius: 13px;
+$border-radius-mobile: 10px;
+
+$body-inline-padding-desktop: 12vw;
+$body-inline-padding-desktop-large: 20vw;
+$body-inline-padding-desktop-xlarge: 24vw;
+$body-inline-padding-mobile: calc(4vw + 1rem);
+$body-inline-padding-tablet: 14vw;
+
+$breakpoint-mobile: 37.5em;
+$breakpoint-tablet: 48em;
+$breakpoint-desktop: 90em;
+$breakpoint-desktop-large: 120rem;
+$breakpoint-desktop-xlarge: 160rem;

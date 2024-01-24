@@ -1,0 +1,50 @@
+.footer {
+  @include flex-column;
+
+  align-items: center;
+
+  margin-top: 15rem;
+  margin-bottom: 16rem;
+
+  gap: 2rem;
+
+  @include mediaQuery(desktop-xlarge) {
+    margin-bottom: 26rem;
+  }
+
+  @include mediaQuery(mobile) {
+    margin-top: 6rem;
+  }
+
+  & a {
+    transition: 0.25s;
+    &:hover,
+    &:active {
+      opacity: 0.4;
+    }
+  }
+
+  &__text {
+    @include mediaQuery(mobile) {
+      & > svg {
+        height: 4rem;
+      }
+    }
+  }
+
+  &__socials {
+    @include flex-row;
+
+    & > a {
+      padding-inline: 2rem;
+
+      @include mediaQuery(mobile) {
+        padding-inline: 0.5rem;
+
+        & > svg {
+          height: 2rem;
+        }
+      }
+    }
+  }
+}

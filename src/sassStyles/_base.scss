@@ -1,0 +1,172 @@
+html {
+  font-family: "Montserrat Variable", sans-serif;
+
+  font-size: 55%;
+
+  overflow-x: hidden;
+
+  white-space: pre-wrap;
+
+  cursor: url("/images/cursor/cursor_default.png"), default;
+
+  @include mediaQuery(tablet) {
+    font-size: 62.5%;
+  }
+
+  @include mediaQuery(mobile) {
+    font-size: 62.5%;
+  }
+
+  @include mediaQuery(desktop-xlarge) {
+    font-size: 70%;
+  }
+}
+
+#root {
+  display: grid;
+  justify-content: center;
+  width: 100%;
+}
+
+body {
+  position: relative;
+
+  @include flex-column;
+  align-items: center;
+
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: var(--color-text);
+
+  background-size: cover;
+
+  overflow: hidden;
+
+  background-color: #e5eaff;
+  // background-color: black !important;
+
+  &.volume-one {
+    background-image: url("/images/bg/desktop/bg-volume_one-desktop.webp");
+
+    @include mediaQuery(tablet) {
+      background-image: url("/images/bg/tablet/bg-volume_one-tablet.webp");
+    }
+
+    @include mediaQuery(mobile) {
+      background-image: url("/images/bg/mobile/bg-volume_one-mobile.webp");
+    }
+  }
+
+  &.volume-two {
+    background-image: url("/images/bg/desktop/bg-volume_two-desktop.webp");
+
+    @include mediaQuery(tablet) {
+      background-image: url("/images/bg/tablet/bg-volume_two-tablet.webp");
+    }
+
+    @include mediaQuery(mobile) {
+      background-image: url("/images/bg/mobile/bg-volume_two-mobile.webp");
+    }
+  }
+
+  &.volume-three {
+    background-image: url("/images/bg/desktop/bg-volume_three-desktop.webp");
+
+    @include mediaQuery(tablet) {
+      background-image: url("/images/bg/tablet/bg-volume_three-tablet.webp");
+    }
+
+    @include mediaQuery(mobile) {
+      background-image: url("/images/bg/mobile/bg-volume_three-mobile.webp");
+    }
+  }
+
+  &.volume-four {
+    background-image: url("/images/bg/desktop/bg-volume_four-desktop.webp");
+
+    @include mediaQuery(mobile) {
+      background-image: url("/images/bg/mobile/bg-volume_four-mobile.webp");
+    }
+  }
+
+  &.volume-five {
+    background-image: url("/images/bg/desktop/bg-volume_five-desktop.webp");
+
+    @include mediaQuery(tablet) {
+      background-image: url("/images/bg/tablet/bg-volume_five-tablet.webp");
+    }
+
+    @include mediaQuery(mobile) {
+      background-image: url("/images/bg/mobile/bg-volume_five-mobile.webp");
+    }
+  }
+
+  &.volume-six {
+    background-image: url("/images/bg/desktop/bg-volume_six-desktop.webp");
+
+    @include mediaQuery(tablet) {
+      background-image: url("/images/bg/tablet/bg-volume_six-tablet.webp");
+    }
+
+    @include mediaQuery(mobile) {
+      background-image: url("/images/bg/mobile/bg-volume_six-mobile.webp");
+    }
+  }
+
+  &.volume-seven {
+    background-image: url("/images/bg/desktop/bg-volume_seven-desktop.webp");
+
+    @include mediaQuery(tablet) {
+      background-image: url("/images/bg/tablet/bg-volume_seven-tablet.webp");
+    }
+
+    @include mediaQuery(mobile) {
+      background-image: url("/images/bg/mobile/bg-volume_seven-mobile.webp");
+    }
+  }
+
+  &.volume-eight {
+    background-image: url("/images/bg/desktop/bg-volume_eight-desktop.webp");
+
+    @include mediaQuery(tablet) {
+      background-image: url("/images/bg/tablet/bg-volume_eight-tablet.webp");
+    }
+
+    @include mediaQuery(mobile) {
+      background-image: url("/images/bg/mobile/bg-volume_eight-mobile.webp");
+    }
+  }
+
+  // background-image: url("/images/bg.jpeg");
+
+  // DESKTOP
+
+  // background-size: 550% 110%;
+  // background-repeat: no-repeat;
+  // background-position: 47% top;
+
+  // MOBILE
+
+  // background-size: 1600%;
+  // background-repeat: no-repeat;
+  // background-position: 47% top;
+}
+
+img {
+  color: $color-text-black;
+  font-style: italic;
+}
+
+a,
+button,
+input,
+textarea,
+select,
+iframe {
+  cursor: url("/images/cursor/cursor_pointer.png"), pointer !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

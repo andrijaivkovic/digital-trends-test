@@ -1,0 +1,47 @@
+.image-container {
+  @include flex-row;
+
+  flex-grow: 1;
+
+  height: 100%;
+  width: 100%;
+
+  overflow: hidden;
+
+  & > .image-placeholder {
+    position: relative;
+    @include flex-row;
+    width: 100%;
+
+    & > img {
+      filter: blur(10px);
+    }
+
+    & > .loading-spinner-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  & > picture {
+    display: none;
+
+    &.shown {
+      @include flex-row;
+    }
+  }
+
+  & img {
+    object-fit: cover;
+  }
+
+  // @include mediaQuery(mobile) {
+  //   height: 40rem;
+  // }
+
+  // @include mediaQuery(tablet) {
+  //   height: 40rem;
+  // }
+}

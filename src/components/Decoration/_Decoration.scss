@@ -1,0 +1,20 @@
+.volume__decoration {
+  @include flex-row;
+  @include flex-center;
+
+  filter: drop-shadow($drop-shadow-strong);
+  aspect-ratio: unset;
+  min-height: 100%;
+
+  @include mediaQuery(tablet) {
+    scale: 0.75;
+  }
+
+  & > .animation {
+    display: none;
+
+    &.shown {
+      display: block;
+    }
+  }
+}

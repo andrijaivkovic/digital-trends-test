@@ -1,0 +1,20 @@
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 0.8rem 0.5rem 0.1rem 0.5rem;
+
+  display: none;
+
+  @include glass-bright-opaque;
+  border-radius: $border-radius;
+  border: $border;
+
+  & > svg {
+    scale: 0.5;
+  }
+
+  &.shown {
+    display: block;
+  }
+}

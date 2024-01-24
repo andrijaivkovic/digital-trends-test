@@ -1,0 +1,87 @@
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin grid {
+  display: grid;
+}
+
+@mixin glass-bright {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+@mixin glass-gradient {
+  // background-image: radial-gradient(
+  //   farthest-corner at 30% 20%,
+  //   rgba(255, 255, 255, 0) 0%,
+  //   rgba(255, 255, 255, 0.6) 100%
+  // );
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.8) 100%
+  );
+  -webkit-backdrop-filter: blur(10px);
+}
+
+@mixin glass-dark {
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+@mixin glass-bright-opaque {
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+@mixin mediaQuery($breakpoint) {
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: calc(#{$breakpoint-tablet} - 1px) ) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media screen and (min-width: $breakpoint-tablet) and (max-width:calc(#{$breakpoint-desktop} - 1px) ) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop {
+    @media screen and (min-width: $breakpoint-desktop) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop-large {
+    @media screen and (min-width: $breakpoint-desktop-large) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop-xlarge {
+    @media screen and (min-width: calc(#{$breakpoint-desktop-xlarge} + 1px)) {
+      @content;
+    }
+  }
+}

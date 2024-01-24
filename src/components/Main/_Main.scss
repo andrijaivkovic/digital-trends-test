@@ -1,0 +1,34 @@
+.main {
+  @include flex-column;
+  padding-inline: $body-inline-padding-desktop;
+
+  @include flex-column;
+  gap: 16rem;
+
+  @include mediaQuery(mobile) {
+    gap: 4rem;
+  }
+
+  @include mediaQuery(tablet) {
+    gap: 8rem;
+    max-width: 110rem;
+  }
+
+  @include mediaQuery(desktop-large) {
+    padding-inline: $body-inline-padding-desktop-large;
+    max-width: 260rem;
+  }
+
+  @include mediaQuery(desktop-xlarge) {
+    // padding-inline: $body-inline-padding-desktop-xlarge;
+    max-width: 300rem;
+  }
+
+  @include mediaQuery(mobile) {
+    padding-inline: $body-inline-padding-mobile;
+  }
+
+  @include mediaQuery(tablet) {
+    padding-inline: $body-inline-padding-tablet;
+  }
+}

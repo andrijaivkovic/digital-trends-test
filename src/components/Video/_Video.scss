@@ -1,0 +1,35 @@
+.video-container {
+  @include flex-row;
+  width: 100%;
+
+  overflow: hidden;
+
+  box-shadow: $drop-shadow-light;
+  border-radius: $border-radius;
+  border: $border;
+
+  & > .video-placeholder {
+    position: relative;
+    @include flex-row;
+    width: 100%;
+
+    & > img {
+      filter: blur(10px);
+    }
+
+    & > .loading-spinner-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  & > video {
+    display: none;
+
+    &.shown {
+      @include flex-row;
+    }
+  }
+}
