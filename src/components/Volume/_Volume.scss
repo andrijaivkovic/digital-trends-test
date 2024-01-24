@@ -222,6 +222,14 @@
         box-shadow: $drop-shadow-light;
         border-radius: $border-radius;
         border: $border;
+
+        & img {
+          filter: brightness(70%) !important;
+        }
+
+        & > .image-placeholder > img {
+          filter: brightness(70%) blur(10px) !important;
+        }
       }
 
       & video {
