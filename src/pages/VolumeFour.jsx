@@ -81,6 +81,36 @@ const VolumeFour = ({
         <title>
           Volume Up For 2024 - Digital Trends 2024 by Ovation - Volume Four
         </title>
+        <link
+          rel="preload"
+          href="/images/bg/desktop/bg-volume_four-desktop.webp"
+          as="image"
+        />
+        <link
+          rel="preload"
+          href="/images/bg/tablet/bg-volume_four-tablet.webp"
+          as="image"
+        />
+        <link
+          rel="preload"
+          href="/images/bg/mobile/bg-volume_four-mobile.webp"
+          as="image"
+        />
+        <link
+          rel="preload"
+          href="/images/bg/desktop/bg-volume_five-desktop.webp"
+          as="image"
+        />
+        <link
+          rel="preload"
+          href="/images/bg/tablet/bg-volume_five-tablet.webp"
+          as="image"
+        />
+        <link
+          rel="preload"
+          href="/images/bg/mobile/bg-volume_five-mobile.webp"
+          as="image"
+        />
       </Helmet>
       <Volume className="volume--four">
         <div

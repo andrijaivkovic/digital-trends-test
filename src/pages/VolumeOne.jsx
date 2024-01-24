@@ -68,6 +68,36 @@ const VolumeOne = ({
         <title>
           Volume Up For 2024 - Digital Trends 2024 by Ovation - Volume One
         </title>
+        <link
+          rel="preload"
+          href="/images/bg/desktop/bg-volume_one-desktop.webp"
+          as="image"
+        />
+        <link
+          rel="preload"
+          href="/images/bg/tablet/bg-volume_one-tablet.webp"
+          as="image"
+        />
+        <link
+          rel="preload"
+          href="/images/bg/mobile/bg-volume_one-mobile.webp"
+          as="image"
+        />
+        <link
+          rel="preload"
+          href="/images/bg/desktop/bg-volume_two-desktop.webp"
+          as="image"
+        />
+        <link
+          rel="preload"
+          href="/images/bg/tablet/bg-volume_two-tablet.webp"
+          as="image"
+        />
+        <link
+          rel="preload"
+          href="/images/bg/mobile/bg-volume_two-mobile.webp"
+          as="image"
+        />
       </Helmet>
       <Volume className="volume--one">
         <div
