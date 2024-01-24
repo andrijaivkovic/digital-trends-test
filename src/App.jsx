@@ -89,6 +89,7 @@ function App() {
           rel="preload"
           href="/images/bg/desktop/bg-volume_one-desktop.webp"
           as="image"
+          fetchPriority="high"
         />
         <link
           rel="preload"
