@@ -85,36 +85,6 @@ function App() {
       <Helmet>
         <html lang={language} />
         <meta name="theme-color" content="#E5EAFF" />
-        <link
-          rel="preload"
-          href="/images/bg/desktop/bg-volume_seven-desktop.webp"
-          as="image"
-        />
-        <link
-          rel="preload"
-          href="/images/bg/tablet/bg-volume_seven-tablet.webp"
-          as="image"
-        />
-        <link
-          rel="preload"
-          href="/images/bg/mobile/bg-volume_seven-mobile.webp"
-          as="image"
-        />
-        <link
-          rel="preload"
-          href="/images/bg/desktop/bg-volume_eight-desktop.webp"
-          as="image"
-        />
-        <link
-          rel="preload"
-          href="/images/bg/tablet/bg-volume_eight-tablet.webp"
-          as="image"
-        />
-        <link
-          rel="preload"
-          href="/images/bg/mobile/bg-volume_eight-mobile.webp"
-          as="image"
-        />
       </Helmet>
       <Navigation
         language={language}
