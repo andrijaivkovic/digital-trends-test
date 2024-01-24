@@ -114,7 +114,7 @@ const VolumeSeven = ({
                       cy="18"
                       r="18"
                       transform="translate(1351 846)"
-                      fill="#fabc2b"
+                      fill="#f8c140"
                     />
                     <g
                       id="Group_10997"

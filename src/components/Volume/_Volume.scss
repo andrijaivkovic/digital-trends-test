@@ -178,6 +178,12 @@
       padding: 12rem 18rem;
       @include glass-bright;
 
+      & > svg {
+        animation-name: rotate;
+        animation-duration: 25s;
+        animation-iteration-count: infinite;
+      }
+
       @include mediaQuery(tablet) {
         padding: 5rem 12rem;
 
@@ -253,6 +259,15 @@
 
     &--volume-four {
       padding: 12rem 18rem;
+
+      & > svg {
+        animation: hover-big;
+        animation-duration: 2.5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-fill-mode: none;
+      }
 
       @include mediaQuery(tablet) {
         padding: 5rem 12rem;
@@ -1916,5 +1931,14 @@
   }
   to {
     rotate: 360deg;
+  }
+}
+
+@keyframes hover-big {
+  from {
+    translate: 0 10px;
+  }
+  to {
+    translate: 0 -10px;
   }
 }
