@@ -1882,8 +1882,6 @@
 
     flex-basis: 60%;
 
-    overflow: hidden;
-
     @include mediaQuery(tablet) {
       flex: 1;
     }
