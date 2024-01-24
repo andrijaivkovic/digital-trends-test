@@ -218,6 +218,12 @@
       border-radius: unset;
       border: unset;
 
+      & .image-container {
+        box-shadow: $drop-shadow-light;
+        border-radius: $border-radius;
+        border: $border;
+      }
+
       & video {
         filter: brightness(70%);
       }
