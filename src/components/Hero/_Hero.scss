@@ -39,7 +39,7 @@
   &__waveform-animation-container {
     animation-name: fadeUp;
     animation-duration: 0.75s;
-    animation-delay: 1s;
+    // animation-delay: 1s;
     animation-fill-mode: backwards;
 
     height: 18rem;
@@ -62,7 +62,11 @@
   }
 
   &__credits {
-    animation: fadeUp 0.75s linear 1.5s backwards;
+    animation: fadeUp;
+    animation-timing-function: linear;
+    animation-fill-mode: backwards;
+    // animation-delay: 1.5s;
+    animation-duration: 0.75s;
     margin-top: 6rem;
     margin-bottom: 8rem;
     height: 8rem;

@@ -1,7 +1,14 @@
 import { useEffect, useRef } from "react";
 import Lottie from "lottie-web";
 
-const LottieAnimation = ({ className, path, loop, autoplay, delay }) => {
+const LottieAnimation = ({
+  className,
+  path,
+  loop,
+  autoplay,
+  delay,
+  style = {},
+}) => {
   const lottieAnimationContainer = useRef(null);
 
   useEffect(() => {
@@ -13,14 +20,18 @@ const LottieAnimation = ({ className, path, loop, autoplay, delay }) => {
       path: path,
     });
 
-    if (autoplay) {
-      setTimeout(() => {
-        animation.play();
-      }, delay);
-    }
+    setTimeout(() => {
+      animation.play();
+    }, delay);
   }, [autoplay, loop, path, delay]);
 
-  return <div className={className} ref={lottieAnimationContainer}></div>;
+  return (
+    <div
+      style={style}
+      className={className}
+      ref={lottieAnimationContainer}
+    ></div>
+  );
 };
 
 export default LottieAnimation;

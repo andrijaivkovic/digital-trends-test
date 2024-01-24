@@ -1,5 +1,10 @@
 import LottieAnimation from "../LottieAnimation/LottieAnimation";
 
+const ANIMATION_BASE_DELAY = 250;
+const WAVEFORM_ANIMATION_DELAY = 1050;
+const CREDITS_ANIMATION_DELAY = 1500;
+const SCROLL_INDICATOR_ANIMATION_DELAYS = [600, 2000];
+
 const Hero = () => {
   return (
     <article className="hero">
@@ -9,19 +14,23 @@ const Hero = () => {
           "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/hero_text.json"
         }
         loop={false}
-        autoplay={true}
-        delay={100}
+        autoplay={false}
+        delay={ANIMATION_BASE_DELAY}
       />
       <LottieAnimation
+        style={{ animationDelay: `${WAVEFORM_ANIMATION_DELAY}ms` }}
         className="hero__waveform-animation-container"
         path={
           "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/hero_waveform.json"
         }
         loop={true}
-        autoplay={true}
-        delay={500}
+        autoplay={false}
+        delay={0}
       />
-      <div className="hero__credits">
+      <div
+        style={{ animationDelay: `${CREDITS_ANIMATION_DELAY}ms` }}
+        className="hero__credits"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="298.704"
@@ -149,7 +158,14 @@ const Hero = () => {
           </g>
         </svg>
       </div>
-      <div className="hero__scroll-indicator">
+      <div
+        style={{
+          animationDelay: `${SCROLL_INDICATOR_ANIMATION_DELAYS.at(
+            0
+          )}ms, ${SCROLL_INDICATOR_ANIMATION_DELAYS.at(1)}ms`,
+        }}
+        className="hero__scroll-indicator"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="109.356"
