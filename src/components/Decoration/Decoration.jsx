@@ -18,8 +18,8 @@ const Decoration = ({ path, style = {}, className = "" }) => {
         <LottieReact
           className={`animation ${isLoaded ? "shown" : ""}`}
           onDataReady={() => {
-            // setTimeout(() => setIsLoaded(true), 2000);
-            setIsLoaded(true);
+            setTimeout(() => setIsLoaded(true), 500);
+            // setIsLoaded(true);
           }}
           path={path}
           loop={true}

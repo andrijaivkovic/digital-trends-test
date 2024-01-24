@@ -23,8 +23,8 @@ const Video = ({
       )}
       <video
         onLoadedData={() => {
-          // setTimeout(() => setIsLoaded(true), 2000);
-          setIsLoaded(true);
+          setTimeout(() => setIsLoaded(true), 500);
+          // setIsLoaded(true);
         }}
         className={`${isLoaded ? "shown" : ""}`}
         width={width}
