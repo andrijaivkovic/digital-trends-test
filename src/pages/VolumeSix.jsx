@@ -222,6 +222,7 @@ const VolumeSix = ({
               )}
             </div>
             <Decoration
+              style={{ width: "70rem", height: "70rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_6_deco_2.json"
               }
