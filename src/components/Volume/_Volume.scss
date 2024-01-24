@@ -218,9 +218,12 @@
       border-radius: unset;
       border: unset;
 
-      & video,
-      img {
+      & video {
         filter: brightness(70%);
+      }
+
+      & .video-placeholder > img {
+        filter: brightness(70%) blur(10px) !important;
       }
 
       z-index: -1;

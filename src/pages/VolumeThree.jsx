@@ -102,7 +102,7 @@ const VolumeThree = ({
           <div className="volume__title-video volume__title-video--volume-three">
             {!isiPhone && (
               <Video
-                placeholderPath="/images/volumes/volume-three/volume_3_image_title-placeholder.jpg"
+                placeholderPath="/images/volumes/volume-three/volume_3_video_title-placeholder.jpg"
                 path={volume3TitleVideo}
               />
             )}
