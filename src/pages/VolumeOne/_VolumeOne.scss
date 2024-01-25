@@ -1,0 +1,239 @@
+.volume {
+  &__title {
+    &--volume-one {
+      margin-bottom: 24rem;
+
+      @include mediaQuery(tablet) {
+        flex-direction: row-reverse;
+        margin-bottom: 24rem;
+      }
+
+      @include mediaQuery(mobile) {
+        flex-direction: row-reverse;
+        margin-bottom: 16rem;
+      }
+    }
+  }
+
+  &__title-image,
+  &__title-video {
+    &--volume-one {
+      padding: 12rem 18rem;
+      @include glass-bright;
+
+      & > svg {
+        animation-name: rotate;
+        animation-duration: 35s;
+        animation-iteration-count: infinite;
+      }
+
+      @include mediaQuery(tablet) {
+        padding: 5rem 12rem;
+
+        & > svg {
+          height: 14rem;
+          width: 14rem;
+        }
+      }
+
+      @include mediaQuery(mobile) {
+        padding: 3rem 7rem;
+
+        & > svg {
+          height: 10rem;
+          width: 10rem;
+        }
+      }
+    }
+  }
+
+  &__checkmark {
+    &--volume-one {
+      left: 2rem;
+
+      & > p {
+        color: $color-volume-one;
+      }
+
+      @include mediaQuery(tablet) {
+        left: unset;
+        right: 2rem;
+      }
+
+      @include mediaQuery(mobile) {
+        left: unset;
+        right: 1rem;
+      }
+    }
+  }
+
+  &__title-text {
+    &--volume-one {
+      margin-bottom: -9.5rem;
+      margin-left: -13rem;
+
+      & > * {
+        color: $color-volume-one;
+      }
+
+      @include mediaQuery(tablet) {
+        margin-left: unset;
+        margin-right: -20rem;
+        margin-bottom: -13rem;
+      }
+
+      @include mediaQuery(mobile) {
+        margin-left: unset;
+        margin-right: -16rem;
+        margin-bottom: -8.7rem;
+      }
+    }
+  }
+
+  &__title-name {
+    &--volume-one {
+      max-width: 70rem;
+
+      @include mediaQuery(tablet) {
+        max-width: 42rem;
+      }
+
+      @include mediaQuery(mobile) {
+        max-width: 27rem;
+      }
+    }
+  }
+
+  &__title-description {
+    &--volume-one {
+      max-width: 60rem;
+    }
+  }
+
+  &__section {
+    &--volume-one {
+      &-section-one {
+        & > .volume__textbox {
+          padding-right: 11rem;
+        }
+
+        & > .volume__decoration {
+          translate: 0 -6rem;
+          margin-left: -14rem;
+          scale: 1.1;
+          rotate: -3deg;
+        }
+      }
+
+      &-section-two {
+        margin-top: -8rem;
+        & > .volume__decoration {
+          margin-right: -5rem;
+          scale: -1.1 1.1;
+        }
+
+        & > .volume__image {
+          & > .image-container {
+            @include mediaQuery(mobile) {
+              height: 50vw;
+            }
+
+            @include mediaQuery(tablet) {
+              height: 42vw;
+            }
+          }
+        }
+      }
+
+      &-section-three {
+        & > .volume__textbox {
+          padding-right: 11rem;
+        }
+
+        & > .volume__decoration {
+          translate: 0 -8rem;
+          margin-left: -8rem;
+          scale: 1.2;
+          rotate: 3deg;
+        }
+      }
+
+      &-section-four {
+        margin-top: -5rem;
+        & > .volume__decoration {
+          margin-right: -10em;
+          translate: 0 -3rem;
+          scale: -0.8 0.8;
+        }
+
+        & > .volume__image {
+          & > .image-container {
+            @include mediaQuery(mobile) {
+              height: 40vw;
+            }
+
+            @include mediaQuery(tablet) {
+              height: 35vw;
+            }
+          }
+        }
+      }
+
+      &-section-five {
+        margin-top: -3rem;
+        & > .volume__textbox {
+          padding-right: 11rem;
+        }
+
+        & > .volume__decoration {
+          margin-left: -22rem;
+          translate: -0rem -1rem;
+          scale: 0.9;
+        }
+      }
+
+      &-section-six {
+        & > .volume__decoration {
+          margin-right: -4em;
+          flex-basis: 45%;
+        }
+        & > .volume__image {
+          & > .image-container {
+            @include mediaQuery(mobile) {
+              height: 55vw;
+            }
+            @include mediaQuery(tablet) {
+              height: 45vw;
+            }
+          }
+        }
+      }
+
+      &-section-seven {
+        margin-top: -5rem;
+        margin-bottom: -10rem;
+
+        & > .volume__textbox {
+          padding-right: 11rem;
+        }
+
+        & > .volume__decoration {
+          margin-left: -14rem;
+          translate: -0rem -10rem;
+        }
+      }
+    }
+  }
+
+  &__textbox {
+    &--volume-one:before {
+      background-image: linear-gradient(
+        90deg,
+        rgba(56, 189, 248, 0) 0%,
+        rgba(14, 14, 255, 0.75) 40%,
+        rgba(241, 69, 14, 0.75) 60%,
+        rgba(236, 72, 153, 0) 100%
+      );
+    }
+  }
+}

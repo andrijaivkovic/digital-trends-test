@@ -8,21 +8,21 @@ import Hero from "./components/Hero/Hero";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
 
-import VolumeOne from "../src/pages/VolumeOne";
-import VolumeTwo from "../src/pages/VolumeTwo";
-import VolumeThree from "../src/pages/VolumeThree";
-import VolumeFour from "./pages/VolumeFour";
-import VolumeFive from "./pages/VolumeFive";
-import VolumeSix from "./pages/VolumeSix";
-import VolumeSeven from "./pages/VolumeSeven";
-import VolumeEight from "./pages/VolumeEight";
+import VolumeOne from "./pages/VolumeOne/VolumeOne";
+import VolumeTwo from "./pages/VolumeTwo/VolumeTwo";
+import VolumeThree from "./pages/VolumeThree/VolumeThree";
+import VolumeFour from "./pages/VolumeFour/VolumeFour";
+import VolumeFive from "./pages/VolumeFive/VolumeFive";
+import VolumeSix from "./pages/VolumeSix/VolumeSix";
+import VolumeSeven from "./pages/VolumeSeven/VolumeSeven";
+import VolumeEight from "./pages/VolumeEight/VolumeEight";
 
 import LastVisitedVolume from "./components/LastVisited/LastVisitedVolume";
 
 import SpotifyPlayer from "./components/SpotifyPlayer/SpotifyPlayer";
 import VolumeNavigation from "./components/VolumeNavigation/VolumeNavigation";
 
-import ClearLocalStorage from "./components/ClearLocalStorage/ClearLocalStorage";
+// import ClearLocalStorage from "./components/ClearLocalStorage/ClearLocalStorage";
 import KeyVideo from "./components/KeyVideo/KeyVideo";
 
 const getPreferredLanuage = () => {

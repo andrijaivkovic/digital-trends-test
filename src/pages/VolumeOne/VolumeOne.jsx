@@ -3,10 +3,10 @@ import { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import numberToWords from "number-to-words";
 
-import Volume from "../components/Volume/Volume";
+import Volume from "../../components/Volume/Volume";
 
-import Image from "../components/Image/Image";
-import Decoration from "../components/Decoration/Decoration";
+import Image from "../../components/Image/Image";
+import Decoration from "../../components/Decoration/Decoration";
 
 const volumeNumber = 1;
 

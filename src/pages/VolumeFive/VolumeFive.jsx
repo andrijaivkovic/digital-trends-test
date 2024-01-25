@@ -5,15 +5,15 @@ import { Helmet } from "react-helmet-async";
 import numberToWords from "number-to-words";
 import scrollIntoView from "scroll-into-view";
 
-import Volume from "../components/Volume/Volume";
+import Volume from "../../components/Volume/Volume";
 
-import Decoration from "../components/Decoration/Decoration";
-import Image from "../components/Image/Image";
+import Decoration from "../../components/Decoration/Decoration";
+import Image from "../../components/Image/Image";
 
 import volume5video1 from "/video/volume_5_video_1.mp4";
 
-import { VOLUME_READ_OBSERVER_DELAY } from "../helpers/variables";
-import Video from "../components/Video/Video";
+import { VOLUME_READ_OBSERVER_DELAY } from "../../helpers/variables";
+import Video from "../../components/Video/Video";
 
 const volumeNumber = 5;
 

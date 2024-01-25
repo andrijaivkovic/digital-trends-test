@@ -5,17 +5,17 @@ import { Helmet } from "react-helmet-async";
 import numberToWords from "number-to-words";
 import scrollIntoView from "scroll-into-view";
 
-import Volume from "../components/Volume/Volume";
+import Volume from "../../components/Volume/Volume";
 
-import Embed from "../components/Embed/Embed";
-import Decoration from "../components/Decoration/Decoration";
+import Embed from "../../components/Embed/Embed";
+import Decoration from "../../components/Decoration/Decoration";
 
-import Image from "../components/Image/Image";
-import Video from "../components/Video/Video";
+import Image from "../../components/Image/Image";
+import Video from "../../components/Video/Video";
 
 import volume3TitleVideo from "/video/volume_3_title_video.mp4";
 
-import { VOLUME_READ_OBSERVER_DELAY } from "../helpers/variables";
+import { VOLUME_READ_OBSERVER_DELAY } from "../../helpers/variables";
 
 const volumeNumber = 3;
 

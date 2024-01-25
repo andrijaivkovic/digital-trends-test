@@ -11,14 +11,23 @@
 @import "./src/components/Volume/Volume";
 @import "./src//components/Footer/Footer";
 
-@import "./src/components/LoadingSpinner/LoadingSpinner";
+@import "./src/pages/VolumeOne/VolumeOne";
+@import "./src/pages/VolumeTwo/VolumeTwo";
+@import "./src/pages/VolumeThree/VolumeThree";
+@import "./src/pages/VolumeFour/VolumeFour";
+@import "./src/pages/VolumeFive/VolumeFive";
+@import "./src/pages/VolumeSix/VolumeSix";
+@import "./src/pages/VolumeSeven/VolumeSeven";
+@import "./src/pages/VolumeEight/VolumeEight";
+
 @import "./src/components/VolumeNavigation/VolumeNavigation";
 @import "./src/components/SpotifyPlayer/SpotifyPlayer";
-@import "./src/components/Embed/Embed";
-@import "./src/components/Decoration/Decoration";
 @import "./src/components/KeyVideo/KeyVideo";
 
 @import "./src/components/Image/Image";
 @import "./src/components/Video/Video";
+@import "./src/components/Embed/Embed";
+@import "./src/components/Decoration/Decoration";
+@import "./src/components/LoadingSpinner/LoadingSpinner";
 
 @import "./src/components/ClearLocalStorage/ClearLocalStorage";

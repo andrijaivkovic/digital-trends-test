@@ -4,12 +4,12 @@ import { Helmet } from "react-helmet-async";
 import numberToWords from "number-to-words";
 import scrollIntoView from "scroll-into-view";
 
-import Volume from "../components/Volume/Volume";
+import Volume from "../../components/Volume/Volume";
 
-import Decoration from "../components/Decoration/Decoration";
+import Decoration from "../../components/Decoration/Decoration";
 
-import { VOLUME_READ_OBSERVER_DELAY } from "../helpers/variables";
-import Image from "../components/Image/Image";
+import { VOLUME_READ_OBSERVER_DELAY } from "../../helpers/variables";
+import Image from "../../components/Image/Image";
 
 const volumeNumber = 6;
 

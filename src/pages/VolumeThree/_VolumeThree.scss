@@ -1,0 +1,223 @@
+.volume {
+  &__title {
+    &--volume-three {
+      margin-bottom: 40rem;
+
+      @include mediaQuery(tablet) {
+        flex-direction: row-reverse;
+        margin-bottom: 24rem;
+      }
+
+      @include mediaQuery(mobile) {
+        flex-direction: row-reverse;
+        margin-bottom: 16rem;
+      }
+    }
+  }
+
+  &__title-image,
+  &__title-video {
+    &--volume-three {
+      flex-basis: 42%;
+      aspect-ratio: 1 / 1;
+
+      box-shadow: unset;
+      border-radius: unset;
+      border: unset;
+
+      & .image-container {
+        box-shadow: $drop-shadow-light;
+        border-radius: $border-radius;
+        border: $border;
+
+        & img {
+          filter: brightness(70%) !important;
+        }
+
+        & > .image-placeholder > img {
+          filter: brightness(70%) blur(10px) !important;
+        }
+      }
+
+      & video {
+        filter: brightness(70%);
+      }
+
+      & .video-placeholder > img {
+        filter: brightness(70%) blur(10px) !important;
+      }
+
+      z-index: -1;
+
+      @include mediaQuery(tablet) {
+        flex-basis: 70%;
+      }
+
+      @include mediaQuery(mobile) {
+        flex-basis: 70%;
+      }
+    }
+  }
+
+  &__checkmark {
+    &--volume-three {
+      left: 2rem;
+
+      & > p {
+        color: $color-volume-three;
+      }
+
+      @include mediaQuery(tablet) {
+        left: unset;
+        right: 2rem;
+      }
+
+      @include mediaQuery(mobile) {
+        left: unset;
+        right: 1rem;
+      }
+    }
+  }
+
+  &__title-text {
+    &--volume-three {
+      margin-bottom: -18.5rem;
+      margin-left: -15.5rem;
+
+      & > * {
+        color: $color-volume-three;
+      }
+
+      @include mediaQuery(tablet) {
+        margin-left: unset;
+        margin-right: -30rem;
+        margin-bottom: -12.5rem;
+      }
+
+      @include mediaQuery(mobile) {
+        margin-left: unset;
+        margin-right: -18.8rem;
+        margin-bottom: -8.7rem;
+      }
+    }
+  }
+
+  &__title-name {
+    &--volume-three {
+      @include mediaQuery(mobile) {
+        min-width: 33rem;
+      }
+    }
+  }
+
+  &__title-description {
+    &--volume-three {
+      max-width: 60rem;
+
+      @include mediaQuery(mobile) {
+        max-width: 33rem;
+      }
+    }
+  }
+
+  &__section {
+    &--volume-three {
+      &-section-one {
+        & > .volume__textbox {
+          padding-right: 14rem;
+          flex-basis: 60%;
+        }
+
+        & > .volume__decoration {
+          // translate: 0 4rem;
+          margin-left: -7rem;
+          scale: 1.1;
+          rotate: -2deg;
+        }
+      }
+
+      &-section-two,
+      &-section-four,
+      &-section-six {
+        @include flex-row;
+        gap: 12rem;
+
+        justify-content: center;
+        align-items: start;
+
+        @include mediaQuery(tablet) {
+          @include flex-column;
+          gap: 8rem;
+
+          & > .volume__embed {
+            margin-top: unset !important;
+          }
+        }
+
+        @include mediaQuery(mobile) {
+          @include flex-column;
+          gap: 4rem;
+
+          & > .volume__embed {
+            margin-top: unset !important;
+          }
+        }
+      }
+
+      &-section-two,
+      &-section-six {
+        & > .volume__embed:first-of-type {
+          margin-top: 12rem;
+        }
+      }
+
+      &-section-four {
+        & > .volume__embed:last-of-type {
+          margin-top: 12rem;
+        }
+      }
+
+      &-section-five {
+        & > .volume__decoration {
+          translate: 0 -4rem;
+          scale: 0.9;
+        }
+      }
+
+      &-section-three,
+      &-section-five {
+        & > .volume__textbox {
+          padding-right: 12rem;
+        }
+
+        & > .volume__decoration {
+          margin-left: -11rem;
+        }
+      }
+
+      &-section-seven {
+        & > .volume__textbox {
+          padding-right: 12rem;
+        }
+
+        & > .volume__decoration {
+          margin-left: -3rem;
+          translate: 0 -4rem;
+          scale: 1.3;
+        }
+      }
+    }
+  }
+
+  &__textbox {
+    &--volume-three:before {
+      background-image: linear-gradient(
+        90deg,
+        rgba(56, 189, 248, 0) 0%,
+        rgb(150, 146, 255) 40%,
+        rgba(241, 69, 14, 1) 60%,
+        rgba(236, 72, 153, 0) 100%
+      );
+    }
+  }
+}
