@@ -16,7 +16,13 @@ const Decoration = ({ path, style = {}, className = "", motionProps = {} }) => {
   if (!isMobile) {
     return (
       <motion.div
-        {...motionProps}
+        {...{
+          ...motionProps,
+          transition: {
+            y: { duration: 0.45, delay: 0.2 },
+            opacity: { duration: 0.55, delay: 0.2 },
+          },
+        }}
         style={style}
         className={`volume__decoration ${className}`}
       >

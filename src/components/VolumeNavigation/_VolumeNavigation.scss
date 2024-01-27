@@ -1,25 +1,85 @@
 .volume-navigation {
-  @include flex-row;
+  @include flex-column;
+  @include flex-center;
 
-  justify-content: center;
-  gap: 30rem;
+  gap: 8rem;
 
   margin-top: 20rem;
 
   @include mediaQuery(tablet) {
-    gap: unset;
-    flex-wrap: wrap;
-    margin-top: 12rem;
-    gap: 1rem;
-    padding-inline: $body-inline-padding-tablet;
+    gap: 6rem;
   }
 
   @include mediaQuery(mobile) {
-    gap: unset;
-    flex-wrap: wrap;
-    margin-top: 8rem;
-    gap: 1rem;
-    padding-inline: $body-inline-padding-mobile;
+    gap: 4rem;
+  }
+
+  &__congrats {
+    @include flex-row;
+    @include flex-center;
+    gap: 2rem;
+
+    @include mediaQuery(tablet) {
+      gap: 1.5rem;
+    }
+
+    @include mediaQuery(mobile) {
+      gap: 1rem;
+    }
+
+    & > svg {
+      width: 2.8rem;
+      height: 2.8rem;
+
+      @include mediaQuery(tablet) {
+        width: 2.6rem;
+        height: 2.6rem;
+      }
+
+      @include mediaQuery(mobile) {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+    }
+
+    & > p {
+      color: $color-text-black;
+      font-size: 3rem;
+      font-weight: 400;
+
+      translate: 0 1px;
+
+      @include mediaQuery(tablet) {
+        font-size: 2.4rem;
+        translate: 0 1px;
+      }
+
+      @include mediaQuery(mobile) {
+        font-size: 2rem;
+        translate: 0 1px;
+      }
+    }
+  }
+
+  &__links {
+    @include flex-row;
+
+    justify-content: center;
+    gap: 30rem;
+
+    @include mediaQuery(tablet) {
+      gap: unset;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-inline: $body-inline-padding-tablet;
+    }
+
+    @include mediaQuery(mobile) {
+      gap: unset;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-inline: $body-inline-padding-mobile;
+    }
   }
 
   &__link {

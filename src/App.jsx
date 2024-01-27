@@ -199,11 +199,12 @@ function App() {
             }
           />
         </Routes>
-        <KeyVideo language={language} />
+        <KeyVideo key={currentVolumeNumber} language={language} />
       </Main>
       <VolumeNavigation
         language={language}
         currentVolumeNumber={currentVolumeNumber}
+        readVolumes={readVolumes}
       />
       <Footer />
       <SpotifyPlayer

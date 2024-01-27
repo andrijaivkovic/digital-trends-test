@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import numberToWords from "number-to-words";
-import scrollIntoView from "scroll-into-view";
+// import scrollIntoView from "scroll-into-view";
 
 import Volume from "../../components/Volume/Volume";
 
@@ -28,7 +28,8 @@ const VolumeFour = ({
 
   useEffect(() => {
     if (isVolumeRead === false)
-      scrollIntoView(volumeTitle.current, { time: 1200, align: { top: 0.4 } });
+      // scrollIntoView(volumeTitle.current, { time: 1200, align: { top: 0.4 } });
+      volumeTitle.current.scrollIntoView();
   }, [isVolumeRead]);
 
   useEffect(() => {

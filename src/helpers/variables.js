@@ -16,13 +16,13 @@ export const elementsMotionProps = {
   whileInView: "animate",
   exit: "exit",
   viewport: {
-    once: false,
+    once: true,
     amount: 0.45,
     // margin: "-200px",
   },
   transition: {
-    y: { duration: 0.4, ease: "easeInOut" },
-    opacity: { duration: 0.5, ease: "easeInOut" },
+    y: { duration: 0.45, ease: [0.65, 0, 0.35, 1] },
+    opacity: { duration: 0.55, ease: [0.65, 0, 0.35, 1] },
   },
 };
 
