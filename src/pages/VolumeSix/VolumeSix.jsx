@@ -1,15 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 
 import { Helmet } from "react-helmet-async";
+import { motion } from "framer-motion";
 import numberToWords from "number-to-words";
 import scrollIntoView from "scroll-into-view";
 
 import Volume from "../../components/Volume/Volume";
 
+import Image from "../../components/Image/Image";
 import Decoration from "../../components/Decoration/Decoration";
 
 import { VOLUME_READ_OBSERVER_DELAY } from "../../helpers/variables";
-import Image from "../../components/Image/Image";
+import { elementsMotionProps } from "../../helpers/variables";
 
 const volumeNumber = 6;
 
@@ -116,7 +118,10 @@ const VolumeSix = ({
           ref={volumeTitle}
           className="volume__title volume__title--reverse volume__title--volume-six"
         >
-          <div className="volume__title-image volume__title-image--volume-six">
+          <motion.div
+            {...elementsMotionProps}
+            className="volume__title-image volume__title-image--volume-six"
+          >
             <Image
               webpPath="/images/volumes/volume-six/volume_6_image_title.webp"
               path="/images/volumes/volume-six/volume_6_image_title.jpg"
@@ -182,22 +187,32 @@ const VolumeSix = ({
                 )}
               </div>
             )}
-          </div>
+          </motion.div>
           <div className="volume__title-text volume__title-text--volume-six">
-            <p className="volume__title-number volume__title-number--volume-six">
+            <motion.p
+              {...elementsMotionProps}
+              className="volume__title-number volume__title-number--volume-six"
+            >
               Volume 6
-            </p>
+            </motion.p>
             <h2 className="volume__title-name volume__title-name--volume-six">
-              Data is What You Came For
+              <motion.span {...elementsMotionProps}>Data is What</motion.span>
+              <motion.span {...elementsMotionProps}>You Came For</motion.span>
             </h2>
-            <p className="volume__title-description volume__title-description--volume-six">
+            <motion.p
+              {...elementsMotionProps}
+              className="volume__title-description volume__title-description--volume-six"
+            >
               Big data, research, research, research
-            </p>
+            </motion.p>
           </div>
         </div>
         <div className="volume__content">
           <section className="volume__section volume__section--non-reverse volume__section--volume-six-section-one">
-            <div className="volume__textbox volume__textbox--volume-six">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__textbox volume__textbox--volume-six"
+            >
               {language === "en-US" ? (
                 <>
                   <p>
@@ -250,8 +265,9 @@ const VolumeSix = ({
                   <p>Ukratko – veliku.</p>
                 </>
               )}
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "70rem", height: "70rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_6_deco_2.json"
@@ -259,7 +275,10 @@ const VolumeSix = ({
             />
           </section>
           <section className="volume__section volume__section--volume-six-section-two">
-            <div className="volume__image volume__image--vertical">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__image volume__image--vertical"
+            >
               <Image
                 webpPath="/images/volumes/volume-six/volume_6_image_1.webp"
                 path="/images/volumes/volume-six/volume_6_image_1.jpg"
@@ -269,8 +288,11 @@ const VolumeSix = ({
               <div className="volume__image-description">
                 <p>McDonald’s</p>
               </div>
-            </div>
-            <div className="volume__image volume__image--vertical">
+            </motion.div>
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__image volume__image--vertical"
+            >
               <Image
                 webpPath="/images/volumes/volume-six/volume_6_image_2.webp"
                 path="/images/volumes/volume-six/volume_6_image_2.jpg"
@@ -280,10 +302,13 @@ const VolumeSix = ({
               <div className="volume__image-description">
                 <p>Marriott Hotels</p>
               </div>
-            </div>
+            </motion.div>
           </section>
           <section className="volume__section volume__section--non-reverse volume__section--volume-six-section-three">
-            <div className="volume__textbox volume__textbox--volume-six">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__textbox volume__textbox--volume-six"
+            >
               {language === "en-US" ? (
                 <>
                   <p>
@@ -317,8 +342,9 @@ const VolumeSix = ({
                   </p>
                 </>
               )}
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "72rem", height: "48rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_6_deco_1.json"
@@ -326,7 +352,10 @@ const VolumeSix = ({
             />
           </section>
           <section className="volume__section volume__section--volume-six-section-four">
-            <div className="volume__image volume__image--vertical">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__image volume__image--vertical"
+            >
               <Image
                 webpPath="/images/volumes/volume-six/volume_6_image_3.webp"
                 path="/images/volumes/volume-six/volume_6_image_3.jpg"
@@ -336,8 +365,11 @@ const VolumeSix = ({
               <div className="volume__image-description">
                 <p>Starbucks</p>
               </div>
-            </div>
-            <div className="volume__image volume__image--vertical">
+            </motion.div>
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__image volume__image--vertical"
+            >
               <Image
                 webpPath="/images/volumes/volume-six/volume_6_image_4.webp"
                 path="/images/volumes/volume-six/volume_6_image_4.jpg"
@@ -347,10 +379,13 @@ const VolumeSix = ({
               <div className="volume__image-description">
                 <p>Netflix</p>
               </div>
-            </div>
+            </motion.div>
           </section>
           <section className="volume__section volume__section--non-reverse volume__section--volume-six-section-five">
-            <div className="volume__textbox volume__textbox--volume-six">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__textbox volume__textbox--volume-six"
+            >
               {language === "en-US" ? (
                 <>
                   <p>How is it formed?</p>
@@ -391,8 +426,9 @@ const VolumeSix = ({
                   </p>
                 </>
               )}
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "70rem", height: "70rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_6_deco_3.json"
@@ -400,7 +436,10 @@ const VolumeSix = ({
             />
           </section>
           <section className="volume__section volume__section--volume-six-section-six">
-            <div className="volume__image volume__image--vertical">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__image volume__image--vertical"
+            >
               <Image
                 webpPath="/images/volumes/volume-six/volume_6_image_5.webp"
                 path="/images/volumes/volume-six/volume_6_image_5.jpg"
@@ -410,8 +449,11 @@ const VolumeSix = ({
               <div className="volume__image-description">
                 <p>Amazon</p>
               </div>
-            </div>
-            <div className="volume__image volume__image--vertical">
+            </motion.div>
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__image volume__image--vertical"
+            >
               <Image
                 webpPath="/images/volumes/volume-six/volume_6_image_6.webp"
                 path="/images/volumes/volume-six/volume_6_image_6.jpg"
@@ -421,13 +463,16 @@ const VolumeSix = ({
               <div className="volume__image-description">
                 <p>Spotify</p>
               </div>
-            </div>
+            </motion.div>
           </section>
           <section
             ref={lastSection}
             className="volume__section volume__section--non-reverse volume__section--volume-six-section-seven"
           >
-            <div className="volume__textbox volume__textbox--volume-six">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__textbox volume__textbox--volume-six"
+            >
               {language === "en-US" ? (
                 <>
                   <p>
@@ -468,8 +513,9 @@ const VolumeSix = ({
                   </p>
                 </>
               )}
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "60rem", height: "48rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_6_deco_4.json"

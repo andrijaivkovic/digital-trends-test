@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import { Helmet } from "react-helmet-async";
-
+import { motion } from "framer-motion";
 import numberToWords from "number-to-words";
 import scrollIntoView from "scroll-into-view";
 
@@ -11,6 +11,7 @@ import Decoration from "../../components/Decoration/Decoration";
 import Embed from "../../components/Embed/Embed";
 
 import { VOLUME_READ_OBSERVER_DELAY } from "../../helpers/variables";
+import { elementsMotionProps } from "../../helpers/variables";
 
 const volumeNumber = 4;
 
@@ -117,7 +118,10 @@ const VolumeFour = ({
           ref={volumeTitle}
           className="volume__title volume__title--reverse volume__title--volume-four"
         >
-          <div className="volume__title-image volume__title-image--volume-four">
+          <motion.div
+            {...elementsMotionProps}
+            className="volume__title-image volume__title-image--volume-four"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="138.091"
@@ -191,23 +195,35 @@ const VolumeFour = ({
                 )}
               </div>
             )}
-          </div>
+          </motion.div>
           <div className="volume__title-text volume__title-text--volume-four">
-            <p className="volume__title-number volume__title-number--volume-four">
+            <motion.p
+              {...elementsMotionProps}
+              className="volume__title-number volume__title-number--volume-four"
+            >
               Volume 4
-            </p>
+            </motion.p>
             <h2 className="volume__title-name volume__title-name--volume-four">
-              Look What <br /> TikTok Made Me Do
+              <motion.span {...elementsMotionProps}>Look What</motion.span>
+              <motion.span {...elementsMotionProps}>
+                TikTok Made Me Do
+              </motion.span>
             </h2>
-            <p className="volume__title-description volume__title-description--volume-four">
+            <motion.p
+              {...elementsMotionProps}
+              className="volume__title-description volume__title-description--volume-four"
+            >
               The answers you’re looking for are hidden on TikTok, do the
               research
-            </p>
+            </motion.p>
           </div>
         </div>
         <div className="volume__content">
           <section className="volume__section volume__section--non-reverse volume__section--volume-four-section-one">
-            <div className="volume__textbox volume__textbox--volume-four">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__textbox volume__textbox--volume-four"
+            >
               {language === "en-US" ? (
                 <>
                   <p>
@@ -250,8 +266,9 @@ const VolumeFour = ({
                   </p>
                 </>
               )}
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "60rem", height: "60rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_4_deco_1.json"
@@ -260,6 +277,7 @@ const VolumeFour = ({
           </section>
           <section className="volume__section volume__section--volume-four-section-two">
             <Embed
+              motionProps={elementsMotionProps}
               type="vertical"
               site="tiktok"
               src="https://www.tiktok.com/embed/7206038743336389934"
@@ -268,6 +286,7 @@ const VolumeFour = ({
               allowFullScreen={true}
             />
             <Embed
+              motionProps={elementsMotionProps}
               type="vertical"
               site="tiktok"
               src="https://www.tiktok.com/embed/7283213311909367083"
@@ -277,7 +296,10 @@ const VolumeFour = ({
             />
           </section>
           <section className="volume__section volume__section--non-reverse volume__section--volume-four-section-three">
-            <div className="volume__textbox volume__textbox--volume-four">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__textbox volume__textbox--volume-four"
+            >
               {language === "en-US" ? (
                 <>
                   <p>
@@ -312,8 +334,9 @@ const VolumeFour = ({
                   </p>
                 </>
               )}
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "60rem", height: "60rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_4_deco_2.json"
@@ -322,6 +345,7 @@ const VolumeFour = ({
           </section>
           <section className="volume__section volume__section--volume-four-section-four">
             <Embed
+              motionProps={elementsMotionProps}
               type="vertical"
               site="tiktok"
               src="https://www.tiktok.com/embed/7254683600090713387"
@@ -330,6 +354,7 @@ const VolumeFour = ({
               allowFullScreen={true}
             />
             <Embed
+              motionProps={elementsMotionProps}
               type="vertical"
               site="tiktok"
               src="https://www.tiktok.com/embed/7246843475566546219"
@@ -342,7 +367,10 @@ const VolumeFour = ({
             ref={lastSection}
             className="volume__section volume__section--non-reverse volume__section--volume-four-section-five"
           >
-            <div className="volume__textbox volume__textbox--volume-four">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__textbox volume__textbox--volume-four"
+            >
               {language === "en-US" ? (
                 <>
                   <p>And what does that mean for us? For the brands?</p>
@@ -384,8 +412,9 @@ const VolumeFour = ({
                   </p>
                 </>
               )}
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "64rem", height: "72rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_4_deco_3.json"

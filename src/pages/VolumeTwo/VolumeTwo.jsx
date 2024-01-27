@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import { Helmet } from "react-helmet-async";
+import { motion } from "framer-motion";
 import numberToWords from "number-to-words";
 import scrollIntoView from "scroll-into-view";
 
@@ -11,6 +12,7 @@ import Decoration from "../../components/Decoration/Decoration";
 import Image from "../../components/Image/Image";
 
 import { VOLUME_READ_OBSERVER_DELAY } from "../../helpers/variables";
+import { elementsMotionProps } from "../../helpers/variables";
 
 const volumeNumber = 2;
 
@@ -116,7 +118,10 @@ const VolumeTwo = ({
           ref={volumeTitle}
           className="volume__title volume__title--reverse volume__title--volume-two"
         >
-          <div className="volume__title-image volume__title-image--volume-two">
+          <motion.div
+            {...elementsMotionProps}
+            className="volume__title-image volume__title-image--volume-two"
+          >
             <Image
               webpPath="/images/volumes/volume-2/volume_2_image_title.webp"
               path="/images/volumes/volume-2/volume_2_image_title.jpg"
@@ -182,23 +187,33 @@ const VolumeTwo = ({
                 )}
               </div>
             )}
-          </div>
-          <div className="volume__title-text volume__title-text--volume-two">
+          </motion.div>
+          <motion.div
+            {...elementsMotionProps}
+            className="volume__title-text volume__title-text--volume-two"
+          >
             <p className="volume__title-number volume__title-number--volume-two">
               Volume 2
             </p>
             <h2 className="volume__title-name volume__title-name--volume-two">
-              In This World It’s Just You
+              <motion.span {...elementsMotionProps}>In This World</motion.span>
+              <motion.span {...elementsMotionProps}>It’s Just You</motion.span>
             </h2>
-            <p className="volume__title-description volume__title-description--volume-two">
+            <motion.p
+              {...elementsMotionProps}
+              className="volume__title-description volume__title-description--volume-two"
+            >
               Hyper-personalisation, human content & storytelling, immersive
               advertising
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
         </div>
         <div className="volume__content">
           <section className="volume__section volume__section--non-reverse volume__section--volume-two-section-one">
-            <div className="volume__textbox volume__textbox--volume-two">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__textbox volume__textbox--volume-two"
+            >
               {language === "en-US" ? (
                 <>
                   <p>
@@ -237,8 +252,9 @@ const VolumeTwo = ({
                   </p>
                 </>
               )}
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "72rem", height: "64rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_2_deco_1.json"
@@ -246,7 +262,7 @@ const VolumeTwo = ({
             />
           </section>
           <section className="volume__section volume__section--reverse volume__section--volume-two-section-two">
-            <div className="volume__image">
+            <motion.div {...elementsMotionProps} className="volume__image">
               <Image
                 webpPath="/images/volumes/volume-2/volume_2_image_1.webp"
                 path="/images/volumes/volume-1/volume_2_image_1.jpg"
@@ -256,8 +272,9 @@ const VolumeTwo = ({
               <div className="volume__image-description">
                 <p>Spotify Wrapped</p>
               </div>
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "72rem", height: "64rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_2_deco_2.json"
@@ -265,7 +282,10 @@ const VolumeTwo = ({
             />
           </section>
           <section className="volume__section volume__section--non-reverse volume__section--volume-two-section-three">
-            <div className="volume__textbox volume__textbox--volume-two">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__textbox volume__textbox--volume-two"
+            >
               {language === "en-US" ? (
                 <>
                   <p>
@@ -308,8 +328,9 @@ const VolumeTwo = ({
                   </p>
                 </>
               )}
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "72rem", height: "64rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_2_deco_3.json"
@@ -318,6 +339,7 @@ const VolumeTwo = ({
           </section>
           <section className="volume__section volume__section--reverse volume__section--volume-two-section-four">
             <Embed
+              motionProps={elementsMotionProps}
               type="horizontal"
               site="youtube"
               src="https://www.youtube.com/embed/3KtWfp0UopM?si=T3ilnYqNY23X4C4-&autoplay=1"
@@ -328,6 +350,7 @@ const VolumeTwo = ({
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;"
             />
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "72rem", height: "50rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_2_deco_4.json"
@@ -335,7 +358,10 @@ const VolumeTwo = ({
             />
           </section>
           <section className="volume__section volume__section--non-reverse volume__section--volume-two-section-five">
-            <div className="volume__textbox volume__textbox--volume-two">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__textbox volume__textbox--volume-two"
+            >
               {language === "en-US" ? (
                 <>
                   <p>How do we evoke an emotional reaction?</p>
@@ -369,7 +395,7 @@ const VolumeTwo = ({
                   </p>
                 </>
               )}
-            </div>
+            </motion.div>
             <Decoration
               style={{ width: "72rem", height: "64rem" }}
               path={
@@ -378,7 +404,7 @@ const VolumeTwo = ({
             />
           </section>
           <section className="volume__section volume__section--reverse volume__section--volume-two-section-six">
-            <div className="volume__image">
+            <motion.div {...elementsMotionProps} className="volume__image">
               <Image
                 webpPath="/images/volumes/volume-2/volume_2_image_2.webp"
                 path="/images/volumes/volume-1/volume_2_image_2.jpg"
@@ -392,8 +418,9 @@ const VolumeTwo = ({
                     : "Personalizacija - Amazon & Netflix"}
                 </p>
               </div>
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "72rem", height: "50rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_2_deco_6.json"
@@ -404,7 +431,10 @@ const VolumeTwo = ({
             ref={lastSection}
             className="volume__section volume__section--non-reverse volume__section--volume-two-section-seven"
           >
-            <div className="volume__textbox volume__textbox--volume-two">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__textbox volume__textbox--volume-two"
+            >
               {language === "en-US" ? (
                 <>
                   <p>
@@ -426,8 +456,9 @@ const VolumeTwo = ({
                   <p>I tako svakog dana. I tokom svake kampanje.</p>
                 </>
               )}
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "72rem", height: "42rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_2_deco_7.json"

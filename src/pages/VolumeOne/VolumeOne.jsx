@@ -1,12 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 
 import { Helmet } from "react-helmet-async";
+import { motion } from "framer-motion";
 import numberToWords from "number-to-words";
 
 import Volume from "../../components/Volume/Volume";
 
 import Image from "../../components/Image/Image";
 import Decoration from "../../components/Decoration/Decoration";
+
+import { elementsMotionProps } from "../../helpers/variables";
 
 const volumeNumber = 1;
 
@@ -104,7 +107,10 @@ const VolumeOne = ({
           ref={volumeTitle}
           className="volume__title volume__title--non-reverse volume__title--volume-one"
         >
-          <div className="volume__title-image volume__title-image--volume-one">
+          <motion.div
+            {...elementsMotionProps}
+            className="volume__title-image volume__title-image--volume-one"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="153.937"
@@ -178,22 +184,34 @@ const VolumeOne = ({
                 )}
               </div>
             )}
-          </div>
+          </motion.div>
           <div className="volume__title-text volume__title-text--volume-one">
-            <p className="volume__title-number volume__title-number--volume-one">
+            <motion.p
+              {...elementsMotionProps}
+              className="volume__title-number volume__title-number--volume-one"
+            >
               Volume 1
-            </p>
+            </motion.p>
             <h2 className="volume__title-name volume__title-name--volume-one">
-              Why You Only Call Me When AI?
+              <motion.span {...elementsMotionProps}>Why You Only</motion.span>
+              <motion.span {...elementsMotionProps}>
+                Call Me When AI?
+              </motion.span>
             </h2>
-            <p className="volume__title-description volume__title-description--volume-one">
+            <motion.p
+              {...elementsMotionProps}
+              className="volume__title-description volume__title-description--volume-one"
+            >
               The impact and the correct use of ChatGPT and AI
-            </p>
+            </motion.p>
           </div>
         </div>
         <div className="volume__content">
           <section className="volume__section volume__section--non-reverse volume__section--volume-one-section-one">
-            <div className="volume__textbox volume__textbox--volume-one">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__textbox volume__textbox--volume-one"
+            >
               {language === "en-US" ? (
                 <>
                   <p>
@@ -226,8 +244,15 @@ const VolumeOne = ({
                   <p>Kratki odgovori? Ne. Ne. Da.</p>
                 </>
               )}
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={{
+                ...elementsMotionProps,
+                transition: {
+                  y: { duration: 0.4, delay: 0.2, ease: "easeInOut" },
+                  opacity: { duration: 0.5, delay: 0.2, ease: "easeInOut" },
+                },
+              }}
               style={{ width: "72rem", height: "68rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_1_deco_1.json"
@@ -235,7 +260,7 @@ const VolumeOne = ({
             />
           </section>
           <section className="volume__section volume__section--reverse volume__section--volume-one-section-two">
-            <div className="volume__image">
+            <motion.div {...elementsMotionProps} className="volume__image">
               <Image
                 webpPath="/images/volumes/volume-one/volume_1_image_1.webp"
                 path="/images/volumes/volume-one/volume_1_image_1.jpg"
@@ -249,8 +274,15 @@ const VolumeOne = ({
                   <p>Heinz AI kampanja</p>
                 )}
               </div>
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={{
+                ...elementsMotionProps,
+                transition: {
+                  y: { duration: 0.4, delay: 0.2, ease: "easeInOut" },
+                  opacity: { duration: 0.5, delay: 0.2, ease: "easeInOut" },
+                },
+              }}
               style={{ width: "70rem", height: "58rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_1_deco_2.json"
@@ -258,7 +290,10 @@ const VolumeOne = ({
             />
           </section>
           <section className="volume__section volume__section--non-reverse volume__section--volume-one-section-three">
-            <div className="volume__textbox volume__textbox--volume-one">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__textbox volume__textbox--volume-one"
+            >
               {language === "en-US" ? (
                 <>
                   <p>
@@ -302,8 +337,15 @@ const VolumeOne = ({
                   </p>
                 </>
               )}
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={{
+                ...elementsMotionProps,
+                transition: {
+                  y: { duration: 0.4, delay: 0.2, ease: "easeInOut" },
+                  opacity: { duration: 0.5, delay: 0.2, ease: "easeInOut" },
+                },
+              }}
               style={{ width: "45rem", height: "64rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_1_deco_3.json"
@@ -311,7 +353,7 @@ const VolumeOne = ({
             />
           </section>
           <section className="volume__section volume__section--reverse volume__section--volume-one-section-four">
-            <div className="volume__image">
+            <motion.div {...elementsMotionProps} className="volume__image">
               <Image
                 webpPath="/images/volumes/volume-one/volume_1_image_2.webp"
                 path="/images/volumes/volume-one/volume_1_image_2.jpg"
@@ -325,8 +367,15 @@ const VolumeOne = ({
                   <p>Popularni AI alati</p>
                 )}
               </div>
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={{
+                ...elementsMotionProps,
+                transition: {
+                  y: { duration: 0.4, delay: 0.2, ease: "easeInOut" },
+                  opacity: { duration: 0.5, delay: 0.2, ease: "easeInOut" },
+                },
+              }}
               style={{ width: "72rem", height: "63rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_1_deco_4.json"
@@ -334,7 +383,10 @@ const VolumeOne = ({
             />
           </section>
           <section className="volume__section volume__section--non-reverse volume__section--volume-one-section-five">
-            <div className="volume__textbox volume__textbox--volume-one">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__textbox volume__textbox--volume-one"
+            >
               {language === "en-US" ? (
                 <>
                   <p>
@@ -373,8 +425,15 @@ const VolumeOne = ({
                   <p>Zato gledaj, inspiriši se i ohrabri se.</p>
                 </>
               )}
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={{
+                ...elementsMotionProps,
+                transition: {
+                  y: { duration: 0.4, delay: 0.2, ease: "easeInOut" },
+                  opacity: { duration: 0.5, delay: 0.2, ease: "easeInOut" },
+                },
+              }}
               style={{ width: "72rem", height: "64rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_1_deco_5.json"
@@ -382,7 +441,7 @@ const VolumeOne = ({
             />
           </section>
           <section className="volume__section volume__section--reverse volume__section--volume-one-section-six">
-            <div className="volume__image">
+            <motion.div {...elementsMotionProps} className="volume__image">
               <Image
                 webpPath="/images/volumes/volume-one/volume_1_image_3.webp"
                 path="/images/volumes/volume-one/volume_1_image_3.jpg"
@@ -396,8 +455,15 @@ const VolumeOne = ({
                   <p>Čovek protiv AI</p>
                 )}
               </div>
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={{
+                ...elementsMotionProps,
+                transition: {
+                  y: { duration: 0.4, delay: 0.2, ease: "easeInOut" },
+                  opacity: { duration: 0.5, delay: 0.2, ease: "easeInOut" },
+                },
+              }}
               style={{ width: "72rem", height: "54rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_1_deco_6.json"
@@ -408,7 +474,10 @@ const VolumeOne = ({
             ref={lastSection}
             className="volume__section volume__section--non-reverse volume__section--volume-one-section-seven"
           >
-            <div className="volume__textbox volume__textbox--volume-one">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__textbox volume__textbox--volume-one"
+            >
               {language === "en-US" ? (
                 <>
                   <p>
@@ -437,8 +506,15 @@ const VolumeOne = ({
                   </p>
                 </>
               )}
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={{
+                ...elementsMotionProps,
+                transition: {
+                  y: { duration: 0.4, delay: 0.2, ease: "easeInOut" },
+                  opacity: { duration: 0.5, delay: 0.2, ease: "easeInOut" },
+                },
+              }}
               style={{ width: "72rem", height: "64rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_1_deco_7.json"

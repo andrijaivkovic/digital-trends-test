@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import { Helmet } from "react-helmet-async";
-
+import { motion } from "framer-motion";
 import numberToWords from "number-to-words";
 import scrollIntoView from "scroll-into-view";
 
@@ -16,6 +16,7 @@ import Video from "../../components/Video/Video";
 import volume3TitleVideo from "/video/volume_3_title_video.mp4";
 
 import { VOLUME_READ_OBSERVER_DELAY } from "../../helpers/variables";
+import { elementsMotionProps } from "../../helpers/variables";
 
 const volumeNumber = 3;
 
@@ -144,7 +145,10 @@ const VolumeThree = ({
           ref={volumeTitle}
           className="volume__title volume__title--non-reverse volume__title--volume-three"
         >
-          <div className="volume__title-video volume__title-video--volume-three">
+          <motion.div
+            {...elementsMotionProps}
+            className="volume__title-video volume__title-video--volume-three"
+          >
             {!isiPhone && (
               <Video
                 placeholderPath="/images/volumes/volume-three/volume_3_video_title-placeholder.jpg"
@@ -218,23 +222,34 @@ const VolumeThree = ({
                 )}
               </div>
             )}
-          </div>
+          </motion.div>
           <div className="volume__title-text volume__title-text--volume-three">
-            <p className="volume__title-number volume__title-number--volume-three">
+            <motion.p
+              {...elementsMotionProps}
+              className="volume__title-number volume__title-number--volume-three"
+            >
               Volume 3
-            </p>
+            </motion.p>
             <h2 className="volume__title-name volume__title-name--volume-three">
-              When I Grow Up
-              <br />I Wanna Be Influential
+              <motion.span {...elementsMotionProps}>When I Grow Up</motion.span>
+              <motion.span {...elementsMotionProps}>
+                I Wanna Be Influential
+              </motion.span>
             </h2>
-            <p className="volume__title-description volume__title-description--volume-three">
+            <motion.p
+              {...elementsMotionProps}
+              className="volume__title-description volume__title-description--volume-three"
+            >
               Influencer marketing and its ups and downs – pros and cons
-            </p>
+            </motion.p>
           </div>
         </div>
         <div className="volume__content">
           <section className="volume__section volume__section--non-reverse volume__section--volume-three-section-one">
-            <div className="volume__textbox volume__textbox--volume-three">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__textbox volume__textbox--volume-three"
+            >
               {language === "en-US" ? (
                 <>
                   <p>
@@ -264,8 +279,9 @@ const VolumeThree = ({
                   <p>Ukratko: Verovatno da.</p>
                 </>
               )}
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "35rem", height: "35rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_3_deco_1.json"
@@ -274,6 +290,7 @@ const VolumeThree = ({
           </section>
           <section className="volume__section volume__section--volume-three-section-two">
             <Embed
+              motionProps={elementsMotionProps}
               type="vertical"
               site="tiktok"
               src="https://www.tiktok.com/embed/7008662966941797637"
@@ -282,6 +299,7 @@ const VolumeThree = ({
               allowFullScreen={true}
             />
             <Embed
+              motionProps={elementsMotionProps}
               type="vertical"
               site="tiktok"
               src="https://www.tiktok.com/embed/7278484854684142891"
@@ -291,7 +309,10 @@ const VolumeThree = ({
             />
           </section>
           <section className="volume__section volume__section--non-reverse volume__section--volume-three-section-three">
-            <div className="volume__textbox volume__textbox--volume-three">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__textbox volume__textbox--volume-three"
+            >
               {language === "en-US" ? (
                 <>
                   <p>
@@ -330,8 +351,9 @@ const VolumeThree = ({
                   </p>
                 </>
               )}
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "40rem", height: "40rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_3_deco_2.json"
@@ -340,6 +362,7 @@ const VolumeThree = ({
           </section>
           <section className="volume__section volume__section--volume-three-section-four">
             <Embed
+              motionProps={elementsMotionProps}
               type="vertical"
               site="tiktok"
               src="https://www.tiktok.com/embed/7299850601234435329"
@@ -348,6 +371,7 @@ const VolumeThree = ({
               backgroundImage="/images/embed-bg/volume-3/volume_3_embed_3.jpg"
             />
             <Embed
+              motionProps={elementsMotionProps}
               type="vertical"
               site="instagram"
               src="https://www.instagram.com/p/CnxDtuOJMD2/embed"
@@ -357,7 +381,10 @@ const VolumeThree = ({
             />
           </section>
           <section className="volume__section volume__section--non-reverse volume__section--volume-three-section-five">
-            <div className="volume__textbox volume__textbox--volume-three">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__textbox volume__textbox--volume-three"
+            >
               {language === "en-US" ? (
                 <>
                   <p>So, where’s the problem?</p>
@@ -399,8 +426,9 @@ const VolumeThree = ({
                   </p>
                 </>
               )}
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "60rem", height: "60rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_3_deco_3.json"
@@ -409,6 +437,7 @@ const VolumeThree = ({
           </section>
           <section className="volume__section volume__section--volume-three-section-six">
             <Embed
+              motionProps={elementsMotionProps}
               type="vertical"
               site="tiktok"
               src="https://www.tiktok.com/embed/7214087789543968006"
@@ -417,6 +446,7 @@ const VolumeThree = ({
               allowFullScreen={true}
             />
             <Embed
+              motionProps={elementsMotionProps}
               type="vertical"
               site="tiktok"
               src="https://www.instagram.com/p/CnxKp4Eu5oI/embed"
@@ -429,7 +459,10 @@ const VolumeThree = ({
             ref={lastSection}
             className="volume__section volume__section--non-reverse volume__section--volume-three-section-seven"
           >
-            <div className="volume__textbox volume__textbox--volume-three">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__textbox volume__textbox--volume-three"
+            >
               {language === "en-US" ? (
                 <>
                   <p>
@@ -471,8 +504,9 @@ const VolumeThree = ({
                   <p>Pa opet.</p>
                 </>
               )}
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "60rem", height: "60rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_3_deco_4.json"

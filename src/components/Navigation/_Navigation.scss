@@ -241,6 +241,8 @@
     border-width: 1px;
     border-radius: $border-radius;
 
+    @include glass-dark;
+
     list-style: none;
     overflow: clip;
 
@@ -252,18 +254,6 @@
     @include mediaQuery(mobile) {
       top: 8rem;
       right: -7rem;
-    }
-
-    &::before {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      @include glass-dark;
-      z-index: -1;
-      border-radius: $border-radius;
     }
 
     & > li {
@@ -304,51 +294,51 @@
         //   border-color: $color-text-black;
         // }
 
-        &.ai:hover,
-        &.ai:active,
-        &.ai.active {
+        &.volume-one:hover,
+        &.volume-one:active,
+        &.volume-one.active {
           background-color: rgba($color: $color-volume-one, $alpha: 0.8);
         }
 
-        &.pers:hover,
-        &.pers:active,
-        &.pers.active {
+        &.volume-two:hover,
+        &.volume-two:active,
+        &.volume-two.active {
           background-color: rgba($color: $color-volume-two, $alpha: 0.8);
         }
 
-        &.inf:hover,
-        &.inf:active,
-        &.inf.active {
+        &.volume-three:hover,
+        &.volume-three:active,
+        &.volume-three.active {
           background-color: rgba($color: $color-volume-three, $alpha: 0.8);
         }
 
-        &.tiktok:hover,
-        &.tiktok:active,
-        &.tiktok.active {
+        &.volume-four:hover,
+        &.volume-four:active,
+        &.volume-four.active {
           background-color: rgba($color: $color-volume-four, $alpha: 0.8);
         }
 
-        &.voice-search:hover,
-        &.voice-search:active,
-        &.voice-search.active {
+        &.volume-five:hover,
+        &.volume-five:active,
+        &.volume-five.active {
           background-color: rgba($color: $color-volume-five, $alpha: 0.8);
         }
 
-        &.big-data:hover,
-        &.big-data:active,
-        &.big-data.active {
+        &.volume-six:hover,
+        &.volume-six:active,
+        &.volume-six.active {
           background-color: rgba($color: $color-volume-six, $alpha: 0.8);
         }
 
-        &.real-time:hover,
-        &.real-time:active,
-        &.real-time.active {
+        &.volume-seven:hover,
+        &.volume-seven:active,
+        &.volume-seven.active {
           background-color: rgba($color: $color-volume-seven, $alpha: 0.8);
         }
 
-        &.meme:hover,
-        &.meme:active,
-        &.meme.active {
+        &.volume-eight:hover,
+        &.volume-eight:active,
+        &.volume-eight.active {
           background-color: rgba($color: $color-volume-eight, $alpha: 0.8);
         }
       }

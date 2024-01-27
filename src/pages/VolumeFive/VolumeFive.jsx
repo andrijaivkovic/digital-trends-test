@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import { Helmet } from "react-helmet-async";
-
+import { motion } from "framer-motion";
 import numberToWords from "number-to-words";
 import scrollIntoView from "scroll-into-view";
 
@@ -9,11 +9,12 @@ import Volume from "../../components/Volume/Volume";
 
 import Decoration from "../../components/Decoration/Decoration";
 import Image from "../../components/Image/Image";
+import Video from "../../components/Video/Video";
 
 import volume5video1 from "/video/volume_5_video_1.mp4";
 
 import { VOLUME_READ_OBSERVER_DELAY } from "../../helpers/variables";
-import Video from "../../components/Video/Video";
+import { elementsMotionProps } from "../../helpers/variables";
 
 const volumeNumber = 5;
 
@@ -127,7 +128,10 @@ const VolumeFive = ({
           ref={volumeTitle}
           className="volume__title volume__title--non-reverse volume__title--volume-five"
         >
-          <div className="volume__title-image volume__title-image--volume-five">
+          <motion.div
+            {...elementsMotionProps}
+            className="volume__title-image volume__title-image--volume-five"
+          >
             <Image
               webpPath="/images/volumes/volume-5/volume_5_image_title.webp"
               path="/images/volumes/volume-5/volume_5_image_title.png"
@@ -193,22 +197,35 @@ const VolumeFive = ({
                 )}
               </div>
             )}
-          </div>
+          </motion.div>
           <div className="volume__title-text volume__title-text--volume-five">
-            <p className="volume__title-number volume__title-number--volume-five">
+            <motion.p
+              {...elementsMotionProps}
+              className="volume__title-number volume__title-number--volume-five"
+            >
               Volume 5
-            </p>
+            </motion.p>
             <h2 className="volume__title-name volume__title-name--volume-five">
-              Listen For My Voice When I’m Searching for you
+              <motion.span {...elementsMotionProps}>Listen For My</motion.span>
+              <motion.span {...elementsMotionProps}>Voice When I’m</motion.span>
+              <motion.span {...elementsMotionProps}>
+                Searching for you
+              </motion.span>
             </h2>
-            <p className="volume__title-description volume__title-description--volume-five">
+            <motion.p
+              {...elementsMotionProps}
+              className="volume__title-description volume__title-description--volume-five"
+            >
               The reality of SEO optimization and Voice Search in 2024
-            </p>
+            </motion.p>
           </div>
         </div>
         <div className="volume__content">
           <section className="volume__section volume__section--non-reverse volume__section--volume-five-section-one">
-            <div className="volume__textbox volume__textbox--volume-five">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__textbox volume__textbox--volume-five"
+            >
               {language === "en-US" ? (
                 <>
                   <p>Alexa, what is this text about? Hey, Siri? Click play.</p>
@@ -245,8 +262,9 @@ const VolumeFive = ({
                   </p>
                 </>
               )}
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "72rem", height: "64rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_5_deco_1.json"
@@ -254,7 +272,7 @@ const VolumeFive = ({
             />
           </section>
           <section className="volume__section volume__section--reverse volume__section--volume-five-section-two">
-            <div className="volume__image">
+            <motion.div {...elementsMotionProps} className="volume__image">
               <Image
                 webpPath="/images/volumes/volume-5/volume_5_image_1.webp"
                 path="/images/volumes/volume-5/volume_5_image_1.jpg"
@@ -268,10 +286,13 @@ const VolumeFive = ({
                   <p>Amazon Echo sa Amazon Alexa</p>
                 )}
               </div>
-            </div>
+            </motion.div>
           </section>
           <section className="volume__section volume__section--non-reverse volume__section--volume-five-section-three">
-            <div className="volume__textbox volume__textbox--volume-five">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__textbox volume__textbox--volume-five"
+            >
               {language === "en-US" ? (
                 <>
                   <p>
@@ -307,8 +328,9 @@ const VolumeFive = ({
                   </p>
                 </>
               )}
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "72rem", height: "64rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_5_deco_2.json"
@@ -317,7 +339,7 @@ const VolumeFive = ({
           </section>
           <section className="volume__section volume__section--reverse volume__section--volume-five-section-four">
             {!isiPhone && (
-              <div className="volume__video">
+              <motion.div {...elementsMotionProps} className="volume__video">
                 <Video
                   placeholderPath="/images/volumes/volume-5/volume_5_image_2-placeholder.jpg"
                   path={volume5video1}
@@ -329,10 +351,10 @@ const VolumeFive = ({
                     <p>Apple Siri glasovna pretraga</p>
                   )}
                 </div>
-              </div>
+              </motion.div>
             )}
             {isiPhone && (
-              <div className="volume__image">
+              <motion.div {...elementsMotionProps} className="volume__image">
                 <Image
                   webpPath="/images/volumes/volume-5/volume_5_image_2.webp"
                   path="/images/volumes/volume-5/volume_5_image_2.jpg"
@@ -360,14 +382,17 @@ const VolumeFive = ({
                     <p>Apple Siri glasovna pretraga</p>
                   )}
                 </div>
-              </div>
+              </motion.div>
             )}
           </section>
           <section
             ref={lastSection}
             className="volume__section volume__section--non-reverse volume__section--volume-five-section-five"
           >
-            <div className="volume__textbox volume__textbox--volume-five">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__textbox volume__textbox--volume-five"
+            >
               {language === "en-US" ? (
                 <>
                   <p>
@@ -389,8 +414,9 @@ const VolumeFive = ({
                   <p>Neka glasne žice prorade i dovedu nas do novih uvida.</p>
                 </>
               )}
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "50rem", height: "60rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_5_deco_3.json"

@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
+import { AnimatePresence, motion } from "framer-motion";
+
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
 import { SPOTIFY_VISIBILTY_TRESHOLD_DESKTOP } from "../../helpers/variables";
@@ -20,6 +22,12 @@ const SpotifyPlayer = ({ currentVolumeNumber, language }) => {
       ? SPOTIFY_VISIBILTY_TRESHOLD_MOBILE
       : SPOTIFY_VISIBILTY_TRESHOLD_DESKTOP;
   }, [isMobile]);
+
+  useEffect(() => {
+    if (!isSpotifyPlayerVisible) {
+      setIsLoading(true);
+    }
+  }, [isSpotifyPlayerVisible]);
 
   const changeSpotifyPlayerVisibility = () => {
     if (
@@ -46,38 +54,57 @@ const SpotifyPlayer = ({ currentVolumeNumber, language }) => {
   });
 
   return (
-    <div className={`spotify-player ${isSpotifyPlayerVisible ? "shown" : ""}`}>
-      <div className="player-container">
-        <iframe
-          style={{
-            borderRadius: "12px",
-            display: isLoading ? "none" : "block",
+    <AnimatePresence>
+      {isSpotifyPlayerVisible && (
+        <motion.div
+          transition={{
+            y: { duration: 0.4, ease: [0.65, 0, 0.35, 1] },
+            opacity: { duration: 0.4 },
           }}
-          src={`https://open.spotify.com/embed/episode/${spotifyEpisodesLinks.at(
-            currentVolumeNumber - 1
-          )}?utm_source=generator&t=0`}
-          width="100%"
-          frameBorder="0"
-          allowFullScreen
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          onLoad={() => {
-            setIsLoading(false);
-          }}
-        />
-        {isLoading && (
-          <>
-            <div className="spotify-loading">
-              <LoadingSpinner size="4rem" color="#242424" />
-              {language === "en-US" ? (
-                <p>Spotify player is loading...</p>
-              ) : (
-                <p>Spotify plejer se učitava...</p>
-              )}
-            </div>
-          </>
-        )}
-      </div>
-    </div>
+          initial={{ y: 150, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 150, opacity: 0 }}
+          className="spotify-player"
+        >
+          <div className="player-container">
+            <iframe
+              style={{
+                borderRadius: "12px",
+                display: isLoading ? "none" : "block",
+              }}
+              src={`https://open.spotify.com/embed/episode/${spotifyEpisodesLinks.at(
+                currentVolumeNumber - 1
+              )}?utm_source=generator&t=0`}
+              width="100%"
+              frameBorder="0"
+              allowFullScreen
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              onLoad={() => {
+                setTimeout(() => setIsLoading(false), 500);
+                // setIsLoading(false);
+              }}
+            />
+            {isLoading && (
+              <>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="spotify-loading"
+                >
+                  <LoadingSpinner size="4rem" color="#242424" />
+                  {language === "en-US" ? (
+                    <p>Spotify player is loading...</p>
+                  ) : (
+                    <p>Spotify plejer se učitava...</p>
+                  )}
+                </motion.div>
+              </>
+            )}
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 

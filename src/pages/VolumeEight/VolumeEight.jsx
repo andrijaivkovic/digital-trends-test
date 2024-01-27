@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import { Helmet } from "react-helmet-async";
+import { motion } from "framer-motion";
 import numberToWords from "number-to-words";
 import scrollIntoView from "scroll-into-view";
 
@@ -11,6 +12,7 @@ import Image from "../../components/Image/Image";
 import Embed from "../../components/Embed/Embed";
 
 import { VOLUME_READ_OBSERVER_DELAY } from "../../helpers/variables";
+import { elementsMotionProps } from "../../helpers/variables";
 
 const volumeNumber = 8;
 
@@ -117,7 +119,10 @@ const VolumeSeven = ({
           ref={volumeTitle}
           className="volume__title volume__title--reverse volume__title--volume-eight"
         >
-          <div className="volume__title-image volume__title-image--volume-eight">
+          <motion.div
+            {...elementsMotionProps}
+            className="volume__title-image volume__title-image--volume-eight"
+          >
             <Image
               webpPath="/images/volumes/volume-eight/volume_8_image_title.webp"
               path="/images/volumes/volume-eight/volume_8_image_title.jpg"
@@ -183,23 +188,33 @@ const VolumeSeven = ({
                 )}
               </div>
             )}
-          </div>
+          </motion.div>
           <div className="volume__title-text volume__title-text--volume-eight">
-            <p className="volume__title-number volume__title-number--volume-eight">
+            <motion.p
+              {...elementsMotionProps}
+              className="volume__title-number volume__title-number--volume-eight"
+            >
               Volume 8
-            </p>
+            </motion.p>
             <h2 className="volume__title-name volume__title-name--volume-eight">
-              Every Meme You Make
+              <motion.span {...elementsMotionProps}>Every Meme</motion.span>
+              <motion.span {...elementsMotionProps}>You Make</motion.span>
             </h2>
-            <p className="volume__title-description volume__title-description--volume-eight">
+            <motion.p
+              {...elementsMotionProps}
+              className="volume__title-description volume__title-description--volume-eight"
+            >
               About memification, offline and online trends brands use, and the
               right moment
-            </p>
+            </motion.p>
           </div>
         </div>
         <div className="volume__content">
           <section className="volume__section volume__section--non-reverse volume__section--volume-eight-section-one">
-            <div className="volume__textbox volume__textbox--volume-eight">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__textbox volume__textbox--volume-eight"
+            >
               {language === "en-US" ? (
                 <>
                   <p>
@@ -250,8 +265,9 @@ const VolumeSeven = ({
                   </p>
                 </>
               )}
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "70rem", height: "70rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_8_deco_1.json"
@@ -260,6 +276,7 @@ const VolumeSeven = ({
           </section>
           <section className="volume__section volume__section--reverse volume__section--volume-eight-section-two">
             <Embed
+              motionProps={elementsMotionProps}
               type="horizontal"
               site="youtube"
               src="https://www.youtube.com/embed/BBIX9FG6kZ0?si=eDcXUSpNKWksv-v6&autoplay=1"
@@ -271,7 +288,10 @@ const VolumeSeven = ({
             />
           </section>
           <section className="volume__section volume__section--non-reverse volume__section--volume-eight-section-three">
-            <div className="volume__textbox volume__textbox--volume-eight">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__textbox volume__textbox--volume-eight"
+            >
               {language === "en-US" ? (
                 <>
                   <p>
@@ -323,8 +343,9 @@ const VolumeSeven = ({
                   </p>
                 </>
               )}
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "70rem", height: "70rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_8_deco_2.json"
@@ -333,6 +354,7 @@ const VolumeSeven = ({
           </section>
           <section className="volume__section volume__section--volume-eight-section-four">
             <Embed
+              motionProps={elementsMotionProps}
               type="vertical"
               site="tiktok"
               src="https://www.tiktok.com/embed/7249114859349232942"
@@ -341,6 +363,7 @@ const VolumeSeven = ({
               allowFullScreen={true}
             />
             <Embed
+              motionProps={elementsMotionProps}
               type="vertical"
               site="tiktok"
               src="https://www.tiktok.com/embed/7255416435743182122"
@@ -353,7 +376,10 @@ const VolumeSeven = ({
             ref={lastSection}
             className="volume__section volume__section--non-reverse volume__section--volume-eight-section-five"
           >
-            <div className="volume__textbox volume__textbox--volume-eight">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__textbox volume__textbox--volume-eight"
+            >
               {language === "en-US" ? (
                 <>
                   <p>
@@ -392,8 +418,9 @@ const VolumeSeven = ({
                   </p>
                 </>
               )}
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "45.5rem", height: "49rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_8_deco_3.json"

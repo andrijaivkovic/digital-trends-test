@@ -1,4 +1,7 @@
 import { useState } from "react";
+
+import { motion } from "framer-motion";
+
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
 const Embed = ({
@@ -12,13 +15,17 @@ const Embed = ({
   allow = "",
   frameBorder = "0",
   scrolling = "no",
+  motionProps = {},
 }) => {
   const [isShown, setIsShown] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   if (type === "horizontal") {
     return (
-      <div className={`volume__embed volume__embed--horizontal  ${className}`}>
+      <motion.div
+        {...motionProps}
+        className={`volume__embed volume__embed--horizontal  ${className}`}
+      >
         {isShown && (
           <iframe
             className={!isLoading ? "loaded" : ""}
@@ -66,13 +73,16 @@ const Embed = ({
             </>
           </button>
         )}
-      </div>
+      </motion.div>
     );
   }
 
   if (type === "vertical") {
     return (
-      <div className={`volume__embed volume__embed--vertical ${className}`}>
+      <motion.div
+        {...motionProps}
+        className={`volume__embed volume__embed--vertical ${className}`}
+      >
         {isShown && (
           <iframe
             className={`${!isLoading ? "loaded" : ""} ${site}`}
@@ -118,7 +128,7 @@ const Embed = ({
             </>
           </button>
         )}
-      </div>
+      </motion.div>
     );
   }
 };

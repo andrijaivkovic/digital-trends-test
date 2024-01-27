@@ -18,6 +18,7 @@
     "@fontsource/manrope": "^5.0.18",
     "browserify": "^17.0.0",
     "commonjs": "^0.0.1",
+    "framer-motion": "^11.0.3",
     "lottie-react": "^2.4.0",
     "lottie-web": "^5.12.2",
     "number-to-words": "^1.2.4",

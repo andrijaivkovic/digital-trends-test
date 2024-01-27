@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import { Helmet } from "react-helmet-async";
+import { motion } from "framer-motion";
 import numberToWords from "number-to-words";
 import scrollIntoView from "scroll-into-view";
 
@@ -11,6 +12,7 @@ import Embed from "../../components/Embed/Embed";
 import Image from "../../components/Image/Image";
 
 import { VOLUME_READ_OBSERVER_DELAY } from "../../helpers/variables";
+import { elementsMotionProps } from "../../helpers/variables";
 
 const volumeNumber = 7;
 
@@ -117,11 +119,10 @@ const VolumeSeven = ({
           ref={volumeTitle}
           className="volume__title volume__title--non-reverse volume__title--volume-seven"
         >
-          <div className="volume__title-image volume__title-image--volume-seven">
-            {/* <img
-              src="/images/volumes/volume-seven/volume_7_image_title.png"
-              alt="Simplistic 3D render of an hourglass"
-            /> */}
+          <motion.div
+            {...elementsMotionProps}
+            className="volume__title-image volume__title-image--volume-seven"
+          >
             <Image
               webpPath="/images/volumes/volume-seven/volume_7_image_title.webp"
               path="/images/volumes/volume-seven/volume_7_image_title.png"
@@ -187,22 +188,34 @@ const VolumeSeven = ({
                 )}
               </div>
             )}
-          </div>
+          </motion.div>
           <div className="volume__title-text volume__title-text--volume-seven">
-            <p className="volume__title-number volume__title-number--volume-seven">
+            <motion.p
+              {...elementsMotionProps}
+              className="volume__title-number volume__title-number--volume-seven"
+            >
               Volume 7
-            </p>
+            </motion.p>
             <h2 className="volume__title-name volume__title-name--volume-seven">
-              The Real-Time Is Now
+              <motion.span {...elementsMotionProps}>
+                The Real-Time Is
+              </motion.span>
+              <motion.span {...elementsMotionProps}>Now</motion.span>
             </h2>
-            <p className="volume__title-description volume__title-description--volume-seven">
+            <motion.p
+              {...elementsMotionProps}
+              className="volume__title-description volume__title-description--volume-seven"
+            >
               Is Real-Time marketing the thing to use now?
-            </p>
+            </motion.p>
           </div>
         </div>
         <div className="volume__content">
           <section className="volume__section volume__section--non-reverse volume__section--volume-seven-section-one">
-            <div className="volume__textbox volume__textbox--volume-seven">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__textbox volume__textbox--volume-seven"
+            >
               {language === "en-US" ? (
                 <>
                   <p>
@@ -240,8 +253,9 @@ const VolumeSeven = ({
                   </p>
                 </>
               )}
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "60rem", height: "50rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_7_deco_1.json"
@@ -250,12 +264,14 @@ const VolumeSeven = ({
           </section>
           <section className="volume__section volume__section--non-reverse volume__section--volume-seven-section-two">
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "54rem", height: "64.5rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_7_deco_2.json"
               }
             />
             <Embed
+              motionProps={elementsMotionProps}
               type="vertical"
               site="instagram"
               src="https://www.instagram.com/p/CupSgRmr3Mq/embed"
@@ -265,7 +281,10 @@ const VolumeSeven = ({
             />
           </section>
           <section className="volume__section volume__section--non-reverse volume__section--volume-seven-section-\">
-            <div className="volume__textbox volume__textbox--volume-seven">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__textbox volume__textbox--volume-seven"
+            >
               {language === "en-US" ? (
                 <>
                   <p>
@@ -307,8 +326,9 @@ const VolumeSeven = ({
                   </p>
                 </>
               )}
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "60rem", height: "60rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_7_deco_3.json"
@@ -317,6 +337,7 @@ const VolumeSeven = ({
           </section>
           <section className="volume__section volume__section--non-reverse volume__section--volume-seven-section-four">
             <Embed
+              motionProps={elementsMotionProps}
               type="vertical"
               site="tiktok"
               src="https://www.tiktok.com/embed/7286838768236121376"
@@ -325,6 +346,7 @@ const VolumeSeven = ({
               allowFullScreen={true}
             />
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "40rem", height: "40.5rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_7_deco_4.json"
@@ -335,7 +357,10 @@ const VolumeSeven = ({
             ref={lastSection}
             className="volume__section volume__section--non-reverse volume__section--volume-seven-section-five"
           >
-            <div className="volume__textbox volume__textbox--volume-seven">
+            <motion.div
+              {...elementsMotionProps}
+              className="volume__textbox volume__textbox--volume-seven"
+            >
               {language === "en-US" ? (
                 <>
                   <p>
@@ -379,8 +404,9 @@ const VolumeSeven = ({
                   </p>
                 </>
               )}
-            </div>
+            </motion.div>
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "60rem", height: "60rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_7_deco_5.json"

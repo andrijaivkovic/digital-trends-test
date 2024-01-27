@@ -1,4 +1,7 @@
 import { useState } from "react";
+
+import { motion } from "framer-motion";
+
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
 const Image = ({
@@ -7,11 +10,12 @@ const Image = ({
   path = "",
   placeholderPath = "",
   altText = "",
+  motionProps = {},
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
-    <div className="image-container">
+    <motion.div {...motionProps} className="image-container">
       {!isLoaded && (
         <div className="image-placeholder">
           <img src={placeholderPath} alt={`${altText} - placeholder`} />
@@ -30,7 +34,7 @@ const Image = ({
           alt={altText}
         />
       </picture>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,7 +1,7 @@
 .spotify-player {
   position: fixed;
 
-  display: none;
+  @include flex-row;
 
   bottom: 2rem;
 
@@ -78,6 +78,5 @@
   }
 
   &.shown {
-    @include flex-row;
   }
 }

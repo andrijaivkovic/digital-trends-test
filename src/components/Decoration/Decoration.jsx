@@ -1,19 +1,25 @@
 import { useState } from "react";
 
+import { motion } from "framer-motion";
+
 import LottieReact from "lottie-react";
 
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 
-const Decoration = ({ path, style = {}, className = "" }) => {
+const Decoration = ({ path, style = {}, className = "", motionProps = {} }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   const isMobile = useMediaQuery("(max-width: 1439px)");
 
   if (!isMobile) {
     return (
-      <div style={style} className={`volume__decoration ${className}`}>
+      <motion.div
+        {...motionProps}
+        style={style}
+        className={`volume__decoration ${className}`}
+      >
         {!isLoaded && <LoadingSpinner />}
         <LottieReact
           className={`animation ${isLoaded ? "shown" : ""}`}
@@ -25,7 +31,7 @@ const Decoration = ({ path, style = {}, className = "" }) => {
           loop={true}
           autoplay={true}
         />
-      </div>
+      </motion.div>
     );
   }
 };

@@ -1,7 +1,56 @@
 import { useEffect, useRef, useState } from "react";
+
 import { NavLink } from "react-router-dom";
+import numberToWords from "number-to-words";
+import { AnimatePresence, motion } from "framer-motion";
 
 import { NAVIGATION_OPAQUE_TRESHOLD } from "../../helpers/variables";
+
+const navigationMenuItems = [
+  "Artificial Intelligence",
+  "Hyper-personalization",
+  "Influencer Marketing",
+  "TikTok Marketing",
+  "Voice Search Optimization",
+  "Big Data",
+  "Real-Time Marketing",
+  "Memefication",
+];
+
+const menuContainerVariants = {
+  initial: { opacity: 0, y: -2 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -2 },
+};
+
+const menuContainerMotionProps = {
+  variants: menuContainerVariants,
+  initial: "initial",
+  animate: "animate",
+  exit: "exit",
+  transition: {
+    y: { duration: 0.2 },
+    opacity: { duration: 0.2 },
+  },
+};
+
+const menuItemVariants = {
+  initial: { opacity: 0 },
+  animate: (index) => {
+    return { opacity: 1, transition: { delay: 0.05 + 0.02 * index } };
+  },
+  exit: { opacity: 0 },
+};
+
+const menuItemMotionProps = {
+  variants: menuItemVariants,
+  initial: "initial",
+  animate: "animate",
+  exit: "exit",
+  transition: {
+    opacity: { duration: 0.3 },
+  },
+};
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -424,84 +473,35 @@ const Navigation = ({ language, handleSwitchLanguage }) => {
               />
             </svg>
           </button>
-          {isMenuOpen && (
-            <ol className="navigation__menu">
-              <li>
-                <NavLink
-                  onClick={() => handleMenuOpen()}
-                  to={"/volume-one"}
-                  className="ai"
-                >
-                  Artificial Intelligence
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  onClick={() => handleMenuOpen()}
-                  to={"/volume-two"}
-                  className="pers"
-                >
-                  Hyper-personalization
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  onClick={() => handleMenuOpen()}
-                  className="inf"
-                  to={"/volume-three"}
-                >
-                  Influencer Marketing
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  onClick={() => handleMenuOpen()}
-                  className="tiktok"
-                  to={"volume-four"}
-                >
-                  TikTok Marketing
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  onClick={() => handleMenuOpen()}
-                  className="voice-search"
-                  to={"volume-five"}
-                >
-                  Voice Search Optimization
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  onClick={() => handleMenuOpen()}
-                  className="big-data"
-                  to={"volume-six"}
-                >
-                  Big Data
-                </NavLink>
-              </li>
-
-              <li>
-                <NavLink
-                  onClick={() => handleMenuOpen()}
-                  className="real-time"
-                  to={"/volume-seven"}
-                >
-                  Real-Time Marketing
-                </NavLink>
-              </li>
-
-              <li>
-                <NavLink
-                  onClick={() => handleMenuOpen()}
-                  className="meme"
-                  to={"/volume-eight"}
-                >
-                  Memefication
-                </NavLink>
-              </li>
-            </ol>
-          )}
+          <AnimatePresence>
+            {isMenuOpen && (
+              <motion.ol
+                {...menuContainerMotionProps}
+                className="navigation__menu"
+              >
+                {navigationMenuItems.map((navItem, index) => {
+                  const volumeName = `volume-${numberToWords.toWords(
+                    index + 1
+                  )}`;
+                  return (
+                    <motion.li
+                      {...menuItemMotionProps}
+                      custom={index}
+                      key={navItem}
+                    >
+                      <NavLink
+                        onClick={() => handleMenuOpen()}
+                        to={`/${volumeName}`}
+                        className={volumeName}
+                      >
+                        {navItem}
+                      </NavLink>
+                    </motion.li>
+                  );
+                })}
+              </motion.ol>
+            )}
+          </AnimatePresence>
         </div>
         <button
           tabIndex={0}

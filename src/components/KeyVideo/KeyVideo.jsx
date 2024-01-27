@@ -1,23 +1,30 @@
+import { motion } from "framer-motion";
+
 import Embed from "../Embed/Embed";
+
+import { elementsMotionProps } from "../../helpers/variables";
 
 const KeyVideo = ({ language }) => {
   return (
     <section className="key-video">
       <div className="key-video__text">
-        <h2 className="key-video__title">Key video</h2>
+        <motion.h2 {...elementsMotionProps} className="key-video__title">
+          Key video
+        </motion.h2>
         {language === "en-US" ? (
-          <p className="key-video__body-text">
+          <motion.p {...elementsMotionProps} className="key-video__body-text">
             If you don’t have time to read, you can watch the video in which we
             briefly described each trend
-          </p>
+          </motion.p>
         ) : (
-          <p className="key-video__body-text">
+          <motion.p {...elementsMotionProps} className="key-video__body-text">
             Ako nemaš vremena da čitaš, pogledaj video u kome smo ukratko
             opisali svaki trend
-          </p>
+          </motion.p>
         )}
       </div>
       <Embed
+        motionProps={elementsMotionProps}
         type="horizontal"
         site="youtube"
         src="https://www.youtube.com/embed/J-WpIOxbEpQ?si=N1tx5XLAatbYvDgx&autoplay=1"

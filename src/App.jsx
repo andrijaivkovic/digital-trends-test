@@ -22,7 +22,7 @@ import LastVisitedVolume from "./components/LastVisited/LastVisitedVolume";
 import SpotifyPlayer from "./components/SpotifyPlayer/SpotifyPlayer";
 import VolumeNavigation from "./components/VolumeNavigation/VolumeNavigation";
 
-// import ClearLocalStorage from "./components/ClearLocalStorage/ClearLocalStorage";
+import ClearLocalStorage from "./components/ClearLocalStorage/ClearLocalStorage";
 import KeyVideo from "./components/KeyVideo/KeyVideo";
 
 const getPreferredLanuage = () => {
@@ -211,7 +211,7 @@ function App() {
         key={currentVolumeNumber}
         currentVolumeNumber={currentVolumeNumber}
       />
-      {/* <ClearLocalStorage /> */}
+      <ClearLocalStorage />
     </>
   );
 }
