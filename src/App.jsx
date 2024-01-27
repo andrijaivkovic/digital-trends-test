@@ -21,9 +21,9 @@ import LastVisitedVolume from "./components/LastVisited/LastVisitedVolume";
 
 import SpotifyPlayer from "./components/SpotifyPlayer/SpotifyPlayer";
 import VolumeNavigation from "./components/VolumeNavigation/VolumeNavigation";
-
-import ClearLocalStorage from "./components/ClearLocalStorage/ClearLocalStorage";
 import KeyVideo from "./components/KeyVideo/KeyVideo";
+
+// import ClearLocalStorage from "./components/ClearLocalStorage/ClearLocalStorage";
 
 const getPreferredLanuage = () => {
   return localStorage.getItem("preferredLanguage");
@@ -212,7 +212,7 @@ function App() {
         key={currentVolumeNumber}
         currentVolumeNumber={currentVolumeNumber}
       />
-      <ClearLocalStorage />
+      {/* <ClearLocalStorage /> */}
     </>
   );
 }
