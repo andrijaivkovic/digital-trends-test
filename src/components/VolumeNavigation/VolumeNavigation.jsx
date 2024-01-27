@@ -58,7 +58,7 @@ const VolumeNavigation = ({ language, currentVolumeNumber, readVolumes }) => {
               </g>
             </svg>
             {language === "en-US" ? (
-              <p>Congratulations! You’ve finished this Volume!</p>
+              <p>Congratulations! You’ve completed this Volume!</p>
             ) : (
               <p>Čestitamo! Završili ste ovaj Volume.</p>
             )}
