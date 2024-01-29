@@ -7,10 +7,12 @@
   margin-top: 20rem;
 
   @include mediaQuery(tablet) {
+    margin-top: 15rem;
     gap: 6rem;
   }
 
   @include mediaQuery(mobile) {
+    margin-top: 10rem;
     gap: 4rem;
   }
 
@@ -20,20 +22,22 @@
     gap: 2rem;
 
     @include mediaQuery(tablet) {
+      @include flex-column;
       gap: 1.5rem;
     }
 
     @include mediaQuery(mobile) {
+      @include flex-column;
       gap: 1rem;
     }
 
     & > svg {
-      width: 2.8rem;
-      height: 2.8rem;
+      width: 4rem;
+      height: 4rem;
 
       @include mediaQuery(tablet) {
-        width: 2.6rem;
-        height: 2.6rem;
+        width: 3rem;
+        height: 3rem;
       }
 
       @include mediaQuery(mobile) {
@@ -46,17 +50,20 @@
       color: $color-text-black;
       font-size: 3rem;
       font-weight: 400;
+      text-align: center;
 
-      translate: 0 1px;
+      white-space: normal;
 
       @include mediaQuery(tablet) {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
         translate: 0 1px;
+        white-space: pre-wrap;
       }
 
       @include mediaQuery(mobile) {
-        font-size: 2rem;
+        font-size: 1.8rem;
         translate: 0 1px;
+        white-space: pre-wrap;
       }
     }
   }

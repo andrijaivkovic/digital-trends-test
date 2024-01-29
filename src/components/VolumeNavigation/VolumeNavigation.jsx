@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import numberToWords from "number-to-words";
 
-const VolumeNavigation = ({ language, currentVolumeNumber, readVolumes }) => {
+import { useApp } from "../../contexts/useApp";
+
+const VolumeNavigation = () => {
+  const { language, currentVolumeNumber, readVolumes } = useApp();
+
   return (
     <>
       <nav className="volume-navigation">
@@ -58,9 +62,9 @@ const VolumeNavigation = ({ language, currentVolumeNumber, readVolumes }) => {
               </g>
             </svg>
             {language === "en-US" ? (
-              <p>Congratulations! You’ve completed this Volume!</p>
+              <p>{"Congratulations!\nYou’ve completed this Volume!"}</p>
             ) : (
-              <p>Čestitamo! Završili ste ovaj Volume.</p>
+              <p>{"Čestitamo!\nZavršili ste ovaj Volume."}</p>
             )}
           </div>
         )}

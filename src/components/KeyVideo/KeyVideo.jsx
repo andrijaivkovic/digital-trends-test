@@ -2,9 +2,13 @@ import { motion } from "framer-motion";
 
 import Embed from "../Embed/Embed";
 
+import { useApp } from "../../contexts/useApp";
+
 import { elementsMotionProps } from "../../helpers/variables";
 
-const KeyVideo = ({ language }) => {
+const KeyVideo = () => {
+  const { language } = useApp();
+
   return (
     <section className="key-video">
       <div className="key-video__text">

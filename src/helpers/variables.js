@@ -3,6 +3,7 @@ export const SPOTIFY_VISIBILTY_TRESHOLD_DESKTOP = 1100;
 export const SPOTIFY_VISIBILTY_TRESHOLD_MOBILE = 400;
 export const LAZY_LOAD_OFFSET = 700;
 export const VOLUME_READ_OBSERVER_DELAY = 1000;
+export const TOAST_AUTOREMOVE_TIMER = 3000;
 
 const elementsMotionVariants = {
   initial: { y: 20, opacity: 0 },

@@ -2,8 +2,10 @@ import { useEffect, useRef, useState } from "react";
 
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
+import { v4 as uuidv4 } from "uuid";
 import numberToWords from "number-to-words";
-// import scrollIntoView from "scroll-into-view";
+
+import { useApp } from "../../contexts/useApp";
 
 import Volume from "../../components/Volume/Volume";
 
@@ -16,24 +18,23 @@ import volume5video1 from "/video/volume_5_video_1.mp4";
 import { VOLUME_READ_OBSERVER_DELAY } from "../../helpers/variables";
 import { elementsMotionProps } from "../../helpers/variables";
 
+// const isVolumeReadInitial = (readVolumesArr) => {
+//   return readVolumesArr.includes(volumeNumber);
+// };
+
 const volumeNumber = 5;
 
-const VolumeFive = ({
-  language,
-  handleChangeCurrentVolumeNumber,
-  handleAddReadVolume,
-  readVolumes,
-}) => {
-  const [isVolumeRead, setIsVolumeRead] = useState();
+const VolumeFive = () => {
+  const { language, readVolumes, dispatch } = useApp();
+
+  const [isVolumeRead, setIsVolumeRead] = useState(true);
   const [isiPhone, setIsiPhone] = useState(false);
 
   const lastSection = useRef(null);
   const volumeTitle = useRef(null);
 
   useEffect(() => {
-    if (isVolumeRead === false)
-      // scrollIntoView(volumeTitle.current, { time: 1200, align: { top: 0.4 } });
-      volumeTitle.current.scrollIntoView();
+    if (isVolumeRead === false) volumeTitle.current.scrollIntoView();
   }, [isVolumeRead]);
 
   useEffect(() => {
@@ -55,27 +56,43 @@ const VolumeFive = ({
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) handleAddReadVolume(volumeNumber);
+        if (entry.isIntersecting) {
+          dispatch({ type: "volume/read", payload: volumeNumber });
+        }
       },
       { threshold: 1 }
     );
 
-    // observer.observe(lastSection.current);
     setTimeout(
       () => observer.observe(lastSection.current),
       VOLUME_READ_OBSERVER_DELAY
     );
 
     return () => observer.disconnect();
-  }, [handleAddReadVolume]);
+  }, [dispatch]);
 
   useEffect(() => {
-    setIsVolumeRead(readVolumes.includes(volumeNumber));
-  }, [readVolumes]);
+    if (readVolumes.includes(volumeNumber)) {
+      setIsVolumeRead(true);
+      dispatch({
+        type: "toast/added",
+        payload: {
+          id: uuidv4(),
+          icon: "checkmark",
+          messageEN: `Congrats! You've completed this Volume (${volumeNumber}).`,
+          messageRS: `Čestitamo! Završili ste ovaj Volume (${volumeNumber}).`,
+        },
+      });
+
+      return;
+    }
+
+    setIsVolumeRead(false);
+  }, [readVolumes, dispatch]);
 
   useEffect(() => {
-    handleChangeCurrentVolumeNumber(volumeNumber);
-  }, [handleChangeCurrentVolumeNumber]);
+    dispatch({ type: "volume/changed", payload: volumeNumber });
+  }, [dispatch]);
 
   useEffect(() => {
     if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
@@ -362,20 +379,6 @@ const VolumeFive = ({
                   placeholderPath="/images/volumes/volume-5/volume_5_image_2-placeholder.jpg"
                   altText="Amazon Echo with Amazon Alexa Voice assistant."
                 />
-                {/* <picture>
-                  <source
-                    type="image/webp"
-                    srcSet="/images/volumes/volume-5/volume_5_image_2.webp"
-                  />
-                  <source
-                    type="image/jpg"
-                    srcSet="/images/volumes/volume-5/volume_5_image_2.jpg"
-                  />
-                  <img
-                    src="/images/volumes/volume-5/volume_5_image_2.jpg"
-                    alt="Amazon Echo with Amazon Alexa Voice assistant"
-                  />
-                </picture> */}
                 <div className="volume__image-description">
                   {language === "en-US" ? (
                     <p>Apple Siri Voice Search</p>

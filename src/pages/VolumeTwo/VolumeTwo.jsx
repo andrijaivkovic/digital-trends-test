@@ -2,8 +2,10 @@ import { useEffect, useRef, useState } from "react";
 
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
+import { v4 as uuidv4 } from "uuid";
 import numberToWords from "number-to-words";
-// import scrollIntoView from "scroll-into-view";
+
+import { useApp } from "../../contexts/useApp";
 
 import Volume from "../../components/Volume/Volume";
 
@@ -16,21 +18,16 @@ import { elementsMotionProps } from "../../helpers/variables";
 
 const volumeNumber = 2;
 
-const VolumeTwo = ({
-  language,
-  handleChangeCurrentVolumeNumber,
-  handleAddReadVolume,
-  readVolumes,
-}) => {
+const VolumeTwo = () => {
+  const { language, readVolumes, dispatch } = useApp();
+
   const [isVolumeRead, setIsVolumeRead] = useState();
 
   const lastSection = useRef(null);
   const volumeTitle = useRef(null);
 
   useEffect(() => {
-    if (isVolumeRead === false)
-      // scrollIntoView(volumeTitle.current, { time: 1200, align: { top: 0.4 } });
-      volumeTitle.current.scrollIntoView();
+    if (isVolumeRead === false) volumeTitle.current.scrollIntoView();
   }, [isVolumeRead]);
 
   useEffect(() => {
@@ -52,7 +49,8 @@ const VolumeTwo = ({
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) handleAddReadVolume(volumeNumber);
+        if (entry.isIntersecting)
+          dispatch({ type: "volume/read", payload: volumeNumber });
       },
       { threshold: 1 }
     );
@@ -63,15 +61,30 @@ const VolumeTwo = ({
     );
 
     return () => observer.disconnect();
-  }, [handleAddReadVolume]);
+  }, [dispatch]);
 
   useEffect(() => {
-    setIsVolumeRead(readVolumes.includes(volumeNumber));
-  }, [readVolumes]);
+    if (readVolumes.includes(volumeNumber)) {
+      setIsVolumeRead(true);
+      dispatch({
+        type: "toast/added",
+        payload: {
+          id: uuidv4(),
+          icon: "checkmark",
+          messageEN: `Congrats! You've completed this Volume (${volumeNumber}).`,
+          messageRS: `Čestitamo! Završili ste ovaj Volume (${volumeNumber}).`,
+        },
+      });
+
+      return;
+    }
+
+    setIsVolumeRead(false);
+  }, [readVolumes, dispatch]);
 
   useEffect(() => {
-    handleChangeCurrentVolumeNumber(volumeNumber);
-  }, [handleChangeCurrentVolumeNumber]);
+    dispatch({ type: "volume/changed", payload: volumeNumber });
+  }, [dispatch]);
 
   return (
     <>

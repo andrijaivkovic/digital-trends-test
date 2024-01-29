@@ -1,0 +1,20 @@
+.toast-list {
+  position: fixed;
+  bottom: 13.5rem;
+
+  z-index: 99;
+
+  @include flex-column;
+  @include flex-center;
+  gap: 1rem;
+
+  width: 100%;
+
+  @include mediaQuery(tablet) {
+    bottom: 12rem;
+  }
+
+  @include mediaQuery(mobile) {
+    bottom: 13rem;
+  }
+}

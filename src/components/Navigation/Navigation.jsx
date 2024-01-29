@@ -4,6 +4,8 @@ import { NavLink } from "react-router-dom";
 import numberToWords from "number-to-words";
 import { AnimatePresence, motion } from "framer-motion";
 
+import { useApp } from "../../contexts/useApp";
+
 import { NAVIGATION_OPAQUE_TRESHOLD } from "../../helpers/variables";
 
 const navigationMenuItems = [
@@ -37,7 +39,7 @@ const menuContainerMotionProps = {
 const menuItemVariants = {
   initial: { opacity: 0 },
   animate: (index) => {
-    return { opacity: 1, transition: { delay: 0.05 + 0.02 * index } };
+    return { opacity: 1, transition: { delay: 0.05 + 0.04 * index } };
   },
   exit: { opacity: 0 },
 };
@@ -56,7 +58,9 @@ const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
-const Navigation = ({ language, handleSwitchLanguage }) => {
+const Navigation = () => {
+  const { language, dispatch } = useApp();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isNavigationOpaque, setIsNavigationOpaque] = useState(false);
 
@@ -458,7 +462,8 @@ const Navigation = ({ language, handleSwitchLanguage }) => {
             <svg
               className={isMenuOpen ? "rotated" : ""}
               xmlns="http://www.w3.org/2000/svg"
-              height="13"
+              height="11"
+              width="12"
               viewBox="0 0 20 36.707"
             >
               <path
@@ -469,7 +474,7 @@ const Navigation = ({ language, handleSwitchLanguage }) => {
                 fill="none"
                 stroke="#fff"
                 strokeLinecap="round"
-                strokeWidth="6"
+                strokeWidth="4"
               />
             </svg>
           </button>
@@ -505,7 +510,7 @@ const Navigation = ({ language, handleSwitchLanguage }) => {
         </div>
         <button
           tabIndex={0}
-          onClick={() => handleSwitchLanguage()}
+          onClick={() => dispatch({ type: "language/toggled" })}
           className="navigation__language-switch"
         >
           {language === "en-US" ? "SR" : "EN"}

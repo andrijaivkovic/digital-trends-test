@@ -4,13 +4,17 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
+import { useApp } from "../../contexts/useApp";
+
+import { useMediaQuery } from "../../hooks/useMediaQuery";
+
 import { SPOTIFY_VISIBILTY_TRESHOLD_DESKTOP } from "../../helpers/variables";
 import { SPOTIFY_VISIBILTY_TRESHOLD_MOBILE } from "../../helpers/variables";
 import { spotifyEpisodesLinks } from "../../helpers/variables";
 
-import { useMediaQuery } from "../../hooks/useMediaQuery";
+const SpotifyPlayer = () => {
+  const { language, currentVolumeNumber } = useApp();
 
-const SpotifyPlayer = ({ currentVolumeNumber, language }) => {
   const [isSpotifyPlayerVisible, setIsSpotifyPlayerVisible] = useState();
   const [isLoading, setIsLoading] = useState(true);
 

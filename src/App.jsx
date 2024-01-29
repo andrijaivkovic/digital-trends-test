@@ -1,5 +1,3 @@
-import { useCallback, useEffect, useState } from "react";
-
 import { Route, Routes } from "react-router";
 import { Helmet } from "react-helmet-async";
 
@@ -22,63 +20,13 @@ import LastVisitedVolume from "./components/LastVisited/LastVisitedVolume";
 import SpotifyPlayer from "./components/SpotifyPlayer/SpotifyPlayer";
 import VolumeNavigation from "./components/VolumeNavigation/VolumeNavigation";
 import KeyVideo from "./components/KeyVideo/KeyVideo";
+import ToastList from "./components/ToastList/ToastList";
+import { useApp } from "./contexts/useApp";
 
 // import ClearLocalStorage from "./components/ClearLocalStorage/ClearLocalStorage";
 
-const getPreferredLanuage = () => {
-  return localStorage.getItem("preferredLanguage");
-};
-
-const getReadVolumes = () => {
-  const readVolumes = JSON.parse(localStorage.getItem("readVolumes"));
-  if (!readVolumes) return [];
-
-  return readVolumes;
-};
-
 function App() {
-  const [language, setLanguage] = useState(getPreferredLanuage);
-  const [currentVolumeNumber, setCurrentVolumeNumber] = useState(null);
-  const [readVolumes, setReadVolumes] = useState(getReadVolumes);
-
-  const handleChangeCurrentVolumeNumber = useCallback((volumeNumber) => {
-    setCurrentVolumeNumber(volumeNumber);
-  }, []);
-
-  const handleAddReadVolume = useCallback((volumeNumber) => {
-    setReadVolumes((current) => {
-      if (current.includes(volumeNumber)) return current;
-      return [...current, volumeNumber];
-    });
-  }, []);
-
-  const handleSwitchLanguage = () => {
-    if (language === "en-US") setLanguage("sr-Lat");
-    if (language === "sr-Lat") setLanguage("en-US");
-  };
-
-  useEffect(() => {
-    if (language) localStorage.setItem("preferredLanguage", language);
-  }, [language]);
-
-  useEffect(() => {
-    if (!language) {
-      const userSystemLanguage = navigator.language;
-
-      if (!userSystemLanguage.includes("sr")) {
-        setLanguage("en-US");
-      }
-
-      if (userSystemLanguage.includes("sr")) {
-        setLanguage("sr-Lat");
-      }
-    }
-  }, [language]);
-
-  useEffect(() => {
-    if (!readVolumes) return;
-    localStorage.setItem("readVolumes", JSON.stringify(readVolumes));
-  }, [readVolumes]);
+  const { language, currentVolumeNumber } = useApp();
 
   return (
     <>
@@ -86,132 +34,26 @@ function App() {
         <html lang={language} />
         <meta name="theme-color" content="#E5EAFF" />
       </Helmet>
-      <Navigation
-        language={language}
-        handleSwitchLanguage={handleSwitchLanguage}
-      />
+      <Navigation />
       <Hero />
       <Main>
         <Routes>
           <Route path="/" element={<LastVisitedVolume />} />
-          <Route
-            path="/volume-one"
-            element={
-              <VolumeOne
-                handleAddReadVolume={handleAddReadVolume}
-                readVolumes={readVolumes}
-                handleChangeCurrentVolumeNumber={
-                  handleChangeCurrentVolumeNumber
-                }
-                language={language}
-              />
-            }
-          />
-          <Route
-            path="/volume-two"
-            element={
-              <VolumeTwo
-                readVolumes={readVolumes}
-                handleAddReadVolume={handleAddReadVolume}
-                handleChangeCurrentVolumeNumber={
-                  handleChangeCurrentVolumeNumber
-                }
-                language={language}
-              />
-            }
-          />
-          <Route
-            path="/volume-three"
-            element={
-              <VolumeThree
-                readVolumes={readVolumes}
-                handleAddReadVolume={handleAddReadVolume}
-                handleChangeCurrentVolumeNumber={
-                  handleChangeCurrentVolumeNumber
-                }
-                language={language}
-              />
-            }
-          />
-          <Route
-            path="/volume-four"
-            element={
-              <VolumeFour
-                readVolumes={readVolumes}
-                handleAddReadVolume={handleAddReadVolume}
-                handleChangeCurrentVolumeNumber={
-                  handleChangeCurrentVolumeNumber
-                }
-                language={language}
-              />
-            }
-          />
-          <Route
-            path="/volume-five"
-            element={
-              <VolumeFive
-                readVolumes={readVolumes}
-                handleAddReadVolume={handleAddReadVolume}
-                handleChangeCurrentVolumeNumber={
-                  handleChangeCurrentVolumeNumber
-                }
-                language={language}
-              />
-            }
-          />
-          <Route
-            path="/volume-six"
-            element={
-              <VolumeSix
-                readVolumes={readVolumes}
-                handleAddReadVolume={handleAddReadVolume}
-                handleChangeCurrentVolumeNumber={
-                  handleChangeCurrentVolumeNumber
-                }
-                language={language}
-              />
-            }
-          />
-          <Route
-            path="/volume-seven"
-            element={
-              <VolumeSeven
-                readVolumes={readVolumes}
-                handleAddReadVolume={handleAddReadVolume}
-                handleChangeCurrentVolumeNumber={
-                  handleChangeCurrentVolumeNumber
-                }
-                language={language}
-              />
-            }
-          />
-          <Route
-            path="/volume-eight"
-            element={
-              <VolumeEight
-                readVolumes={readVolumes}
-                handleAddReadVolume={handleAddReadVolume}
-                handleChangeCurrentVolumeNumber={
-                  handleChangeCurrentVolumeNumber
-                }
-                language={language}
-              />
-            }
-          />
+          <Route path="/volume-one" element={<VolumeOne />} />
+          <Route path="/volume-two" element={<VolumeTwo />} />
+          <Route path="/volume-three" element={<VolumeThree />} />
+          <Route path="/volume-four" element={<VolumeFour />} />
+          <Route path="/volume-five" element={<VolumeFive />} />
+          <Route path="/volume-six" element={<VolumeSix />} />
+          <Route path="/volume-seven" element={<VolumeSeven />} />
+          <Route path="/volume-eight" element={<VolumeEight />} />
         </Routes>
-        <KeyVideo key={currentVolumeNumber} language={language} />
+        <KeyVideo key={currentVolumeNumber} />
       </Main>
-      <VolumeNavigation
-        language={language}
-        currentVolumeNumber={currentVolumeNumber}
-        readVolumes={readVolumes}
-      />
+      <VolumeNavigation key={currentVolumeNumber} />
       <Footer />
-      <SpotifyPlayer
-        language={language}
-        key={currentVolumeNumber}
-        currentVolumeNumber={currentVolumeNumber}
-      />
+      <ToastList />
+      <SpotifyPlayer />
       {/* <ClearLocalStorage /> */}
     </>
   );

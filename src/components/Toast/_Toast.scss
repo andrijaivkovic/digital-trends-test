@@ -1,0 +1,54 @@
+.toast {
+  @include flex-row;
+  @include flex-center;
+
+  padding: 1.25rem 4rem;
+
+  gap: 1.5rem;
+
+  @include glass-gradient;
+  border: $border;
+  border-radius: $border-radius;
+
+  box-shadow: $drop-shadow-strong;
+
+  @include mediaQuery(tablet) {
+    border-radius: 10px;
+    padding: 0.7rem 2rem;
+    gap: 1rem;
+  }
+
+  @include mediaQuery(mobile) {
+    border-radius: 10px;
+    padding: 0.7rem 1.5rem;
+    gap: 1rem;
+  }
+
+  & > svg {
+    width: 3.2rem;
+    height: 3.3rem;
+
+    @include mediaQuery(tablet) {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+
+    @include mediaQuery(mobile) {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+  }
+
+  & > p {
+    font-size: 2rem;
+    font-weight: 500;
+
+    @include mediaQuery(tablet) {
+      font-size: 1.6rem;
+    }
+
+    @include mediaQuery(mobile) {
+      font-size: 1.2rem;
+    }
+  }
+}

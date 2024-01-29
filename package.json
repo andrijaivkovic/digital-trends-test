@@ -30,7 +30,8 @@
     "react-router-dom": "^6.21.1",
     "sass": "^1.69.5",
     "scroll-into-view": "^1.16.2",
-    "unplugin-fonts": "^1.1.1"
+    "unplugin-fonts": "^1.1.1",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
