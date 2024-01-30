@@ -509,12 +509,12 @@ const Navigation = () => {
                     </motion.li>
                   );
                 })}
-                <button
+                {/* <button
                   className="navigation__clearLocalStorage"
                   onClick={() => clearLocalStorage()}
                 >
                   Clear LocalStorage
-                </button>
+                </button> */}
               </motion.ol>
             )}
           </AnimatePresence>
