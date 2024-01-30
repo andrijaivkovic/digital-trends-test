@@ -110,7 +110,10 @@ const toastNotificationIcon = (icon) => {
   }
 };
 
-const Toast = ({ toast }) => {
+const Toast = ({
+  toast,
+  // index
+}) => {
   const { language, dispatch } = useApp();
 
   useEffect(() => {
@@ -123,11 +126,14 @@ const Toast = ({ toast }) => {
 
   return (
     <motion.div
-      layout={"toast"}
-      initial={{ y: 70, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.33, ease: [0.65, 0, 0.35, 1], delay: 0.3 }}
+      initial={{ x: 70, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: -70, opacity: 0 }}
+      transition={{
+        x: { duration: 0.33, ease: "easeInOut", delay: 0.2 },
+        opacity: { duration: 0.25, delay: 0.2 },
+        layout: { duration: 0.33, ease: "easeInOut" },
+      }}
       className="toast"
     >
       {toastNotificationIcon(toast.icon)}

@@ -71,8 +71,8 @@ const VolumeTwo = () => {
         payload: {
           id: uuidv4(),
           icon: "checkmark",
-          messageEN: `Congrats! You've completed this Volume (${volumeNumber}).`,
-          messageRS: `Čestitamo! Završili ste ovaj Volume (${volumeNumber}).`,
+          messageEN: `Congrats! You've completed Volume ${volumeNumber}!`,
+          messageRS: `Čestitamo! Završili ste Volume ${volumeNumber}!`,
         },
       });
 
@@ -411,6 +411,7 @@ const VolumeTwo = () => {
               )}
             </motion.div>
             <Decoration
+              motionProps={elementsMotionProps}
               style={{ width: "72rem", height: "64rem" }}
               path={
                 "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_2_deco_5.json"

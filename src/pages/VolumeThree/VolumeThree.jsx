@@ -77,8 +77,8 @@ const VolumeThree = () => {
         payload: {
           id: uuidv4(),
           icon: "checkmark",
-          messageEN: `Congrats! You've completed this Volume (${volumeNumber}).`,
-          messageRS: `Čestitamo! Završili ste ovaj Volume (${volumeNumber}).`,
+          messageEN: `Congrats! You've completed Volume ${volumeNumber}!`,
+          messageRS: `Čestitamo! Završili ste Volume ${volumeNumber}!`,
         },
       });
 

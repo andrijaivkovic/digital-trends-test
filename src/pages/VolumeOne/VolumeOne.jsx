@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 
 import { Helmet } from "react-helmet-async";
-import { motion } from "framer-motion";
 import { v4 as uuidv4 } from "uuid";
+import { motion } from "framer-motion";
 import numberToWords from "number-to-words";
 
 import { useApp } from "../../contexts/useApp";
@@ -69,8 +69,8 @@ const VolumeOne = () => {
         payload: {
           id: uuidv4(),
           icon: "checkmark",
-          messageEN: `Congrats! You've completed this Volume (${volumeNumber}).`,
-          messageRS: `Čestitamo! Završili ste ovaj Volume (${volumeNumber}).`,
+          messageEN: `Congrats! You've completed Volume ${volumeNumber}!`,
+          messageRS: `Čestitamo! Završili ste Volume ${volumeNumber}!`,
         },
       });
 

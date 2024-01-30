@@ -18,21 +18,18 @@ const LastVisitedVolume = () => {
   }, []);
 
   useEffect(() => {
-    if (lastVisitedVolume)
-      setTimeout(
-        () =>
-          dispatch({
-            type: "toast/added",
-            payload: {
-              id: uuidv4(),
-              icon: "save",
-              messageEN: `We've loaded the last Volume you visited (${lastVisitedVolume}).`,
-              messageRS: `Učitali smo poslednji Volume koji ste čitali (${lastVisitedVolume}).`,
-            },
-          }),
-        500
-      );
-  });
+    if (lastVisitedVolume) {
+      dispatch({
+        type: "toast/added",
+        payload: {
+          id: uuidv4(),
+          icon: "save",
+          messageEN: `We've loaded the last Volume you visited.`,
+          messageRS: `Učitali smo poslednji Volume koji ste čitali.`,
+        },
+      });
+    }
+  }, [lastVisitedVolume, dispatch]);
 
   return (
     lastVisitedVolume && (

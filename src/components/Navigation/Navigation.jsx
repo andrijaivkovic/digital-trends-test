@@ -54,6 +54,11 @@ const menuItemMotionProps = {
   },
 };
 
+const clearLocalStorage = () => {
+  localStorage.clear();
+  location.reload();
+};
+
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
@@ -504,6 +509,12 @@ const Navigation = () => {
                     </motion.li>
                   );
                 })}
+                <button
+                  className="navigation__clearLocalStorage"
+                  onClick={() => clearLocalStorage()}
+                >
+                  Clear LocalStorage
+                </button>
               </motion.ol>
             )}
           </AnimatePresence>

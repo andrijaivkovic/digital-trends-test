@@ -1,0 +1,19 @@
+.bottom-overlay {
+  position: fixed;
+
+  bottom: 2rem;
+  z-index: 90;
+
+  @include flex-column;
+  gap: 3rem;
+
+  width: 100%;
+
+  @include mediaQuery(tablet) {
+    gap: 1.5rem;
+  }
+
+  @include mediaQuery(mobile) {
+    gap: 1.5rem;
+  }
+}

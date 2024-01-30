@@ -344,4 +344,31 @@
       }
     }
   }
+
+  &__clearLocalStorage {
+    display: block;
+    font-size: 1.8rem;
+    margin: 0.5rem 1rem;
+    padding: 0.5rem;
+    align-self: flex-start;
+
+    color: #fff;
+    opacity: 0.75;
+    font-weight: 300;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 2rem;
+
+    background-color: none;
+
+    transition: 0.25s;
+
+    @include mediaQuery(mobile) {
+      font-size: 1.4rem;
+    }
+
+    @include mediaQuery(tablet) {
+      font-size: 1.8rem;
+    }
+  }
 }

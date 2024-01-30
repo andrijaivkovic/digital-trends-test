@@ -3,6 +3,24 @@ import numberToWords from "number-to-words";
 
 import { useApp } from "../../contexts/useApp";
 
+const congratsText = (readVolumesArr, language) => {
+  if (readVolumesArr.length === 8) {
+    return language === "en-US" ? (
+      <p>{"Congratulations!\nYou’ve completed every Volume!"}</p>
+    ) : (
+      <p>{"Čestitamo!\nZavršili ste svaki Volume!"}</p>
+    );
+  }
+
+  if (readVolumesArr.length < 8) {
+    return language === "en-US" ? (
+      <p>{"Congratulations!\nYou’ve completed this Volume!"}</p>
+    ) : (
+      <p>{"Čestitamo!\nZavršili ste ovaj Volume!"}</p>
+    );
+  }
+};
+
 const VolumeNavigation = () => {
   const { language, currentVolumeNumber, readVolumes } = useApp();
 
@@ -61,11 +79,7 @@ const VolumeNavigation = () => {
                 </g>
               </g>
             </svg>
-            {language === "en-US" ? (
-              <p>{"Congratulations!\nYou’ve completed this Volume!"}</p>
-            ) : (
-              <p>{"Čestitamo!\nZavršili ste ovaj Volume."}</p>
-            )}
+            {congratsText(readVolumes, language)}
           </div>
         )}
         <div className="volume-navigation__links">

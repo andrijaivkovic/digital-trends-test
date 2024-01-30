@@ -15,6 +15,14 @@
 
     scroll-margin-top: 25rem;
 
+    @include mediaQuery(tablet) {
+      scroll-margin-top: 17.5rem;
+    }
+
+    @include mediaQuery(mobile) {
+      scroll-margin-top: 17.5rem;
+    }
+
     &--non-reverse {
       @include flex-row;
 

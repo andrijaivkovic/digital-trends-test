@@ -1,6 +1,8 @@
 import { Route, Routes } from "react-router";
 import { Helmet } from "react-helmet-async";
 
+import { useApp } from "./contexts/useApp";
+
 import Navigation from "./components/Navigation/Navigation";
 import Hero from "./components/Hero/Hero";
 import Main from "./components/Main/Main";
@@ -17,13 +19,12 @@ import VolumeEight from "./pages/VolumeEight/VolumeEight";
 
 import LastVisitedVolume from "./components/LastVisited/LastVisitedVolume";
 
-import SpotifyPlayer from "./components/SpotifyPlayer/SpotifyPlayer";
 import VolumeNavigation from "./components/VolumeNavigation/VolumeNavigation";
 import KeyVideo from "./components/KeyVideo/KeyVideo";
-import ToastList from "./components/ToastList/ToastList";
-import { useApp } from "./contexts/useApp";
 
-// import ClearLocalStorage from "./components/ClearLocalStorage/ClearLocalStorage";
+import BottomOverlay from "./components/BottomOverlay/BottomOverlay";
+import ToastList from "./components/ToastList/ToastList";
+import SpotifyPlayer from "./components/SpotifyPlayer/SpotifyPlayer";
 
 function App() {
   const { language, currentVolumeNumber } = useApp();
@@ -52,9 +53,10 @@ function App() {
       </Main>
       <VolumeNavigation key={currentVolumeNumber} />
       <Footer />
-      <ToastList />
-      <SpotifyPlayer />
-      {/* <ClearLocalStorage /> */}
+      <BottomOverlay>
+        <ToastList />
+        <SpotifyPlayer key={currentVolumeNumber} />
+      </BottomOverlay>
     </>
   );
 }

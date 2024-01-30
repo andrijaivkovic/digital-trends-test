@@ -58,11 +58,11 @@ const SpotifyPlayer = () => {
   });
 
   return (
-    <AnimatePresence>
+    <AnimatePresence initial="false">
       {isSpotifyPlayerVisible && (
         <motion.div
           transition={{
-            y: { duration: 0.4, ease: [0.65, 0, 0.35, 1] },
+            y: { duration: 0.4, ease: "easeInOut" },
             opacity: { duration: 0.4 },
           }}
           initial={{ y: 150, opacity: 0 }}

@@ -61,6 +61,12 @@ const reducer = (state, action) => {
         ),
       };
 
+    case "toast/cleared":
+      return {
+        ...state,
+        toastNotifications: [],
+      };
+
     default:
       throw new Error("Unknown action inside useApp reducer!");
   }
@@ -119,4 +125,5 @@ const useApp = () => {
   return context;
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export { useApp, AppProvider };

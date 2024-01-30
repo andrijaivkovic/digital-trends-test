@@ -206,6 +206,7 @@
 
       &-section-five {
         margin-top: -5rem;
+
         & > .volume__textbox {
           padding-right: 14rem;
           flex-basis: 60%;
@@ -216,10 +217,26 @@
           margin-left: -14rem;
           scale: 1;
         }
+
+        @include mediaQuery(tablet) {
+          margin-top: unset;
+        }
+
+        @include mediaQuery(mobile) {
+          margin-top: unset;
+        }
       }
 
       &-section-six {
         margin-top: -5rem;
+
+        @include mediaQuery(tablet) {
+          margin-top: unset;
+        }
+
+        @include mediaQuery(mobile) {
+          margin-top: unset;
+        }
       }
 
       &-section-seven {
