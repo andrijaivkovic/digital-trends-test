@@ -1,7 +1,3 @@
-// * {
-//   outline: 1px solid #f00 !important;
-// }
-
 html {
   font-family: "Montserrat Variable", sans-serif;
 
@@ -44,10 +40,7 @@ body {
 
   background-size: cover;
 
-  // overflow: hidden;
-
   background-color: #e5eaff;
-  // background-color: black !important;
 
   &.volume-one {
     background-image: url("/images/bg/desktop/bg-volume_one-desktop.webp");
@@ -140,20 +133,6 @@ body {
       background-image: url("/images/bg/mobile/bg-volume_eight-mobile.webp");
     }
   }
-
-  // background-image: url("/images/bg.jpeg");
-
-  // DESKTOP
-
-  // background-size: 550% 110%;
-  // background-repeat: no-repeat;
-  // background-position: 47% top;
-
-  // MOBILE
-
-  // background-size: 1600%;
-  // background-repeat: no-repeat;
-  // background-position: 47% top;
 }
 
 img {
