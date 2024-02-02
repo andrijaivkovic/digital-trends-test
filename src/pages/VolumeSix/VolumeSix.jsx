@@ -80,9 +80,9 @@ const VolumeSix = () => {
             className="volume__title-image volume__title-image--volume-six"
           >
             <Image
-              webpPath="/images/volumes/volume-six/volume_6_image_title.webp"
-              path="/images/volumes/volume-six/volume_6_image_title.jpg"
-              placeholderPath="/images/volumes/volume-six/volume_6_image_title-placeholder.jpg"
+              webpPath="/images/volumes/volume-six/volume_six_image_title.webp"
+              path="/images/volumes/volume-six/volume_six_image_title.jpg"
+              placeholderPath="/images/volumes/volume-six/volume_six_image_title-placeholder.jpg"
               altText="Abstract illustration of a data center."
             />
             {isVolumeRead && (
@@ -227,7 +227,7 @@ const VolumeSix = () => {
               motionProps={elementsMotionProps}
               style={{ width: "70rem", height: "70rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_6_deco_2.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_six_deco_two.json"
               }
             />
           </section>
@@ -237,9 +237,9 @@ const VolumeSix = () => {
               className="volume__image volume__image--vertical"
             >
               <Image
-                webpPath="/images/volumes/volume-six/volume_6_image_1.webp"
-                path="/images/volumes/volume-six/volume_6_image_1.jpg"
-                placeholderPath="/images/volumes/volume-six/volume_6_image_1-placeholder.jpg"
+                webpPath="/images/volumes/volume-six/volume_six_image_one.webp"
+                path="/images/volumes/volume-six/volume_six_image_one.jpg"
+                placeholderPath="/images/volumes/volume-six/volume_six_image_one-placeholder.jpg"
                 altText="McDonald's mobile app in-app screenshot."
               />
               <div className="volume__image-description">
@@ -251,9 +251,9 @@ const VolumeSix = () => {
               className="volume__image volume__image--vertical"
             >
               <Image
-                webpPath="/images/volumes/volume-six/volume_6_image_2.webp"
-                path="/images/volumes/volume-six/volume_6_image_2.jpg"
-                placeholderPath="/images/volumes/volume-six/volume_6_image_2-placeholder.jpg"
+                webpPath="/images/volumes/volume-six/volume_six_image_two.webp"
+                path="/images/volumes/volume-six/volume_six_image_two.jpg"
+                placeholderPath="/images/volumes/volume-six/volume_six_image_two-placeholder.jpg"
                 altText="Body of text explaining how Marriott Hotels use big data."
               />
               <div className="volume__image-description">
@@ -304,7 +304,7 @@ const VolumeSix = () => {
               motionProps={elementsMotionProps}
               style={{ width: "72rem", height: "48rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_6_deco_1.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_six_deco_one.json"
               }
             />
           </section>
@@ -314,9 +314,9 @@ const VolumeSix = () => {
               className="volume__image volume__image--vertical"
             >
               <Image
-                webpPath="/images/volumes/volume-six/volume_6_image_3.webp"
-                path="/images/volumes/volume-six/volume_6_image_3.jpg"
-                placeholderPath="/images/volumes/volume-six/volume_6_image_3-placeholder.jpg"
+                webpPath="/images/volumes/volume-six/volume_six_image_three.webp"
+                path="/images/volumes/volume-six/volume_six_image_three.jpg"
+                placeholderPath="/images/volumes/volume-six/volume_six_image_three-placeholder.jpg"
                 altText="Screenshot of the rewards screen in Starbuck's mobile app."
               />
               <div className="volume__image-description">
@@ -328,9 +328,9 @@ const VolumeSix = () => {
               className="volume__image volume__image--vertical"
             >
               <Image
-                webpPath="/images/volumes/volume-six/volume_6_image_4.webp"
-                path="/images/volumes/volume-six/volume_6_image_4.jpg"
-                placeholderPath="/images/volumes/volume-six/volume_6_image_4-placeholder.jpg"
+                webpPath="/images/volumes/volume-six/volume_six_image_four.webp"
+                path="/images/volumes/volume-six/volume_six_image_four.jpg"
+                placeholderPath="/images/volumes/volume-six/volume_six_image_four-placeholder.jpg"
                 altText="Screenshot of the recommended page in Netflix's mobile app."
               />
               <div className="volume__image-description">
@@ -388,7 +388,7 @@ const VolumeSix = () => {
               motionProps={elementsMotionProps}
               style={{ width: "70rem", height: "70rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_6_deco_3.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_six_deco_three.json"
               }
             />
           </section>
@@ -398,9 +398,9 @@ const VolumeSix = () => {
               className="volume__image volume__image--vertical"
             >
               <Image
-                webpPath="/images/volumes/volume-six/volume_6_image_5.webp"
-                path="/images/volumes/volume-six/volume_6_image_5.jpg"
-                placeholderPath="/images/volumes/volume-six/volume_6_image_5-placeholder.jpg"
+                webpPath="/images/volumes/volume-six/volume_six_image_five.webp"
+                path="/images/volumes/volume-six/volume_six_image_five.jpg"
+                placeholderPath="/images/volumes/volume-six/volume_six_image_five-placeholder.jpg"
                 altText="Body of text explaining how Amazon uses big data."
               />
               <div className="volume__image-description">
@@ -412,9 +412,9 @@ const VolumeSix = () => {
               className="volume__image volume__image--vertical"
             >
               <Image
-                webpPath="/images/volumes/volume-six/volume_6_image_6.webp"
-                path="/images/volumes/volume-six/volume_6_image_6.jpg"
-                placeholderPath="/images/volumes/volume-six/volume_6_image_6-placeholder.jpg"
+                webpPath="/images/volumes/volume-six/volume_six_image_six.webp"
+                path="/images/volumes/volume-six/volume_six_image_six.jpg"
+                placeholderPath="/images/volumes/volume-six/volume_six_image_six-placeholder.jpg"
                 altText="Spotify Wrapped in-app screenshot."
               />
               <div className="volume__image-description">
@@ -475,7 +475,7 @@ const VolumeSix = () => {
               motionProps={elementsMotionProps}
               style={{ width: "60rem", height: "48rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_6_deco_4.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_six_deco_four.json"
               }
             />
           </section>

@@ -228,7 +228,7 @@ const VolumeFour = () => {
               motionProps={elementsMotionProps}
               style={{ width: "60rem", height: "60rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_4_deco_1.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_four_deco_one.json"
               }
             />
           </section>
@@ -239,7 +239,7 @@ const VolumeFour = () => {
               site="tiktok"
               src="https://www.tiktok.com/embed/7206038743336389934"
               title="Tiktok video player"
-              backgroundImage="/images/embed-bg/volume-4/volume_4_embed_1.jpg"
+              backgroundImage="/images/embed-bg/volume-four/volume_four_embed_one.jpg"
               allowFullScreen={true}
             />
             <Embed
@@ -248,7 +248,7 @@ const VolumeFour = () => {
               site="tiktok"
               src="https://www.tiktok.com/embed/7283213311909367083"
               title="Tiktok video player"
-              backgroundImage="/images/embed-bg/volume-4/volume_4_embed_2.jpg"
+              backgroundImage="/images/embed-bg/volume-four/volume_four_embed_two.jpg"
               allowFullScreen={true}
             />
           </section>
@@ -296,7 +296,7 @@ const VolumeFour = () => {
               motionProps={elementsMotionProps}
               style={{ width: "60rem", height: "60rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_4_deco_2.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_four_deco_two.json"
               }
             />
           </section>
@@ -307,7 +307,7 @@ const VolumeFour = () => {
               site="tiktok"
               src="https://www.tiktok.com/embed/7254683600090713387"
               title="Tiktok video player"
-              backgroundImage="/images/embed-bg/volume-4/volume_4_embed_3.jpg"
+              backgroundImage="/images/embed-bg/volume-four/volume_four_embed_three.jpg"
               allowFullScreen={true}
             />
             <Embed
@@ -316,7 +316,7 @@ const VolumeFour = () => {
               site="tiktok"
               src="https://www.tiktok.com/embed/7246843475566546219"
               title="Tiktok video player"
-              backgroundImage="/images/embed-bg/volume-4/volume_4_embed_4.jpg"
+              backgroundImage="/images/embed-bg/volume-four/volume_four_embed_four.jpg"
               allowFullScreen={true}
             />
           </section>
@@ -374,7 +374,7 @@ const VolumeFour = () => {
               motionProps={elementsMotionProps}
               style={{ width: "64rem", height: "72rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_4_deco_3.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_four_deco_three.json"
               }
             />
           </section>

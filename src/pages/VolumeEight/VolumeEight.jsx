@@ -81,9 +81,9 @@ const VolumeSeven = () => {
             className="volume__title-image volume__title-image--volume-eight"
           >
             <Image
-              webpPath="/images/volumes/volume-eight/volume_8_image_title.webp"
-              path="/images/volumes/volume-eight/volume_8_image_title.jpg"
-              placeholderPath="/images/volumes/volume-eight/volume_8_image_title-placeholder.jpg"
+              webpPath="/images/volumes/volume-eight/volume_eight_image_title.webp"
+              path="/images/volumes/volume-eight/volume_eight_image_title.jpg"
+              placeholderPath="/images/volumes/volume-eight/volume_eight_image_title-placeholder.jpg"
               altText="Hide the pain Harold's legendary meme image."
             />
             {isVolumeRead && (
@@ -227,7 +227,7 @@ const VolumeSeven = () => {
               motionProps={elementsMotionProps}
               style={{ width: "70rem", height: "70rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_8_deco_1.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_eight_deco_one.json"
               }
             />
           </section>
@@ -239,7 +239,7 @@ const VolumeSeven = () => {
               src="https://www.youtube.com/embed/BBIX9FG6kZ0?si=eDcXUSpNKWksv-v6&autoplay=1"
               title="Youtube video player"
               allowFullScreen={true}
-              backgroundImage="/images/embed-bg/volume-eight/volume_8_embed_1.jpg"
+              backgroundImage="/images/embed-bg/volume-eight/volume_eight_embed_one.jpg"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;"
             />
@@ -305,7 +305,7 @@ const VolumeSeven = () => {
               motionProps={elementsMotionProps}
               style={{ width: "70rem", height: "70rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_8_deco_2.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_eight_deco_two.json"
               }
             />
           </section>
@@ -316,7 +316,7 @@ const VolumeSeven = () => {
               site="tiktok"
               src="https://www.tiktok.com/embed/7249114859349232942"
               title="Tiktok video player"
-              backgroundImage="/images/embed-bg/volume-eight/volume_8_embed_2.jpg"
+              backgroundImage="/images/embed-bg/volume-eight/volume_eight_embed_two.jpg"
               allowFullScreen={true}
             />
             <Embed
@@ -326,7 +326,7 @@ const VolumeSeven = () => {
               src="https://www.tiktok.com/embed/7255416435743182122"
               title="Tiktok video player"
               allowFullScreen={true}
-              backgroundImage="/images/embed-bg/volume-eight/volume_8_embed_3.jpg"
+              backgroundImage="/images/embed-bg/volume-eight/volume_eight_embed_three.jpg"
             />
           </section>
           <section
@@ -380,7 +380,7 @@ const VolumeSeven = () => {
               motionProps={elementsMotionProps}
               style={{ width: "45.5rem", height: "49rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_8_deco_3.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_eight_deco_three.json"
               }
             />
           </section>

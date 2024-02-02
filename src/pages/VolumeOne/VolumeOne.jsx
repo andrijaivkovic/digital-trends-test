@@ -224,16 +224,16 @@ const VolumeOne = () => {
               }}
               style={{ width: "72rem", height: "68rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_1_deco_1.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_one_deco_one.json"
               }
             />
           </section>
           <section className="volume__section volume__section--reverse volume__section--volume-one-section-two">
             <motion.div {...elementsMotionProps} className="volume__image">
               <Image
-                webpPath="/images/volumes/volume-one/volume_1_image_1.webp"
-                path="/images/volumes/volume-one/volume_1_image_1.jpg"
-                placeholderPath="/images/volumes/volume-one/volume_1_image_1-placeholder.jpg"
+                webpPath="/images/volumes/volume-one/volume_one_image_one.webp"
+                path="/images/volumes/volume-one/volume_one_image_one.jpg"
+                placeholderPath="/images/volumes/volume-one/volume_one_image_one-placeholder.jpg"
                 altText="Heinz AI campaign"
               />
               <div className="volume__image-description">
@@ -254,7 +254,7 @@ const VolumeOne = () => {
               }}
               style={{ width: "70rem", height: "58rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_1_deco_2.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_one_deco_two.json"
               }
             />
           </section>
@@ -317,16 +317,16 @@ const VolumeOne = () => {
               }}
               style={{ width: "45rem", height: "64rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_1_deco_3.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_one_deco_three.json"
               }
             />
           </section>
           <section className="volume__section volume__section--reverse volume__section--volume-one-section-four">
             <motion.div {...elementsMotionProps} className="volume__image">
               <Image
-                webpPath="/images/volumes/volume-one/volume_1_image_2.webp"
-                path="/images/volumes/volume-one/volume_1_image_2.jpg"
-                placeholderPath="/images/volumes/volume-one/volume_1_image_2-placeholder.jpg"
+                webpPath="/images/volumes/volume-one/volume_one_image_two.webp"
+                path="/images/volumes/volume-one/volume_one_image_two.jpg"
+                placeholderPath="/images/volumes/volume-one/volume_one_image_two-placeholder.jpg"
                 altText="A picture showing icons of the most popular AI tools in a grid."
               />
               <div className="volume__image-description">
@@ -347,7 +347,7 @@ const VolumeOne = () => {
               }}
               style={{ width: "72rem", height: "63rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_1_deco_4.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_one_deco_four.json"
               }
             />
           </section>
@@ -405,16 +405,16 @@ const VolumeOne = () => {
               }}
               style={{ width: "72rem", height: "64rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_1_deco_5.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_one_deco_five.json"
               }
             />
           </section>
           <section className="volume__section volume__section--reverse volume__section--volume-one-section-six">
             <motion.div {...elementsMotionProps} className="volume__image">
               <Image
-                webpPath="/images/volumes/volume-one/volume_1_image_3.webp"
-                path="/images/volumes/volume-one/volume_1_image_3.jpg"
-                placeholderPath="/images/volumes/volume-one/volume_1_image_3-placeholder.jpg"
+                webpPath="/images/volumes/volume-one/volume_one_image_three.webp"
+                path="/images/volumes/volume-one/volume_one_image_three.jpg"
+                placeholderPath="/images/volumes/volume-one/volume_one_image_three-placeholder.jpg"
                 altText="An ilustration depicting a conversation between the human brain and artificial intelligence."
               />
               <div className="volume__image-description">
@@ -435,7 +435,7 @@ const VolumeOne = () => {
               }}
               style={{ width: "72rem", height: "54rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_1_deco_6.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_one_deco_six.json"
               }
             />
           </section>
@@ -486,7 +486,7 @@ const VolumeOne = () => {
               }}
               style={{ width: "72rem", height: "64rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_1_deco_7.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_one_deco_seven.json"
               }
             />
           </section>

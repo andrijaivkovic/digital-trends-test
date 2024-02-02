@@ -81,9 +81,9 @@ const VolumeSeven = () => {
             className="volume__title-image volume__title-image--volume-seven"
           >
             <Image
-              webpPath="/images/volumes/volume-seven/volume_7_image_title.webp"
-              path="/images/volumes/volume-seven/volume_7_image_title.png"
-              placeholderPath="/images/volumes/volume-seven/volume_7_image_title-placeholder.png"
+              webpPath="/images/volumes/volume-seven/volume_seven_image_title.webp"
+              path="/images/volumes/volume-seven/volume_seven_image_title.png"
+              placeholderPath="/images/volumes/volume-seven/volume_seven_image_title-placeholder.png"
               altText="Simplistic 3D render of an hourglass."
             />
             {isVolumeRead && (
@@ -213,7 +213,7 @@ const VolumeSeven = () => {
               motionProps={elementsMotionProps}
               style={{ width: "60rem", height: "50rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_7_deco_1.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_seven_deco_one.json"
               }
             />
           </section>
@@ -222,7 +222,7 @@ const VolumeSeven = () => {
               motionProps={elementsMotionProps}
               style={{ width: "54rem", height: "64.5rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_7_deco_2.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_seven_deco_two.json"
               }
             />
             <Embed
@@ -231,7 +231,7 @@ const VolumeSeven = () => {
               site="instagram"
               src="https://www.instagram.com/p/CupSgRmr3Mq/embed"
               title="Instagram carousel"
-              backgroundImage="/images/embed-bg/volume-seven/volume_7_embed_1.jpg"
+              backgroundImage="/images/embed-bg/volume-seven/volume_seven_embed_one.jpg"
               allowFullScreen={true}
             />
           </section>
@@ -286,7 +286,7 @@ const VolumeSeven = () => {
               motionProps={elementsMotionProps}
               style={{ width: "60rem", height: "60rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_7_deco_3.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_seven_deco_three.json"
               }
             />
           </section>
@@ -297,14 +297,14 @@ const VolumeSeven = () => {
               site="tiktok"
               src="https://www.tiktok.com/embed/7286838768236121376"
               title="Tiktok video player"
-              backgroundImage="/images/embed-bg/volume-seven/volume_7_embed_2.jpg"
+              backgroundImage="/images/embed-bg/volume-seven/volume_seven_embed_two.jpg"
               allowFullScreen={true}
             />
             <Decoration
               motionProps={elementsMotionProps}
               style={{ width: "40rem", height: "40.5rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_7_deco_4.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_seven_deco_four.json"
               }
             />
           </section>
@@ -364,7 +364,7 @@ const VolumeSeven = () => {
               motionProps={elementsMotionProps}
               style={{ width: "60rem", height: "60rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_7_deco_5.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_seven_deco_five.json"
               }
             />
           </section>

@@ -11,7 +11,7 @@ import Decoration from "../../components/Decoration/Decoration";
 import Image from "../../components/Image/Image";
 import Video from "../../components/Video/Video";
 
-import volume5video1 from "/video/volume_5_video_1.mp4";
+import volume5video1 from "/video/volume_five_video_one.mp4";
 
 import { elementsMotionProps } from "../../helpers/variables";
 
@@ -90,9 +90,9 @@ const VolumeFive = () => {
             className="volume__title-image volume__title-image--volume-five"
           >
             <Image
-              webpPath="/images/volumes/volume-5/volume_5_image_title.webp"
-              path="/images/volumes/volume-5/volume_5_image_title.png"
-              placeholderPath="/images/volumes/volume-5/volume_5_image_title-placeholder.png"
+              webpPath="/images/volumes/volume-five/volume_five_image_title.webp"
+              path="/images/volumes/volume-five/volume_five_image_title.png"
+              placeholderPath="/images/volumes/volume-five/volume_five_image_title-placeholder.png"
               altText="Volume 5 Title Image, Apple Siri logo."
             />
             {isVolumeRead && (
@@ -224,16 +224,16 @@ const VolumeFive = () => {
               motionProps={elementsMotionProps}
               style={{ width: "72rem", height: "64rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_5_deco_1.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_five_deco_one.json"
               }
             />
           </section>
           <section className="volume__section volume__section--reverse volume__section--volume-five-section-two">
             <motion.div {...elementsMotionProps} className="volume__image">
               <Image
-                webpPath="/images/volumes/volume-5/volume_5_image_1.webp"
-                path="/images/volumes/volume-5/volume_5_image_1.jpg"
-                placeholderPath="/images/volumes/volume-5/volume_5_image_1-placeholder.jpg"
+                webpPath="/images/volumes/volume-five/volume_five_image_one.webp"
+                path="/images/volumes/volume-five/volume_five_image_one.jpg"
+                placeholderPath="/images/volumes/volume-five/volume_five_image_one-placeholder.jpg"
                 altText="Amazon Echo with Amazon Alexa Voice assistant"
               />
               <div className="volume__image-description">
@@ -290,7 +290,7 @@ const VolumeFive = () => {
               motionProps={elementsMotionProps}
               style={{ width: "72rem", height: "64rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_5_deco_2.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_five_deco_two.json"
               }
             />
           </section>
@@ -298,7 +298,7 @@ const VolumeFive = () => {
             {!isiPhone && (
               <motion.div {...elementsMotionProps} className="volume__video">
                 <Video
-                  placeholderPath="/images/volumes/volume-5/volume_5_image_2-placeholder.jpg"
+                  placeholderPath="/images/volumes/volume-five/volume_5_image_2-placeholder.jpg"
                   path={volume5video1}
                 />
                 <div className="volume__image-description">
@@ -313,9 +313,9 @@ const VolumeFive = () => {
             {isiPhone && (
               <motion.div {...elementsMotionProps} className="volume__image">
                 <Image
-                  webpPath="/images/volumes/volume-5/volume_5_image_2.webp"
-                  path="/images/volumes/volume-5/volume_5_image_2.jpg"
-                  placeholderPath="/images/volumes/volume-5/volume_5_image_2-placeholder.jpg"
+                  webpPath="/images/volumes/volume-five/volume_five_image_two.webp"
+                  path="/images/volumes/volume-five/volume_five_image_two.jpg"
+                  placeholderPath="/images/volumes/volume-five/volume_five_image_two-placeholder.jpg"
                   altText="Amazon Echo with Amazon Alexa Voice assistant."
                 />
                 <div className="volume__image-description">
@@ -362,7 +362,7 @@ const VolumeFive = () => {
               motionProps={elementsMotionProps}
               style={{ width: "50rem", height: "60rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_5_deco_3.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_five_deco_three.json"
               }
             />
           </section>

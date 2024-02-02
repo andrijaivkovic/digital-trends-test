@@ -34,7 +34,7 @@ const KeyVideo = () => {
         src="https://www.youtube.com/embed/J-WpIOxbEpQ?si=N1tx5XLAatbYvDgx&autoplay=1"
         title="Youtube video player"
         allowFullScreen={true}
-        backgroundImage="/images/embed-bg/key-video/key-video_embed_1.jpg"
+        backgroundImage="/images/embed-bg/key-video/key-video_embed.jpg"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;"
       />

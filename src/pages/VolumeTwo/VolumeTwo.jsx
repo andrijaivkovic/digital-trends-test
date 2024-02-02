@@ -81,9 +81,9 @@ const VolumeTwo = () => {
             className="volume__title-image volume__title-image--volume-two"
           >
             <Image
-              webpPath="/images/volumes/volume-2/volume_2_image_title.webp"
-              path="/images/volumes/volume-2/volume_2_image_title.jpg"
-              placeholderPath="/images/volumes/volume-2/volume_2_image_title-placeholder.jpg"
+              webpPath="/images/volumes/volume-two/volume_two_image_title.webp"
+              path="/images/volumes/volume-two/volume_two_image_title.jpg"
+              placeholderPath="/images/volumes/volume-two/volume_two_image_title-placeholder.jpg"
               altText="Spotify's Wrapped visual."
             />
             {isVolumeRead && (
@@ -215,16 +215,16 @@ const VolumeTwo = () => {
               motionProps={elementsMotionProps}
               style={{ width: "72rem", height: "64rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_2_deco_1.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_two_deco_one.json"
               }
             />
           </section>
           <section className="volume__section volume__section--reverse volume__section--volume-two-section-two">
             <motion.div {...elementsMotionProps} className="volume__image">
               <Image
-                webpPath="/images/volumes/volume-2/volume_2_image_1.webp"
-                path="/images/volumes/volume-1/volume_2_image_1.jpg"
-                placeholderPath="/images/volumes/volume-2/volume_2_image_1-placeholder.jpg"
+                webpPath="/images/volumes/volume-two/volume_two_image_one.webp"
+                path="/images/volumes/volume-two/volume_two_image_one.jpg"
+                placeholderPath="/images/volumes/volume-two/volume_two_image_one-placeholder.jpg"
                 altText="Spotify's Wrapped in-app screenshots."
               />
               <div className="volume__image-description">
@@ -235,7 +235,7 @@ const VolumeTwo = () => {
               motionProps={elementsMotionProps}
               style={{ width: "72rem", height: "64rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_2_deco_2.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_two_deco_two.json"
               }
             />
           </section>
@@ -291,7 +291,7 @@ const VolumeTwo = () => {
               motionProps={elementsMotionProps}
               style={{ width: "72rem", height: "64rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_2_deco_3.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_two_deco_three.json"
               }
             />
           </section>
@@ -303,7 +303,7 @@ const VolumeTwo = () => {
               src="https://www.youtube.com/embed/3KtWfp0UopM?si=T3ilnYqNY23X4C4-&autoplay=1"
               title="Youtube video player"
               allowFullScreen={true}
-              backgroundImage="/images/embed-bg/volume-2/volume_2_embed_1.jpg"
+              backgroundImage="/images/embed-bg/volume-two/volume_two_embed_one.jpg"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;"
             />
@@ -311,7 +311,7 @@ const VolumeTwo = () => {
               motionProps={elementsMotionProps}
               style={{ width: "72rem", height: "50rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_2_deco_4.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_two_deco_four.json"
               }
             />
           </section>
@@ -358,16 +358,16 @@ const VolumeTwo = () => {
               motionProps={elementsMotionProps}
               style={{ width: "72rem", height: "64rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_2_deco_5.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_two_deco_five.json"
               }
             />
           </section>
           <section className="volume__section volume__section--reverse volume__section--volume-two-section-six">
             <motion.div {...elementsMotionProps} className="volume__image">
               <Image
-                webpPath="/images/volumes/volume-2/volume_2_image_2.webp"
-                path="/images/volumes/volume-1/volume_2_image_2.jpg"
-                placeholderPath="/images/volumes/volume-2/volume_2_image_2-placeholder.jpg"
+                webpPath="/images/volumes/volume-two/volume_two_image_two.webp"
+                path="/images/volumes/volume-two/volume_two_image_two.jpg"
+                placeholderPath="/images/volumes/volume-two/volume_two_image_two-placeholder.jpg"
                 altText="Screenshot of an insert of a text about personalization on Amazon and Netflix."
               />
               <div className="volume__image-description">
@@ -382,7 +382,7 @@ const VolumeTwo = () => {
               motionProps={elementsMotionProps}
               style={{ width: "72rem", height: "50rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_2_deco_6.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_two_deco_six.json"
               }
             />
           </section>
@@ -420,7 +420,7 @@ const VolumeTwo = () => {
               motionProps={elementsMotionProps}
               style={{ width: "72rem", height: "42rem" }}
               path={
-                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_2_deco_7.json"
+                "https://raw.githubusercontent.com/andrijaivkovic/digitaltrends2024json/main/volume_two_deco_seven.json"
               }
             />
           </section>
