@@ -27,61 +27,59 @@ const VolumeNavigation = () => {
   return (
     <>
       <nav className="volume-navigation">
-        {readVolumes.includes(currentVolumeNumber) && (
-          <div className="volume-navigation__congrats">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 36 36"
+        <div className="volume-navigation__congrats">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 36 36"
+          >
+            <g
+              id="Group_10998"
+              data-name="Group 10998"
+              transform="translate(-1351 -846)"
             >
+              <circle
+                id="Ellipse_1"
+                data-name="Ellipse 1"
+                cx="18"
+                cy="18"
+                r="18"
+                transform="translate(1351 846)"
+                fill="#242424"
+              />
               <g
-                id="Group_10998"
-                data-name="Group 10998"
-                transform="translate(-1351 -846)"
+                id="Group_10997"
+                data-name="Group 10997"
+                transform="translate(-1.101 -2.354)"
               >
-                <circle
-                  id="Ellipse_1"
-                  data-name="Ellipse 1"
-                  cx="18"
-                  cy="18"
-                  r="18"
-                  transform="translate(1351 846)"
-                  fill="#242424"
+                <line
+                  id="Line_18"
+                  data-name="Line 18"
+                  x2="5"
+                  y2="5"
+                  transform="translate(1361.101 868.054)"
+                  fill="none"
+                  stroke="#fff"
+                  strokeLinecap="round"
+                  strokeWidth="2"
                 />
-                <g
-                  id="Group_10997"
-                  data-name="Group 10997"
-                  transform="translate(-1.101 -2.354)"
-                >
-                  <line
-                    id="Line_18"
-                    data-name="Line 18"
-                    x2="5"
-                    y2="5"
-                    transform="translate(1361.101 868.054)"
-                    fill="none"
-                    stroke="#fff"
-                    strokeLinecap="round"
-                    strokeWidth="2"
-                  />
-                  <line
-                    id="Line_19"
-                    data-name="Line 19"
-                    y1="12.5"
-                    x2="12.092"
-                    transform="translate(1366.401 860.354)"
-                    fill="none"
-                    stroke="#fff"
-                    strokeLinecap="round"
-                    strokeWidth="2"
-                  />
-                </g>
+                <line
+                  id="Line_19"
+                  data-name="Line 19"
+                  y1="12.5"
+                  x2="12.092"
+                  transform="translate(1366.401 860.354)"
+                  fill="none"
+                  stroke="#fff"
+                  strokeLinecap="round"
+                  strokeWidth="2"
+                />
               </g>
-            </svg>
-            {congratsText(readVolumes, language)}
-          </div>
-        )}
+            </g>
+          </svg>
+          {congratsText(readVolumes, language)}
+        </div>
         <div className="volume-navigation__links">
           {currentVolumeNumber > 1 && (
             <Link

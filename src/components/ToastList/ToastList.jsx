@@ -12,15 +12,8 @@ const ToastList = () => {
       className="toast-list"
     >
       <AnimatePresence initial="false">
-        {toastNotifications.map((toast, index) => {
-          return (
-            <Toast
-              index={index}
-              key={toast.id}
-              language={language}
-              toast={toast}
-            />
-          );
+        {toastNotifications.map((toast) => {
+          return <Toast key={toast.id} language={language} toast={toast} />;
         })}
       </AnimatePresence>
     </motion.div>

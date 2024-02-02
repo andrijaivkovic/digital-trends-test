@@ -18,7 +18,7 @@ const LastVisitedVolume = () => {
   }, []);
 
   useEffect(() => {
-    if (lastVisitedVolume) {
+    if (lastVisitedVolume && lastVisitedVolume !== 1) {
       dispatch({
         type: "toast/added",
         payload: {

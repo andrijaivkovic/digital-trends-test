@@ -110,10 +110,7 @@ const toastNotificationIcon = (icon) => {
   }
 };
 
-const Toast = ({
-  toast,
-  // index
-}) => {
+const Toast = ({ toast }) => {
   const { language, dispatch } = useApp();
 
   useEffect(() => {
