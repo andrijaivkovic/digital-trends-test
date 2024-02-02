@@ -143,7 +143,6 @@
     transition: 0.25s;
 
     & > svg {
-      // translate: 0 1.1px;
       transition: 0.25s;
 
       &.rotated {
@@ -286,13 +285,6 @@
         @include mediaQuery(tablet) {
           font-size: 1.8rem;
         }
-
-        // &:hover,
-        // &:active,
-        // &.active {
-        //   color: $color-text-black;
-        //   border-color: $color-text-black;
-        // }
 
         &.volume-one:hover,
         &.volume-one:active,

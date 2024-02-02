@@ -19,7 +19,6 @@ export const elementsMotionProps = {
   viewport: {
     once: true,
     amount: 0.45,
-    // margin: "-200px",
   },
   transition: {
     y: { duration: 0.45, ease: [0.65, 0, 0.35, 1] },

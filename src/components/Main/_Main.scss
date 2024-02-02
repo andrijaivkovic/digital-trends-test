@@ -20,7 +20,6 @@
   }
 
   @include mediaQuery(desktop-xlarge) {
-    // padding-inline: $body-inline-padding-desktop-xlarge;
     max-width: 300rem;
   }
 

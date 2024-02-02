@@ -54,11 +54,6 @@ const menuItemMotionProps = {
   },
 };
 
-// const clearLocalStorage = () => {
-//   localStorage.clear();
-//   location.reload();
-// };
-
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };

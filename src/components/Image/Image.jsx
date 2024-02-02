@@ -28,7 +28,6 @@ const Image = ({
         <img
           onLoad={() => {
             setTimeout(() => setIsLoaded(true), 500);
-            // setIsLoaded(true);
           }}
           src={path}
           alt={altText}

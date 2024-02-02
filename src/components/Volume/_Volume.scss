@@ -237,11 +237,6 @@
     @include mediaQuery(mobile) {
       flex: 1;
     }
-
-    // & video {
-    // border-radius: $border-radius;
-    // border: $border;
-    // }
   }
 
   &__image-description {

@@ -85,7 +85,6 @@ const SpotifyPlayer = () => {
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               onLoad={() => {
                 setTimeout(() => setIsLoading(false), 500);
-                // setIsLoading(false);
               }}
             />
             {isLoading && (

@@ -31,7 +31,6 @@ const Decoration = ({ path, style = {}, className = "", motionProps = {} }) => {
           className={`animation ${isLoaded ? "shown" : ""}`}
           onDataReady={() => {
             setTimeout(() => setIsLoaded(true), 500);
-            // setIsLoaded(true);
           }}
           path={path}
           loop={true}
