@@ -1,9 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 import { Helmet } from "react-helmet-async";
-import { v4 as uuidv4 } from "uuid";
+
 import { motion } from "framer-motion";
-import numberToWords from "number-to-words";
 
 import { useApp } from "../../contexts/useApp";
 
@@ -12,77 +11,17 @@ import Volume from "../../components/Volume/Volume";
 import Image from "../../components/Image/Image";
 import Decoration from "../../components/Decoration/Decoration";
 
-import { VOLUME_READ_OBSERVER_DELAY } from "../../helpers/variables";
 import { elementsMotionProps } from "../../helpers/variables";
 
 const volumeNumber = 1;
 
 const VolumeOne = () => {
-  const { language, readVolumes, dispatch } = useApp();
+  const { language } = useApp();
 
   const [isVolumeRead, setIsVolumeRead] = useState();
 
   const lastSection = useRef(null);
   const volumeTitle = useRef(null);
-
-  useEffect(() => {
-    document.body.classList.add(
-      `volume-${numberToWords.toWords(volumeNumber)}`
-    );
-
-    return () => {
-      document.body.classList.remove(
-        `volume-${numberToWords.toWords(volumeNumber)}`
-      );
-    };
-  });
-
-  useEffect(() => {
-    localStorage.setItem("lastVisitedVolume", volumeNumber);
-  }, []);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          dispatch({ type: "volume/read", payload: volumeNumber });
-        }
-      },
-      { threshold: 1 }
-    );
-
-    setTimeout(
-      () => observer.observe(lastSection.current),
-      VOLUME_READ_OBSERVER_DELAY
-    );
-
-    observer.disconnect();
-
-    return () => observer.disconnect();
-  }, [dispatch]);
-
-  useEffect(() => {
-    if (readVolumes.includes(volumeNumber)) {
-      setIsVolumeRead(true);
-      dispatch({
-        type: "toast/added",
-        payload: {
-          id: uuidv4(),
-          icon: "checkmark",
-          messageEN: `Congrats! You've completed Volume ${volumeNumber}!`,
-          messageRS: `Čestitamo! Završili ste Volume ${volumeNumber}!`,
-        },
-      });
-
-      return;
-    }
-
-    setIsVolumeRead(false);
-  }, [readVolumes, dispatch]);
-
-  useEffect(() => {
-    dispatch({ type: "volume/changed", payload: volumeNumber });
-  }, [dispatch]);
 
   return (
     <>
@@ -125,7 +64,14 @@ const VolumeOne = () => {
           as="image"
         />
       </Helmet>
-      <Volume className="volume--one">
+      <Volume
+        lastSection={lastSection}
+        volumeTitle={volumeTitle}
+        isVolumeRead={isVolumeRead}
+        setIsVolumeRead={setIsVolumeRead}
+        volumeNumber={volumeNumber}
+        className="volume--one"
+      >
         <div
           ref={volumeTitle}
           className="volume__title volume__title--non-reverse volume__title--volume-one"
