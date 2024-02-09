@@ -33,7 +33,10 @@ const LastVisitedVolume = () => {
 
   return (
     lastVisitedVolume && (
-      <Navigate to={`/volume-${numberToWords.toWords(lastVisitedVolume)}`} />
+      <Navigate
+        replace
+        to={`/volume-${numberToWords.toWords(lastVisitedVolume)}`}
+      />
     )
   );
 };

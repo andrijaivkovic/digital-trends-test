@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router";
+import { Navigate, Route, Routes } from "react-router";
 import { Helmet } from "react-helmet-async";
 
 import { useApp } from "./contexts/useApp";
@@ -39,7 +39,7 @@ function App() {
       <Hero />
       <Main>
         <Routes>
-          <Route path="/" element={<LastVisitedVolume />} />
+          <Route index element={<LastVisitedVolume />} />
           <Route path="/volume-one" element={<VolumeOne />} />
           <Route path="/volume-two" element={<VolumeTwo />} />
           <Route path="/volume-three" element={<VolumeThree />} />
@@ -48,6 +48,7 @@ function App() {
           <Route path="/volume-six" element={<VolumeSix />} />
           <Route path="/volume-seven" element={<VolumeSeven />} />
           <Route path="/volume-eight" element={<VolumeEight />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <KeyVideo key={currentVolumeNumber} />
       </Main>
