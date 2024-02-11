@@ -3,11 +3,6 @@ import { Helmet } from "react-helmet-async";
 
 import { useApp } from "./contexts/useApp";
 
-import Navigation from "./components/Navigation/Navigation";
-import Hero from "./components/Hero/Hero";
-import Main from "./components/Main/Main";
-import Footer from "./components/Footer/Footer";
-
 import VolumeOne from "./pages/VolumeOne/VolumeOne";
 import VolumeTwo from "./pages/VolumeTwo/VolumeTwo";
 import VolumeThree from "./pages/VolumeThree/VolumeThree";
@@ -19,15 +14,10 @@ import VolumeEight from "./pages/VolumeEight/VolumeEight";
 
 import LastVisitedVolume from "./components/LastVisited/LastVisitedVolume";
 
-import VolumeNavigation from "./components/VolumeNavigation/VolumeNavigation";
-import KeyVideo from "./components/KeyVideo/KeyVideo";
-
-import BottomOverlay from "./components/BottomOverlay/BottomOverlay";
-import ToastList from "./components/ToastList/ToastList";
-import SpotifyPlayer from "./components/SpotifyPlayer/SpotifyPlayer";
+import AppLayout from "./components/AppLayout/AppLayout";
 
 function App() {
-  const { language, currentVolumeNumber } = useApp();
+  const { language } = useApp();
 
   return (
     <>
@@ -35,10 +25,8 @@ function App() {
         <html lang={language} />
         <meta name="theme-color" content="#E5EAFF" />
       </Helmet>
-      <Navigation />
-      <Hero />
-      <Main>
-        <Routes>
+      <Routes>
+        <Route element={<AppLayout />}>
           <Route index element={<LastVisitedVolume />} />
           <Route path="/volume-one" element={<VolumeOne />} />
           <Route path="/volume-two" element={<VolumeTwo />} />
@@ -49,15 +37,8 @@ function App() {
           <Route path="/volume-seven" element={<VolumeSeven />} />
           <Route path="/volume-eight" element={<VolumeEight />} />
           <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
-        <KeyVideo key={currentVolumeNumber} />
-      </Main>
-      <VolumeNavigation key={currentVolumeNumber} />
-      <Footer />
-      <BottomOverlay>
-        <ToastList />
-        <SpotifyPlayer key={currentVolumeNumber} />
-      </BottomOverlay>
+        </Route>
+      </Routes>
     </>
   );
 }
