@@ -134,11 +134,8 @@ const Toast = ({ toast }) => {
       className="toast"
     >
       {toastNotificationIcon(toast.icon)}
-      {language === "en-US" ? (
-        <p>{toast.messageEN}</p>
-      ) : (
-        <p>{toast.messageRS}</p>
-      )}
+      {language === "en-US" && <p>{toast.messageEN}</p>}
+      {language === "sr-Lat" && <p>{toast.messageRS}</p>}
     </motion.div>
   );
 };
