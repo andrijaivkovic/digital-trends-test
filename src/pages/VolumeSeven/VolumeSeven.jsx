@@ -138,11 +138,8 @@ const VolumeSeven = () => {
                     </g>
                   </g>
                 </svg>
-                {language === "en-US" ? (
-                  <p>You’ve completed this Volume.</p>
-                ) : (
-                  <p>Završili ste ovaj Volume.</p>
-                )}
+                {language === "en-US" && <p>You’ve completed this Volume.</p>}
+                {language === "sr-Lat" && <p>Završili ste ovaj Volume.</p>}
               </div>
             )}
           </motion.div>
@@ -171,7 +168,7 @@ const VolumeSeven = () => {
               {...elementsMotionProps}
               className="volume__textbox volume__textbox--volume-seven"
             >
-              {language === "en-US" ? (
+              {language === "en-US" && (
                 <>
                   <p>
                     When it comes to the time in real life, we all become
@@ -189,7 +186,8 @@ const VolumeSeven = () => {
                     can we say that our brand has Real-Time marketing.
                   </p>
                 </>
-              ) : (
+              )}
+              {language === "sr-Lat" && (
                 <>
                   <p>
                     Kada je reč o vremenu u stvarnom životu, svi postanemo
@@ -240,7 +238,7 @@ const VolumeSeven = () => {
               {...elementsMotionProps}
               className="volume__textbox volume__textbox--volume-seven"
             >
-              {language === "en-US" ? (
+              {language === "en-US" && (
                 <>
                   <p>
                     So, what is Real-Time marketing, and how do we decide
@@ -260,7 +258,8 @@ const VolumeSeven = () => {
                     influencer collaboration.
                   </p>
                 </>
-              ) : (
+              )}
+              {language === "sr-Lat" && (
                 <>
                   <p>
                     A šta je sve Real-Time marketing i kako uopšte doneti odluku
@@ -316,7 +315,7 @@ const VolumeSeven = () => {
               {...elementsMotionProps}
               className="volume__textbox volume__textbox--volume-seven"
             >
-              {language === "en-US" ? (
+              {language === "en-US" && (
                 <>
                   <p>
                     The faster the response to the situation, the bigger the
@@ -337,7 +336,8 @@ const VolumeSeven = () => {
                     joke, and most importantly of all: be brave and confident.
                   </p>
                 </>
-              ) : (
+              )}
+              {language === "sr-Lat" && (
                 <>
                   <p>
                     Što je odgovor na situaciju brži, to su rezultati veći. To

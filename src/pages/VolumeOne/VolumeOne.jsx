@@ -146,11 +146,8 @@ const VolumeOne = () => {
                     </g>
                   </g>
                 </svg>
-                {language === "en-US" ? (
-                  <p>You’ve completed this Volume.</p>
-                ) : (
-                  <p>Završili ste ovaj Volume.</p>
-                )}
+                {language === "en-US" && <p>You’ve completed this Volume.</p>}
+                {language === "sr-Lat" && <p>Završili ste ovaj Volume.</p>}
               </div>
             )}
           </motion.div>
@@ -181,7 +178,7 @@ const VolumeOne = () => {
               {...elementsMotionProps}
               className="volume__textbox volume__textbox--volume-one"
             >
-              {language === "en-US" ? (
+              {language === "en-US" && (
                 <>
                   <p>
                     2023 and the invasion of the new terms took us by surprise.
@@ -196,7 +193,8 @@ const VolumeOne = () => {
                   </p>
                   <p>Short answers? No. Yes. No.</p>
                 </>
-              ) : (
+              )}
+              {language === "sr-Lat" && (
                 <>
                   <p>
                     2023. smo dočekali nespremni na najezdu novih reči i
@@ -237,11 +235,8 @@ const VolumeOne = () => {
                 altText="Heinz AI campaign"
               />
               <div className="volume__image-description">
-                {language === "en-US" ? (
-                  <p>Heinz AI campaign</p>
-                ) : (
-                  <p>Heinz AI kampanja</p>
-                )}
+                {language === "en-US" && <p>Heinz AI campaign</p>}
+                {language === "sr-Lat" && <p>Heinz AI kampanja</p>}
               </div>
             </motion.div>
             <Decoration
@@ -263,7 +258,7 @@ const VolumeOne = () => {
               {...elementsMotionProps}
               className="volume__textbox volume__textbox--volume-one"
             >
-              {language === "en-US" ? (
+              {language === "en-US" && (
                 <>
                   <p>
                     What about the longer version? Well, let’s just start by
@@ -285,7 +280,8 @@ const VolumeOne = () => {
                     ever.
                   </p>
                 </>
-              ) : (
+              )}
+              {language === "sr-Lat" && (
                 <>
                   <p>
                     A duži? Pa hajde, za početak, da razgraničimo jednu stvar:
@@ -330,11 +326,8 @@ const VolumeOne = () => {
                 altText="A picture showing icons of the most popular AI tools in a grid."
               />
               <div className="volume__image-description">
-                {language === "en-US" ? (
-                  <p>Popular AI tools</p>
-                ) : (
-                  <p>Popularni AI alati</p>
-                )}
+                {language === "en-US" && <p>Popular AI tools</p>}
+                {language === "sr-Lat" && <p>Popularni AI alati</p>}
               </div>
             </motion.div>
             <Decoration
@@ -356,7 +349,7 @@ const VolumeOne = () => {
               {...elementsMotionProps}
               className="volume__textbox volume__textbox--volume-one"
             >
-              {language === "en-US" ? (
+              {language === "en-US" && (
                 <>
                   <p>
                     In the surge of new tools, it’s up to all of us to recognize
@@ -375,7 +368,8 @@ const VolumeOne = () => {
                   </p>
                   <p>So, watch, be inspired, and encourage yourself.</p>
                 </>
-              ) : (
+              )}
+              {language === "sr-Lat" && (
                 <>
                   <p>
                     U najezdi novih alata, na svima nama je da prepoznamo koji
@@ -418,11 +412,8 @@ const VolumeOne = () => {
                 altText="An ilustration depicting a conversation between the human brain and artificial intelligence."
               />
               <div className="volume__image-description">
-                {language === "en-US" ? (
-                  <p>Human VS AI</p>
-                ) : (
-                  <p>Čovek protiv AI</p>
-                )}
+                {language === "en-US" && <p>Human VS AI</p>}
+                {language === "sr-Lat" && <p>Čovek protiv AI</p>}
               </div>
             </motion.div>
             <Decoration
@@ -447,7 +438,7 @@ const VolumeOne = () => {
               {...elementsMotionProps}
               className="volume__textbox volume__textbox--volume-one"
             >
-              {language === "en-US" ? (
+              {language === "en-US" && (
                 <>
                   <p>
                     Don’t blindly accept the things the machine generates.
@@ -461,7 +452,8 @@ const VolumeOne = () => {
                     have any questions, reach out to us, not to ChatGPT.
                   </p>
                 </>
-              ) : (
+              )}{" "}
+              {language === "sr-Lat" && (
                 <>
                   <p>
                     Ne prihvataj slepo šta ti mašina iskucava. Jer mašina nikada

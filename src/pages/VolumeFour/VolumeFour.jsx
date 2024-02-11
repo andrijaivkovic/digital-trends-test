@@ -145,11 +145,8 @@ const VolumeFour = () => {
                     </g>
                   </g>
                 </svg>
-                {language === "en-US" ? (
-                  <p>You’ve completed this Volume.</p>
-                ) : (
-                  <p>Završili ste ovaj Volume.</p>
-                )}
+                {language === "en-US" && <p>You’ve completed this Volume.</p>}
+                {language === "sr-Lat" && <p>Završili ste ovaj Volume.</p>}
               </div>
             )}
           </motion.div>
@@ -181,7 +178,7 @@ const VolumeFour = () => {
               {...elementsMotionProps}
               className="volume__textbox volume__textbox--volume-four"
             >
-              {language === "en-US" ? (
+              {language === "en-US" && (
                 <>
                   <p>
                     Everywhere you turn, you hear the same thing: Tik-Tok,
@@ -202,7 +199,8 @@ const VolumeFour = () => {
                     everyone.
                   </p>
                 </>
-              ) : (
+              )}
+              {language === "sr-Lat" && (
                 <>
                   <p>
                     Na svim stranama čuje se jedno te isto: Tik-Tok, Tik-Tok,
@@ -257,7 +255,7 @@ const VolumeFour = () => {
               {...elementsMotionProps}
               className="volume__textbox volume__textbox--volume-four"
             >
-              {language === "en-US" ? (
+              {language === "en-US" && (
                 <>
                   <p>
                     As some studies show, 50% of Generation Z uses TikTok as
@@ -273,7 +271,8 @@ const VolumeFour = () => {
                     and #TikTokMadeMeBuy, we wouldn’t bet against it.
                   </p>
                 </>
-              ) : (
+              )}
+              {language === "sr-Lat" && (
                 <>
                   <p>
                     Kako neka istraživanja pokazuju, 50% Generacije Zed
@@ -328,7 +327,7 @@ const VolumeFour = () => {
               {...elementsMotionProps}
               className="volume__textbox volume__textbox--volume-four"
             >
-              {language === "en-US" ? (
+              {language === "en-US" && (
                 <>
                   <p>And what does that mean for us? For the brands?</p>
                   <p>
@@ -348,7 +347,8 @@ const VolumeFour = () => {
                     create, or based on that over which we have no control.
                   </p>
                 </>
-              ) : (
+              )}{" "}
+              {language === "sr-Lat" && (
                 <>
                   <p>A šta to znači za nas? Za brendove?</p>
                   <p>

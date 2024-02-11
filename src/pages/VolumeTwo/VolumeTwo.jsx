@@ -138,11 +138,8 @@ const VolumeTwo = () => {
                     </g>
                   </g>
                 </svg>
-                {language === "en-US" ? (
-                  <p>You’ve completed this Volume.</p>
-                ) : (
-                  <p>Završili ste ovaj Volume.</p>
-                )}
+                {language === "en-US" && <p>You’ve completed this Volume.</p>}
+                {language === "sr-Lat" && <p>Završili ste ovaj Volume.</p>}
               </div>
             )}
           </motion.div>
@@ -172,7 +169,7 @@ const VolumeTwo = () => {
               {...elementsMotionProps}
               className="volume__textbox volume__textbox--volume-two"
             >
-              {language === "en-US" ? (
+              {language === "en-US" && (
                 <>
                   <p>
                     This isn’t a story about a newsletter addressing you by
@@ -191,7 +188,8 @@ const VolumeTwo = () => {
                     communication.
                   </p>
                 </>
-              ) : (
+              )}
+              {language === "sr-Lat" && (
                 <>
                   <p>
                     Ovo sada nije priča o onome kada vam se njuzleter obrati
@@ -228,7 +226,8 @@ const VolumeTwo = () => {
                 altText="Spotify's Wrapped in-app screenshots."
               />
               <div className="volume__image-description">
-                <p>Spotify Wrapped</p>
+                {language === "sr-Lat" && <p>Spotify Wrapped</p>}
+                {language === "en-US" && <p>Spotify Wrapped</p>}
               </div>
             </motion.div>
             <Decoration
@@ -244,7 +243,7 @@ const VolumeTwo = () => {
               {...elementsMotionProps}
               className="volume__textbox volume__textbox--volume-two"
             >
-              {language === "en-US" ? (
+              {language === "en-US" && (
                 <>
                   <p>
                     According to some research, a tenth of a second is enough to
@@ -264,7 +263,8 @@ const VolumeTwo = () => {
                     ideally building more trust in the brand.
                   </p>
                 </>
-              ) : (
+              )}
+              {language === "sr-Lat" && (
                 <>
                   <p>
                     Desetina sekunde je, prema nekim istraživanjima, dovoljna da
@@ -320,7 +320,7 @@ const VolumeTwo = () => {
               {...elementsMotionProps}
               className="volume__textbox volume__textbox--volume-two"
             >
-              {language === "en-US" ? (
+              {language === "en-US" && (
                 <>
                   <p>How do we evoke an emotional reaction?</p>
                   <p>
@@ -336,7 +336,8 @@ const VolumeTwo = () => {
                     tertiary, why not?
                   </p>
                 </>
-              ) : (
+              )}
+              {language === "sr-Lat" && (
                 <>
                   <p>Kako izazivamo emotivnu reakciju?</p>
                   <p>
@@ -371,11 +372,12 @@ const VolumeTwo = () => {
                 altText="Screenshot of an insert of a text about personalization on Amazon and Netflix."
               />
               <div className="volume__image-description">
-                <p>
-                  {language === "en-US"
-                    ? "Personalization - Amazon & Netflix"
-                    : "Personalizacija - Amazon & Netflix"}
-                </p>
+                {language === "en-US" && (
+                  <p>Personalization - Amazon & Netflix</p>
+                )}
+                {language === "sr-Lat" && (
+                  <p> Personalizacija - Amazon & Netflix</p>
+                )}
               </div>
             </motion.div>
             <Decoration
@@ -394,7 +396,7 @@ const VolumeTwo = () => {
               {...elementsMotionProps}
               className="volume__textbox volume__textbox--volume-two"
             >
-              {language === "en-US" ? (
+              {language === "en-US" && (
                 <>
                   <p>
                     Create a story that many can identify with, believing it’s
@@ -404,7 +406,8 @@ const VolumeTwo = () => {
                   </p>
                   <p>Every day. Throughout every campaign.</p>
                 </>
-              ) : (
+              )}
+              {language === "sr-Lat" && (
                 <>
                   <p>
                     Krerirati priču sa kojom će moći da se poistovete mnogi, a

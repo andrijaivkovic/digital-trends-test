@@ -5,19 +5,23 @@ import { useApp } from "../../contexts/useApp";
 
 const congratsText = (readVolumesArr, language) => {
   if (readVolumesArr.length === 8) {
-    return language === "en-US" ? (
-      <p>{"Congratulations!\nYou’ve completed every Volume!"}</p>
-    ) : (
-      <p>{"Čestitamo!\nZavršili ste svaki Volume!"}</p>
-    );
+    if (language === "en-US") {
+      return <p>{"Congratulations!\nYou’ve completed every Volume!"}</p>;
+    }
+
+    if (language === "sr-Lat") {
+      return <p>{"Čestitamo!\nZavršili ste svaki Volume!"}</p>;
+    }
   }
 
   if (readVolumesArr.length < 8) {
-    return language === "en-US" ? (
-      <p>{"Congratulations!\nYou’ve completed this Volume!"}</p>
-    ) : (
-      <p>{"Čestitamo!\nZavršili ste ovaj Volume!"}</p>
-    );
+    if (language === "en-US") {
+      return <p>{"Congratulations!\nYou’ve completed this Volume!"}</p>;
+    }
+
+    if (language === "sr-Lat") {
+      return <p>{"Čestitamo!\nZavršili ste ovaj Volume!"}</p>;
+    }
   }
 };
 
@@ -104,10 +108,11 @@ const VolumeNavigation = () => {
                   strokeWidth="4"
                 />
               </svg>
-              {language === "en-US" ? (
-                <p>{`Previous Volume (Volume ${currentVolumeNumber - 1})`}</p>
-              ) : (
-                <p>{`Prošli Volume (Volume ${currentVolumeNumber - 1})`}</p>
+              {language === "en-US" && (
+                <p>{`Previous Volume (Volume 0${currentVolumeNumber - 1})`}</p>
+              )}
+              {language === "sr-Lat" && (
+                <p>{`Prošli Volume (Volume 0${currentVolumeNumber - 1})`}</p>
               )}
             </Link>
           )}
@@ -118,10 +123,11 @@ const VolumeNavigation = () => {
                 currentVolumeNumber + 1
               )}`}
             >
-              {language === "en-US" ? (
-                <p>{`Next Volume (Volume ${currentVolumeNumber + 1})`}</p>
-              ) : (
-                <p>{`Sledeći Volume (Volume ${currentVolumeNumber + 1})`}</p>
+              {language === "en-US" && (
+                <p>{`Next Volume (Volume 0${currentVolumeNumber + 1})`}</p>
+              )}
+              {language === "sr-Lat" && (
+                <p>{`Sledeći Volume (Volume 0${currentVolumeNumber + 1})`}</p>
               )}
               <svg
                 xmlns="http://www.w3.org/2000/svg"

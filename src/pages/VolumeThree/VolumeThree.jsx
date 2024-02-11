@@ -172,11 +172,8 @@ const VolumeThree = () => {
                     </g>
                   </g>
                 </svg>
-                {language === "en-US" ? (
-                  <p>You’ve completed this Volume.</p>
-                ) : (
-                  <p>Završili ste ovaj Volume.</p>
-                )}
+                {language === "en-US" && <p>You’ve completed this Volume.</p>}
+                {language === "sr-Lat" && <p>Završili ste ovaj Volume.</p>}
               </div>
             )}
           </motion.div>
@@ -207,7 +204,7 @@ const VolumeThree = () => {
               {...elementsMotionProps}
               className="volume__textbox volume__textbox--volume-three"
             >
-              {language === "en-US" ? (
+              {language === "en-US" && (
                 <>
                   <p>
                     And let’s find some influencers... is a phrase said out loud
@@ -221,7 +218,8 @@ const VolumeThree = () => {
                   </p>
                   <p>The short answer? Probably yes.</p>
                 </>
-              ) : (
+              )}
+              {language === "sr-Lat" && (
                 <>
                   <p>
                     I da nađemo neke influensere… je rečenica koju izgovori
@@ -270,7 +268,7 @@ const VolumeThree = () => {
               {...elementsMotionProps}
               className="volume__textbox volume__textbox--volume-three"
             >
-              {language === "en-US" ? (
+              {language === "en-US" && (
                 <>
                   <p>
                     Influencers will impact the reach of posts, bring a large
@@ -288,7 +286,8 @@ const VolumeThree = () => {
                     to watch.
                   </p>
                 </>
-              ) : (
+              )}
+              {language === "sr-Lat" && (
                 <>
                   <p>
                     Influenseri će uticati na reach vaših objava, doneti vam
@@ -342,7 +341,7 @@ const VolumeThree = () => {
               {...elementsMotionProps}
               className="volume__textbox volume__textbox--volume-three"
             >
-              {language === "en-US" ? (
+              {language === "en-US" && (
                 <>
                   <p>So, where’s the problem?</p>
                   <p>
@@ -362,7 +361,8 @@ const VolumeThree = () => {
                     Check what they’ve said.
                   </p>
                 </>
-              ) : (
+              )}
+              {language === "sr-Lat" && (
                 <>
                   <p>Pa, gde onda zapne?</p>
                   <p>
@@ -420,7 +420,7 @@ const VolumeThree = () => {
               {...elementsMotionProps}
               className="volume__textbox volume__textbox--volume-three"
             >
-              {language === "en-US" ? (
+              {language === "en-US" && (
                 <>
                   <p>
                     And that might not be enough. Because you never know what
@@ -440,7 +440,8 @@ const VolumeThree = () => {
                   <p>Research, research, analyze.</p>
                   <p>And again.</p>
                 </>
-              ) : (
+              )}
+              {language === "sr-Lat" && (
                 <>
                   <p>
                     I to može da bude nedovoljno. Zato što nikada ne znate šta

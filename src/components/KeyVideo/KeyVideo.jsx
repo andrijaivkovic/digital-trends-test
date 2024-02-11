@@ -15,12 +15,13 @@ const KeyVideo = () => {
         <motion.h2 {...elementsMotionProps} className="key-video__title">
           Key video
         </motion.h2>
-        {language === "en-US" ? (
+        {language === "en-US" && (
           <motion.p {...elementsMotionProps} className="key-video__body-text">
             If you don’t have time to read, you can watch the video in which we
             briefly described each trend
           </motion.p>
-        ) : (
+        )}
+        {language === "sr-Lat" && (
           <motion.p {...elementsMotionProps} className="key-video__body-text">
             Ako nemaš vremena da čitaš, pogledaj video u kome smo ukratko
             opisali svaki trend

@@ -137,11 +137,8 @@ const VolumeSix = () => {
                     </g>
                   </g>
                 </svg>
-                {language === "en-US" ? (
-                  <p>You’ve completed this Volume.</p>
-                ) : (
-                  <p>Završili ste ovaj Volume.</p>
-                )}
+                {language === "en-US" && <p>You’ve completed this Volume.</p>}
+                {language === "sr-Lat" && <p>Završili ste ovaj Volume.</p>}
               </div>
             )}
           </motion.div>
@@ -170,7 +167,7 @@ const VolumeSix = () => {
               {...elementsMotionProps}
               className="volume__textbox volume__textbox--volume-six"
             >
-              {language === "en-US" ? (
+              {language === "en-US" && (
                 <>
                   <p>
                     One of those pages with quotes that everyone follows,
@@ -195,7 +192,8 @@ const VolumeSix = () => {
                   </p>
                   <p>In short terms – a significant one.</p>
                 </>
-              ) : (
+              )}
+              {language === "sr-Lat" && (
                 <>
                   <p>
                     Jedna od onih stranica sa citatima koju svi prate, a nekada
@@ -266,7 +264,7 @@ const VolumeSix = () => {
               {...elementsMotionProps}
               className="volume__textbox volume__textbox--volume-six"
             >
-              {language === "en-US" ? (
+              {language === "en-US" && (
                 <>
                   <p>
                     Even if you’ve created the campaign of a lifetime, it might
@@ -282,7 +280,8 @@ const VolumeSix = () => {
                     specialized software that can create a narrower picture.
                   </p>
                 </>
-              ) : (
+              )}
+              {language === "sr-Lat" && (
                 <>
                   <p>
                     Čak i ako ste napravili kampanju karijere, ona za druge može
@@ -343,7 +342,7 @@ const VolumeSix = () => {
               {...elementsMotionProps}
               className="volume__textbox volume__textbox--volume-six"
             >
-              {language === "en-US" ? (
+              {language === "en-US" && (
                 <>
                   <p>How is it formed?</p>
                   <p>
@@ -363,7 +362,8 @@ const VolumeSix = () => {
                     which can also lead to increased engagement.
                   </p>
                 </>
-              ) : (
+              )}
+              {language === "sr-Lat" && (
                 <>
                   <p>Kako se ona formira?</p>
                   <p>
@@ -430,7 +430,7 @@ const VolumeSix = () => {
               {...elementsMotionProps}
               className="volume__textbox volume__textbox--volume-six"
             >
-              {language === "en-US" ? (
+              {language === "en-US" && (
                 <>
                   <p>
                     Data is also crucial for getting first-hand feedback, and
@@ -450,7 +450,8 @@ const VolumeSix = () => {
                     show their success to the audience. And even to competitors.
                   </p>
                 </>
-              ) : (
+              )}
+              {language === "sr-Lat" && (
                 <>
                   <p>
                     Podaci su takođe važni za dobijanje feedbacka iz prve ruke,

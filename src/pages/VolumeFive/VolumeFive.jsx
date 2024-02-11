@@ -147,11 +147,8 @@ const VolumeFive = () => {
                     </g>
                   </g>
                 </svg>
-                {language === "en-US" ? (
-                  <p>You’ve completed this Volume.</p>
-                ) : (
-                  <p>Završili ste ovaj Volume.</p>
-                )}
+                {language === "en-US" && <p>You’ve completed this Volume.</p>}
+                {language === "sr-Lat" && <p>Završili ste ovaj Volume.</p>}
               </div>
             )}
           </motion.div>
@@ -183,7 +180,7 @@ const VolumeFive = () => {
               {...elementsMotionProps}
               className="volume__textbox volume__textbox--volume-five"
             >
-              {language === "en-US" ? (
+              {language === "en-US" && (
                 <>
                   <p>Alexa, what is this text about? Hey, Siri? Click play.</p>
                   <p>
@@ -200,7 +197,8 @@ const VolumeFive = () => {
                     adaptation.
                   </p>
                 </>
-              ) : (
+              )}
+              {language === "sr-Lat" && (
                 <>
                   <p>
                     Alexa, o čemu se radi u ovom tekstu? Ovaj, Siri, Siri pusti
@@ -237,11 +235,8 @@ const VolumeFive = () => {
                 altText="Amazon Echo with Amazon Alexa Voice assistant"
               />
               <div className="volume__image-description">
-                {language === "en-US" ? (
-                  <p>Amazon Echo with Amazon Alexa</p>
-                ) : (
-                  <p>Amazon Echo sa Amazon Alexa</p>
-                )}
+                {language === "en-US" && <p>Amazon Echo with Amazon Alexa</p>}
+                {language === "sr-Lat" && <p>Amazon Echo sa Amazon Alexa</p>}
               </div>
             </motion.div>
           </section>
@@ -250,7 +245,7 @@ const VolumeFive = () => {
               {...elementsMotionProps}
               className="volume__textbox volume__textbox--volume-five"
             >
-              {language === "en-US" ? (
+              {language === "en-US" && (
                 <>
                   <p>
                     In the future, SEO optimization will have to adapt to voice
@@ -267,7 +262,8 @@ const VolumeFive = () => {
                     preferences.
                   </p>
                 </>
-              ) : (
+              )}
+              {language === "sr-Lat" && (
                 <>
                   <p>
                     Naime, SEO optimizacija će u budućnosti morati da se
@@ -302,11 +298,8 @@ const VolumeFive = () => {
                   path={volume5video1}
                 />
                 <div className="volume__image-description">
-                  {language === "en-US" ? (
-                    <p>Apple Siri Voice Search</p>
-                  ) : (
-                    <p>Apple Siri glasovna pretraga</p>
-                  )}
+                  {language === "en-US" && <p>Apple Siri Voice Search</p>}
+                  {language === "sr-Lat" && <p>Apple Siri glasovna pretraga</p>}
                 </div>
               </motion.div>
             )}
@@ -319,11 +312,8 @@ const VolumeFive = () => {
                   altText="Amazon Echo with Amazon Alexa Voice assistant."
                 />
                 <div className="volume__image-description">
-                  {language === "en-US" ? (
-                    <p>Apple Siri Voice Search</p>
-                  ) : (
-                    <p>Apple Siri glasovna pretraga</p>
-                  )}
+                  {language === "en-US" && <p>Apple Siri Voice Search</p>}
+                  {language === "sr-Lat" && <p>Apple Siri glasovna pretraga</p>}
                 </div>
               </motion.div>
             )}
@@ -336,7 +326,7 @@ const VolumeFive = () => {
               {...elementsMotionProps}
               className="volume__textbox volume__textbox--volume-five"
             >
-              {language === "en-US" ? (
+              {language === "en-US" && (
                 <>
                   <p>
                     To optimize the visibility of what we offer in the future,
@@ -346,7 +336,8 @@ const VolumeFive = () => {
                   <p>The solution? Talk, talk, talk.</p>
                   <p>Let the vocal cords work and lead us to new insights.</p>
                 </>
-              ) : (
+              )}
+              {language === "sr-Lat" && (
                 <>
                   <p>
                     Da bismo optimizovali vidljivost onoga što nudimo, u

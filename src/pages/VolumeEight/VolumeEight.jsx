@@ -138,11 +138,8 @@ const VolumeSeven = () => {
                     </g>
                   </g>
                 </svg>
-                {language === "en-US" ? (
-                  <p>You’ve completed this Volume.</p>
-                ) : (
-                  <p>Završili ste ovaj Volume.</p>
-                )}
+                {language === "en-US" && <p>You’ve completed this Volume.</p>}
+                {language === "sr-Lat" && <p>Završili ste ovaj Volume.</p>}
               </div>
             )}
           </motion.div>
@@ -172,7 +169,7 @@ const VolumeSeven = () => {
               {...elementsMotionProps}
               className="volume__textbox volume__textbox--volume-eight"
             >
-              {language === "en-US" ? (
+              {language === "en-US" && (
                 <>
                   <p>
                     How to conclude the story about trends if not by delving
@@ -198,7 +195,8 @@ const VolumeSeven = () => {
                     on the internet.
                   </p>
                 </>
-              ) : (
+              )}
+              {language === "sr-Lat" && (
                 <>
                   <p>
                     Kako završiti priču o trendovima, ako ne – pričom o trendu
@@ -249,7 +247,7 @@ const VolumeSeven = () => {
               {...elementsMotionProps}
               className="volume__textbox volume__textbox--volume-eight"
             >
-              {language === "en-US" ? (
+              {language === "en-US" && (
                 <>
                   <p>
                     Or, may we add, each trend becomes a trend only when a brand
@@ -275,7 +273,8 @@ const VolumeSeven = () => {
                     arriving too late.
                   </p>
                 </>
-              ) : (
+              )}
+              {language === "sr-Lat" && (
                 <>
                   <p>
                     Mi dodajemo – svaki trend postaje trend tek onda kada se ne
@@ -337,7 +336,7 @@ const VolumeSeven = () => {
               {...elementsMotionProps}
               className="volume__textbox volume__textbox--volume-eight"
             >
-              {language === "en-US" ? (
+              {language === "en-US" && (
                 <>
                   <p>
                     Sometimes, even a single day can make a difference. Instead
@@ -354,7 +353,8 @@ const VolumeSeven = () => {
                     Just make sure that the leap doesn’t last too long.
                   </p>
                 </>
-              ) : (
+              )}
+              {language === "sr-Lat" && (
                 <>
                   <p>
                     Ponekad bi i jedan dan mogao da napravi razliku, pa biste
