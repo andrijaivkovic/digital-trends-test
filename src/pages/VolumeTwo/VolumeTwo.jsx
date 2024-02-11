@@ -151,7 +151,7 @@ const VolumeTwo = () => {
             className="volume__title-text volume__title-text--volume-two"
           >
             <p className="volume__title-number volume__title-number--volume-two">
-              Volume 2
+              Volume 02
             </p>
             <h2 className="volume__title-name volume__title-name--volume-two">
               <motion.span {...elementsMotionProps}>In This World</motion.span>

@@ -160,7 +160,7 @@ const VolumeFive = () => {
               {...elementsMotionProps}
               className="volume__title-number volume__title-number--volume-five"
             >
-              Volume 5
+              Volume 05
             </motion.p>
             <h2 className="volume__title-name volume__title-name--volume-five">
               <motion.span {...elementsMotionProps}>Listen For My</motion.span>

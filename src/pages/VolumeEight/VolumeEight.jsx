@@ -151,7 +151,7 @@ const VolumeSeven = () => {
               {...elementsMotionProps}
               className="volume__title-number volume__title-number--volume-eight"
             >
-              Volume 8
+              Volume 08
             </motion.p>
             <h2 className="volume__title-name volume__title-name--volume-eight">
               <motion.span {...elementsMotionProps}>Every Meme</motion.span>

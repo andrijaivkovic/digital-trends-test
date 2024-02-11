@@ -49,6 +49,8 @@
   }
 
   &__title-number {
+    font-size: 2.2rem;
+
     @include mediaQuery(mobile) {
       font-size: 1.4rem;
       margin-bottom: 0.5rem;

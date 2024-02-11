@@ -85,8 +85,8 @@ const Volume = ({
         payload: {
           id: uuidv4(),
           icon: "checkmark",
-          messageEN: `Congrats! You've completed Volume ${volumeNumber}!`,
-          messageRS: `Čestitamo! Završili ste Volume ${volumeNumber}!`,
+          messageEN: `Congrats! You've completed Volume 0${volumeNumber}!`,
+          messageRS: `Čestitamo! Završili ste Volume 0${volumeNumber}!`,
         },
       });
 

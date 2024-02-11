@@ -159,7 +159,7 @@ const VolumeOne = () => {
               {...elementsMotionProps}
               className="volume__title-number volume__title-number--volume-one"
             >
-              Volume 1
+              Volume 01
             </motion.p>
             <h2 className="volume__title-name volume__title-name--volume-one">
               <motion.span {...elementsMotionProps}>Why You Only</motion.span>
