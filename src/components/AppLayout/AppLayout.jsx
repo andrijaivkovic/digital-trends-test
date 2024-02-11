@@ -1,3 +1,5 @@
+import { Outlet } from "react-router";
+
 import { useApp } from "../../contexts/useApp";
 
 import Navigation from "../Navigation/Navigation";
@@ -10,7 +12,6 @@ import SpotifyPlayer from "../SpotifyPlayer/SpotifyPlayer";
 
 import KeyVideo from "../KeyVideo/KeyVideo";
 import VolumeNavigation from "../VolumeNavigation/VolumeNavigation";
-import { Outlet } from "react-router";
 
 const AppLayout = () => {
   const { currentVolumeNumber } = useApp();
